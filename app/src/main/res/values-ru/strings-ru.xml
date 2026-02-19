@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--    <string name="app_name">Python Learning</string>-->
+    <string name="result">Rezultat</string>
+    <string name="running">Rabotaem</string>
+    <string name="run">Daway</string>
+    <string name="python_lessons">Python Lessons</string>
+    <string name="lessons">Uroki</string>
+    <string name="tasks">Zadaci</string>
+    <string name="code">kod</string>
+    <string name="settings">Nastroyki</string>
+    <string name="python_playground">Python Playground</string>
+    <string name="input_description">Type each variable from new line</string>
+</resources>

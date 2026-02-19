@@ -1,0 +1,752 @@
+[
+  {
+    "id": 0,
+    "title": "Hello World!",
+    "titleTm": "Hello World!",
+    "titleRu": "Hello World!",
+    "description": "Get Started",
+    "descriptionTm": "Başla",
+    "descriptionRu": "Начать",
+    "progress": 0,
+    "text": "Python is a very simple language, and has a very straightforward syntax. It encourages programmers to program without boilerplate (prepared) code. The simplest directive in Python is the \"print\" directive - it simply prints out a line (and also includes a newline, unlike in C).\n\nThere are two major Python versions, Python 2 and Python 3. Python 2 and 3 are quite different. This tutorial uses Python 3, because it more semantically correct and supports newer features.\n\nFor example, one difference between Python 2 and 3 is the print statement. In Python 2, the \"print\" statement is not a function, and therefore it is invoked without parentheses. However, in Python 3, it is a function, and must be invoked with parentheses.",
+    "textTm": "Python gaty ýönekeý dil we gaty gönümel sintaksis bar. Programmistleri gazanlar (taýýarlanan) kody bolmazdan programma etmäge çagyrýar. Python-da iň ýönekeý görkezme \"çap\" direktiwasydyr - diňe bir setir çykarýar (we C-den tapawutlylykda täze setiri hem öz içine alýar).\n\nIki sany Python wersiýasy bar, Python 2 we Python 3. Python 2 we 3 düýbünden başga. Bu gollanma Python 3 ulanýar, sebäbi has semantiki taýdan dogry we täze aýratynlyklary goldaýar.\n\nMysal üçin, Python 2 bilen 3-iň arasyndaky tapawut, çap jümlesidir. Python 2-de \"çap\" jümlesi funksiýa däl, şonuň üçin gabygyz ulanylýar. Şeýle-de bolsa, Python 3-de bu bir funksiýa bolup, ony gabyk bilen ulanmaly.",
+    "textRu": "Python — очень простой язык с очень понятным синтаксисом. Он побуждает программистов писать код без шаблонного (подготовленного) кода. Самая простая директива в Python — это директива `print` — она просто выводит строку (и, в отличие от C, включает символ новой строки).\n\nСуществует две основные версии Python: Python 2 и Python 3. Python 2 и 3 довольно сильно отличаются друг от друга. В этом руководстве используется Python 3, поскольку он более семантически корректен и поддерживает новые функции.\n\nНапример, одно из различий между Python 2 и 3 — это оператор `print`. В Python 2 оператор `print` не является функцией, и поэтому он вызывается без скобок. Однако в Python 3 это функция, и её необходимо вызывать со скобками.",
+    "body": [
+      {
+        "subtitle": "",
+        "subdescription": "To print a string in Python 3, just write:",
+        "subdescriptionTm": "Python 3-de setir çap etmek üçin diňe ýazyň:",
+        "subdescriptionRu": "Чтобы вывести строку на экран в Python 3, просто напишите:",
+        "code": "print(\"This line will be printed.\")"
+      },
+      {
+        "subtitle": "Indentation",
+        "subtitleTm": "Indentasiýa",
+        "subtitleRu": "Отступ",
+        "subdescription": "Python uses indentation for blocks, instead of curly braces. Both tabs and spaces are supported, but the standard indentation requires standard Python code to use four spaces. For example:",
+        "subdescriptionTm": "Python egri ýaýlaryň ýerine bloklar üçin indentasiýa ulanýar. Salgylar we boşluklar hem goldanýar, ýöne adaty indentasiýa dört boşluk ulanmak üçin adaty Python koduny talap edýär. Mysal üçin:",
+        "subdescriptionRu": "В Python для блочных отступов используются фигурные скобки, а не отступы в виде фигурных скобок. Поддерживаются как табуляция, так и пробелы, но для стандартного отступа в Python требуется использовать четыре пробела. Например:",
+        "code": "x = 1\nif x == 1:\n    # indented four spaces\n    print(\"x is 1.\")"
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "title": "Variables and Types",
+    "titleTm": "Üýtgeýjiler we görnüşler",
+    "titleRu": "Переменные и типы",
+    "description": "int, float, str",
+    "progress": 0,
+    "text": "Python is completely object oriented, and not \"statically typed\". You do not need to declare variables before using them, or declare their type. Every variable in Python is an object.\n\nThis tutorial will go over a few basic types of variables.",
+    "textTm": "Python düýbünden obýekte gönükdirilen we \"statiki görnüşde\" däl. Üýtgeýjileri ulanmazdan ozal yglan etmeli ýa-da olaryň görnüşini yglan etmeli däl. Python-daky her üýtgeýji obýektdir.\n\nBu gollanma üýtgeýänleriň birnäçe esasy görnüşine geçer.",
+    "textRu": "Python — это полностью объектно-ориентированный язык, а не «статически типизированный». Вам не нужно объявлять переменные перед их использованием или указывать их тип. Каждая переменная в Python — это объект.\n\nВ этом руководстве мы рассмотрим несколько основных типов переменных.",
+    "body": [
+      {
+        "subtitle": "Numbers",
+        "subtitleTm": "Sanlar",
+        "subtitleRu": "Числа",
+        "subdescription": "Python supports two types of numbers - integers(whole numbers) and floating point numbers(decimals). (It also supports complex numbers, which will not be explained in this tutorial).\n\nTo define an integer, use the following syntax:",
+        "subdescriptionTm": "Python sanlaryň iki görnüşini - bitewi sanlary (ýüzýän sanlary) we ýüzýän nokat sanlaryny (onluk) goldaýar. (Şeýle hem bu gollanmada düşündirilmeýän çylşyrymly sanlary goldaýar).\n\nBitewi san kesgitlemek üçin aşakdaky sintaksis ulanyň:",
+        "subdescriptionRu": "Python поддерживает два типа чисел — целые числа и числа с плавающей запятой (десятичные дроби). (Он также поддерживает комплексные числа, которые не будут рассматриваться в этом руководстве).\n\nДля определения целого числа используйте следующий синтаксис:",
+        "code": "myint = 7\nprint(myint)"
+      },
+      {
+        "subtitle": "",
+        "subdescription": "To define a floating point number, you may use one of the following notations:",
+        "subdescriptionTm": "Bölünýän (floating point) san döretmek üçin aşakdaky ýazuw görnüşleriniň birini ulanyp bilersiňiz:",
+        "subdescriptionRu": "Чтобы задать число с плавающей точкой, вы можете использовать одну из следующих записей:",
+        "code": "myfloat = 7.0\nprint(myfloat)\nmyfloat = float(7)\nprint(myfloat)"
+      },
+      {
+        "subtitle": "Strings",
+        "subtitleTm": "Setirler",
+        "subtitleRu": "Строки",
+        "subdescription": "Strings are defined either with a single quote or a double quotes.",
+        "subdescriptionTm": "Setirler bir däne  (') ýa-da iki däne  (\") bilen kesgitlenýär.",
+        "subdescriptionRu": "Строки задаются либо одинарными кавычками ('), либо двойными (\").",
+        "code": "mystring = 'hello'\nprint(mystring)\nmystring = \"hello\"\nprint(mystring)"
+      },
+      {
+        "subtitle": "",
+        "subdescription": "The difference between the two is that using double quotes makes it easy to include apostrophes (whereas these would terminate the string if using single quotes)",
+        "subdescriptionTm": "Ikisiniň tapawudy şondadyr: goşa dyrnak (\") ulanmak apostrofy (') setiriň içinde aňsat goşmaga mümkinçilik berýär (ýeke dyrnak (') ulanylsa, ol setiri tamamlar).",
+        "subdescriptionRu": "Разница между ними в том, что двойные кавычки позволяют легко использовать апострофы (тогда как при использовании одинарных кавычек апостроф завершит строку).",
+        "code": "mystring = \"Don't worry about apostrophes\"\nprint(mystring)"
+      },
+      {
+        "subtitle": "",
+        "subdescription": "Simple operators can be executed on numbers and strings:",
+        "subdescriptionTm": "Ýönekeý operatorlar sanlaryň we setirleriň üstünde ýerine ýetirilip bilner:",
+        "subdescriptionRu": "Простые операторы можно применять к числам и строкам:",
+        "code": "one = 1\ntwo = 2\nthree = one + two\nprint(three)\n\nhello = \"hello\"\nworld = \"world\"\nhelloworld = hello + \" \" + world\nprint(helloworld)"
+      },
+      {
+        "subtitle": "",
+        "subdescription": "Assignments can be done on more than one variable \"simultaneously\" on the same line like this",
+        "subdescriptionTm": "Tassyklaýlar birden köp üýtgeýji üçin hem şol bir setirde bir wagtda edilip bilner",
+        "subdescriptionRu": "Присваивания могут выполняться сразу для нескольких переменных на одной строке",
+        "code": "a, b = 3, 4\nprint(a, b)"
+      },
+      {
+        "subtitle": "",
+        "subdescription": "Mixing operators between numbers and strings is not supported:",
+        "subdescriptionTm": "Sanjlar bilen setirler arasynda operatorlary garyşdyrmak goldanylmaýar:",
+        "subdescriptionRu": "Смешивание операторов между числами и строками не поддерживается:",
+        "code": "# This will not work!\none = 1\ntwo = 2\nhello = \"hello\"\n\nprint(one + two + hello)"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Data Types",
+    "titleTm": "Maglumatlaryň görnüşleri",
+    "titleRu": "Типы данных",
+    "description": "list, dict, set",
+    "progress": 0,
+    "text": "Python is completely object oriented, and not \"statically typed\". You do not need to declare variables before using them, or declare their type. Every variable in Python is an object.\n\nThis tutorial will go over a few basic types of variables.",
+    "textTm": "Python düýbünden obýekte gönükdirilen we \"statiki görnüşde\" däl. Üýtgeýjileri ulanmazdan ozal yglan etmeli ýa-da olaryň görnüşini yglan etmeli däl. Python-daky her üýtgeýji obýektdir.\n\nBu gollanma üýtgeýänleriň birnäçe esasy görnüşine geçer.",
+    "textRu": "Python — это полностью объектно-ориентированный язык, а не «статически типизированный». Вам не нужно объявлять переменные перед их использованием или указывать их тип. Каждая переменная в Python — это объект.\n\nВ этом руководстве мы рассмотрим несколько основных типов переменных.",
+    "body": [
+      {
+        "subtitle": "Lists",
+        "subtitleTm": "Sanawlar",
+        "subtitleRu": "Списки",
+        "subdescription": "Lists are very similar to arrays. They can contain any type of variable, and they can contain as many variables as you wish. Lists can also be iterated over in a very simple manner. Here is an example of how to build a list.",
+        "subdescriptionTm": "Sanawlar massiwlar bilen örän meňzeşdir. Olar islendik görnüşli üýtgeýjileri öz içine alyp bilerler we islendik mukdarda üýtgeýji saklap bilerler. Sanawlar bilen işleýän wagty hem olary gaty ýönekeý usulda gaýtalap bilersiňiz. Ine, sanaw döretmegiň mysaly.",
+        "subdescriptionRu": "Списки очень похожи на массивы. Они могут содержать переменные любого типа и любое количество переменных по вашему желанию. Списки также можно перебирать очень простым способом. Вот пример того, как создать список.",
+        "code": "mylist = []\nmylist.append(1)\nmylist.append(2)\nmylist.append(3)\nprint(mylist[0]) # prints 1\nprint(mylist[1]) # prints 2\nprint(mylist[2]) # prints 3\n\n# prints out 1,2,3\nfor x in mylist:\n    print(x)"
+      },
+      {
+        "subtitle": "",
+        "subdescription": "Accessing an index which does not exist generates an exception (an error).",
+        "subdescriptionTm": "Bar bolmadyk indeksine girilende ýalňyşlyk (exception) döreýär.",
+        "subdescriptionRu": "Обращение к несуществующему индексу вызывает исключение (ошибку).",
+        "code": "mylist = [1,2,3]\nprint(mylist[10])"
+      },
+      {
+        "subtitle": "Dictionaries",
+        "subtitleTm": "Sözlükler",
+        "subtitleRu": "Словари",
+        "subdescription": "A dictionary is a data type similar to arrays, but works with keys and values instead of indexes. Each value stored in a dictionary can be accessed using a key, which is any type of object (a string, a number, a list, etc.) instead of using its index to address it.\n\nFor example, a database of phone numbers could be stored using a dictionary like this: ",
+        "subdescriptionTm": "Sözlükler massiwlar bilen meňzeş maglumat görnüşidir, ýöne indeksler ýerine açarlary we bahalary ulanýar. Sözlükde saklanan her bir bahany açar arkaly almak bolýar, açar bolsa islendik obýekt görnüşinde bolup biler (setir, san, sanaw we ş.m.) we onuň indeksini ulanmak gerek däl.\n\nMysal üçin, telefon belgileriniň maglumatlar bazasyny şeýle sözlük arkaly saklap bolýar: ",
+        "subdescriptionRu": "Словарь — это тип данных, похожий на массивы, но работает с ключами и значениями вместо индексов. Каждое значение в словаре можно получить по ключу, который может быть любым объектом (строкой, числом, списком и т.д.), вместо обращения по индексу.\n\nНапример, базу данных телефонных номеров можно хранить с помощью словаря так: ",
+        "code": "phonebook = {}\nphonebook[\"John\"] = 938477566\nphonebook[\"Jack\"] = 938377264\nphonebook[\"Jill\"] = 947662781\nprint(phonebook)"
+      },
+      {
+        "subtitle": "",
+        "subdescription": "Alternatively, a dictionary can be initialized with the same values in the following notation:",
+        "subdescriptionTm": "Başgaça aýdanyňda, sözlük şu aşakdaky ýazuw görnüşinde şol bir bahalar bilen başlanmagy mümkin:",
+        "subdescriptionRu": "Или словарь можно инициализировать с теми же значениями в следующей записи:",
+        "code": "phonebook = {\n    \"John\" : 938477566,\n    \"Jack\" : 938377264,\n    \"Jill\" : 947662781\n}\nprint(phonebook)"
+      },
+      {
+        "subtitle": "Iterating over dictionaries",
+        "subtitleTm": "Sözlüklere gaýtalap giriş",
+        "subtitleRu": "Итерация по словарям",
+        "subdescription": "Dictionaries can be iterated over, just like a list. However, a dictionary, unlike a list, does not keep the order of the values stored in it. To iterate over key value pairs, use the following syntax:",
+        "subdescriptionTm": "Sözlüklere sanaw ýaly gaýtalap girip bolýar. Ýöne sanawdan tapawutlylykda, sözlükde saklanan bahalaryň tertibi saklanmaýar. Açar-baha juplaryny gaýtalap çykmak üçin aşakdaky sintaksisi ulanyň:",
+        "subdescriptionRu": "Словари можно перебирать, так же как списки. Однако, в отличие от списка, словарь не сохраняет порядок хранящихся в нём значений. Чтобы перебирать пары ключ-значение, используйте следующий синтаксис:",
+        "code": "phonebook = {\"John\" : 938477566,\"Jack\" : 938377264,\"Jill\" : 947662781}\nfor name, number in phonebook.items():\n    print(\"Phone number of %s is %d\" % (name, number))"
+      },
+      {
+        "subtitle": "Removing a value",
+        "subtitleTm": "Bir bahany aýyrmak",
+        "subtitleRu": "Удаление значения",
+        "subdescription": "To remove a specified index, use either one of the following notations:",
+        "subdescriptionTm": "Kesgitlenen indeksi aýyrmak üçin aşakdaky ýazuwlardan birini ulanyň:",
+        "subdescriptionRu": "Чтобы удалить указанное значение (по индексу), используйте один из следующих вариантов записи:",
+        "code": "phonebook = {\n   \"John\" : 938477566,\n   \"Jack\" : 938377264,\n   \"Jill\" : 947662781\n}\ndel phonebook[\"John\"]\nprint(phonebook)"
+      },
+      {
+        "subtitle": "",
+        "subdescription": "or:",
+        "subdescriptionTm": "ýa-da:",
+        "subdescriptionRu": "или:",
+        "code": "phonebook = {\n   \"John\" : 938477566,\n   \"Jack\" : 938377264,\n   \"Jill\" : 947662781\n}\nphonebook.pop(\"John\")\nprint(phonebook)"
+      },
+      {
+        "subtitle": "Sets",
+        "subtitleTm": "Toplamlar",
+        "subtitleRu": "Множества",
+        "subdescription": "Sets are lists with no duplicate entries. Let's say you want to collect a list of words used in a paragraph:",
+        "subdescriptionTm": "Toplamlar gaýtalanýan elementleri bolmadyk sanawlardyr. Meselem, bir paragrafa ulanylýan sözleriň sanawyny toplamak isleýärsiňiz diýip aýdaýliň:",
+        "subdescriptionRu": "Множества — это списки без повторяющихся элементов. Допустим, вы хотите собрать список слов, использованных в абзаце:",
+        "code": "print(set(\"my name is Eric and Eric is my name\".split()))"
+      },
+      {
+        "subtitle": "",
+        "subdescription": "This will print out a list containing \"my\", \"name\", \"is\", \"Eric\", and finally \"and\". Since the rest of the sentence uses words which are already in the set, they are not inserted twice.\n\nSets are a powerful tool in Python since they have the ability to calculate differences and intersections between other sets. For example, say you have a list of participants in events A and B:",
+        "subdescriptionTm": "Bu \"my\", \"name\", \"is\", \"Eric\" we ahyrynda \"and\" sözlerini öz içine alýan sanawy çykarar. Jümläniň galan bölegi bolsa setde eýýäm bar bolan sözleri ulanýanlygy üçin iki gezek goşulmaýar.\n\nToplamlar Python-da güýçli gurallardyr, sebäbi olar beýleki toplamlaryň tapawutlaryny we kesişmelerini hasaplap bilýärler. Meselem, A we B çärelerinde gatnaşýanlaryň sanawy bolsa:",
+        "subdescriptionRu": "Это выведет список, содержащий \"my\", \"name\", \"is\", \"Eric\" и, наконец, \"and\". Так как остальные слова предложения уже есть в множестве, они не добавляются дважды.\n\nМножества — это мощный инструмент в Python, поскольку они позволяют вычислять разности и пересечения с другими множествами. Например, допустим, у вас есть список участников событий A и B:",
+        "code": "a = set([\"Jake\", \"John\", \"Eric\"])\nprint(a)\nb = set([\"John\", \"Jill\"])\nprint(b)"
+      },
+      {
+        "subtitle": "",
+        "subdescription": "To find out which members attended both events, you may use the \"intersection\" method:",
+        "subdescriptionTm": "Haýsy agzalaryň iki çärä hem gatnaşandygyny tapmak üçin \"intersection\" usulyny ulanyp bilersiňiz:",
+        "subdescriptionRu": "Чтобы узнать, какие участники посетили оба события, можно использовать метод \"intersection\":",
+        "code": "a = set([\"Jake\", \"John\", \"Eric\"])\nb = set([\"John\", \"Jill\"])\n\nprint(a.intersection(b))\nprint(b.intersection(a))"
+      },
+      {
+        "subtitle": "",
+        "subdescription": "To find out which members attended only one of the events, use the \"symmetric_difference\" method:",
+        "subdescriptionTm": "Haýsy agzalaryň diňe bir çärä gatnaşandygyny tapmak üçin \"symmetric_difference\" usulyny ulanyň:",
+        "subdescriptionRu": "Чтобы узнать, какие участники посетили только одно из событий, используйте метод \"symmetric_difference\":",
+        "code": "a = set([\"Jake\", \"John\", \"Eric\"])\nb = set([\"John\", \"Jill\"])\n\nprint(a.symmetric_difference(b))\nprint(b.symmetric_difference(a))"
+      },
+      {
+        "subtitle": "",
+        "subdescription": "To find out which members attended only one event and not the other, use the \"difference\" method:",
+        "subdescriptionTm": "Haýsy agzalaryň diňe bir çärä gatnaşandygyny, başga çärä gatnaşmandygyny tapmak üçin \"difference\" usulyny ulanyň:",
+        "subdescriptionRu": "Чтобы узнать, какие участники посетили только одно событие, а другое нет, используйте метод \"difference\":",
+        "code": "a = set([\"Jake\", \"John\", \"Eric\"])\nb = set([\"John\", \"Jill\"])\n\nprint(a.difference(b))\nprint(b.difference(a))"
+      },
+      {
+        "subtitle": "",
+        "subdescription": "To receive a list of all participants, use the \"union\" method:",
+        "subdescriptionTm": "Ähli gatnaşyjylaryň sanawyny almak üçin \"union\" usulyny ulanyň:",
+        "subdescriptionRu": "Чтобы получить список всех участников, используйте метод \"union\":",
+        "code": "a = set([\"Jake\", \"John\", \"Eric\"])\nb = set([\"John\", \"Jill\"])\n\nprint(a.union(b))"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Basic Operators",
+    "titleTm": "Esasy operatorlar",
+    "titleRu": "Основные операторы",
+    "description": "+, -, *, /, %",
+    "progress": 0,
+    "text": "This section explains how to use basic operators in Python.",
+    "textTm": "Bu bölüm Python-da esasy operatorlary nädip ulanmalydygyny düşündirýär.",
+    "textRu": "В этом разделе объясняется, как использовать основные операторы в Python.",
+    "body": [
+      {
+        "subtitle": "Arithmetic Operators",
+        "subtitleTm": "Arifmetik Operatorlar",
+        "subtitleRu": "Арифметические операторы",
+        "subdescription": "Just as any other programming languages, the addition, subtraction, multiplication, and division operators can be used with numbers.",
+        "subdescriptionTm": "Beýleki programmirleme dilleri ýaly, goşma, alyş, köpeltme we bölme operatorlaryny sanlar bilen ulanmak bolýar.",
+        "subdescriptionRu": "Как и в любом другом языке программирования, операторы сложения, вычитания, умножения и деления можно использовать с числами.",
+        "code": "number = 1 + 2 * 3 / 4.0\nprint(number)"
+      },
+      {
+        "subtitle": "",
+        "subdescription": "Try to predict what the answer will be. Does python follow order of operations?\nAnother operator available is the modulo (%) operator, which returns the integer remainder of the division. dividend % divisor = remainder.",
+        "subdescriptionTm": "Jogabyň näme boljakdygyny çaklamaga synanyşyň. Python amallaryň ýerine ýetiriş tertibini eýeleýärmi?\nElýeterli başga bir operator modulo (%) operatorydyr, ol bölünmegiň bölen bölegini yzyna berýär. dividend % divisor = galan.",
+        "subdescriptionRu": "Попробуйте предсказать, каким будет ответ. Следует ли Python порядку выполнения операций?\nЕще один доступный оператор — это оператор modulo (%), который возвращает целую часть остатка от деления. dividend % divisor = остаток.",
+        "code": "remainder = 11 % 3\nprint(remainder)"
+      },
+      {
+        "subtitle": "",
+        "subdescription": "Using two multiplication symbols makes a power relationship.",
+        "subdescriptionTm": "Iki esse köpeltme belgisi (** ) dereje hasabyny edýär.",
+        "subdescriptionRu": "Использование двух символов умножения (**) обозначает возведение в степень.",
+        "code": "squared = 7 ** 2\ncubed = 2 ** 3\nprint(squared)\nprint(cubed)"
+      },
+      {
+        "subtitle": "Using Operators with Strings",
+        "subtitleTm": "Setirler bilen operatorlary ulanmak",
+        "subtitleRu": "Использование операторов со строками",
+        "subdescription": "Python supports concatenating strings using the addition operator:",
+        "subdescriptionTm": "Python goşma operatoryny ulanyp setirleri birleşdirmäge mümkinçilik berýär:",
+        "subdescriptionRu": "Python поддерживает объединение строк с помощью оператора сложения:",
+        "code": "helloworld = \"hello\" + \" \" + \"world\"\nprint(helloworld)"
+      },
+      {
+        "subtitle": "",
+        "subdescription": "Python also supports multiplying strings to form a string with a repeating sequence:",
+        "subdescriptionTm": "Python setirleri köpeltmek arkaly gaýtalanýan setir yzygiderliligini döretmäge-de mümkinçilik berýär:",
+        "subdescriptionRu": "Python также поддерживает умножение строк для создания строки с повторяющейся последовательностью:",
+        "code": "lotsofhellos = \"hello\" * 10\nprint(lotsofhellos)"
+      },
+      {
+        "subtitle": "Using Operators with Lists",
+        "subtitleTm": "Sanawlar bilen operatorlary ulanmak",
+        "subtitleRu": "Использование операторов со списками",
+        "subdescription": "Lists can be joined with the addition operators:",
+        "subdescriptionTm": "Sanawlary goşma operatory bilen birleşdirmek bolýar:",
+        "subdescriptionRu": "Списки можно объединять с помощью оператора сложения:",
+        "code": "even_numbers = [2,4,6,8]\nodd_numbers = [1,3,5,7]\nall_numbers = odd_numbers + even_numbers\nprint(all_numbers)"
+      },
+      {
+        "subtitle": "",
+        "subdescription": "Just as in strings, Python supports forming new lists with a repeating sequence using the multiplication operator:",
+        "subdescriptionTm": "Setirlerde bolşy ýaly, Python köpeltme operatoryny ulanyp gaýtalanýan yzygiderli täze sanawlary döretmegi goldaýar:",
+        "subdescriptionRu": "Как и со строками, Python поддерживает создание новых списков с повторяющейся последовательностью с помощью оператора умножения:",
+        "code": "print([1,2,3] * 3)"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "Conditions",
+    "titleTm": "Şertler",
+    "titleRu": "Условия",
+    "description": "Conditional statements",
+    "descriptionTm": "Şertli beýanlar",
+    "descriptionRu": "Условные операторы",
+    "progress": 0,
+    "text": "Python uses boolean logic to evaluate conditions. The boolean values True and False are returned when an expression is compared or evaluated. For example:",
+    "textTm": "Python şertleri bahalandyrmak üçin boolean logikasyny ulanýar. Aňlatmalar deňeşdirilen ýa-da bahalandyrylan wagty True we False boolean bahalary gaýtarylýar. Meselem:",
+    "textRu": "Python использует булеву логику для оценки условий. Булевы значения True и False возвращаются при сравнении или оценке выражения. Например:",
+    "body": [
+      {
+        "subtitle": "",
+        "subdescription": "Notice that variable assignment is done using a single equals operator \"=\", whereas comparison between two variables is done using the double equals operator \"==\". The \"not equals\" operator is marked as \"!=\".",
+        "subdescriptionTm": "Üýtgeýji bellemegi ýeke deňlik operatory \"=\" bilen amala aşyrylýar, iki üýtgeýjiniň deňeşdirişi bolsa iki esse deňlik operatory \"==\" bilen ýerine ýetirilýär. \"Deň däl\" operatory \"!=\" bilen görkezilýär.",
+        "subdescriptionRu": "Обратите внимание, что присвоение значения переменной выполняется с помощью одного знака равенства \"=\", тогда как сравнение двух переменных выполняется с помощью двойного равенства \"==\". Оператор \"не равно\" обозначается как \"!=\".",
+        "code": "x = 2\nprint(x == 2) # prints out True\nprint(x == 3) # prints out False\nprint(x < 3) # prints out True"
+      },
+      {
+        "subtitle": "Boolean operators",
+        "subtitleTm": "Boolean operatorlar",
+        "subtitleRu": "Булевы операторы",
+        "subdescription": "The \"and\" and \"or\" boolean operators allow building complex boolean expressions, for example:",
+        "subdescriptionTm": "\"and\" we \"or\" boolean operatorlary çylşyrymly boolean aňlatmalary döretmäge mümkinçilik berýär, meselem:",
+        "subdescriptionRu": "Булевы операторы \"and\" и \"or\" позволяют строить сложные булевы выражения, например:",
+        "code": "name = \"John\"\nage = 23\nif name == \"John\" and age == 23:\n    print(\"Your name is John, and you are also 23 years old.\")\n\nif name == \"John\" or name == \"Rick\":\n    print(\"Your name is either John or Rick.\")"
+      },
+      {
+        "subtitle": "The \"in\" operator",
+        "subtitleTm": "\"in\" operatory",
+        "subtitleRu": "Оператор \"in\"",
+        "subdescription": "The \"in\" operator could be used to check if a specified object exists within an iterable object container, such as a list:",
+        "subdescriptionTm": "\"in\" operatory görkezilen obýekti sanaw ýaly gaýtalanýan konteýneriň içinde bar diýip barlamaga mümkinçilik berýär:",
+        "subdescriptionRu": "Оператор \"in\" можно использовать, чтобы проверить, существует ли указанный объект внутри итерируемого контейнера, например, списка:",
+        "code": "name = \"John\"\nif name in [\"John\", \"Rick\"]:\n    print(\"Your name is either John or Rick.\")"
+      },
+      {
+        "subtitle": "",
+        "subdescription": "Python uses indentation to define code blocks, instead of brackets. The standard Python indentation is 4 spaces, although tabs and any other space size will work, as long as it is consistent. Notice that code blocks do not need any termination.\n\nHere is an example for using Python's \"if\" statement using code blocks:\n\n",
+        "subdescriptionTm": "Python kod bloklaryny kesgitlemek üçin öýjükleme (indentation) ulanýar, gol çekmeler (brackets) ýerine. Standart Python öýjüklemesi 4 boşlukdyr, ýöne tablar ýa-da başga islendik boşluk ululygy hem işleýär, ýöne sazlaşykly bolmaly. Kod bloklaryna aýratyn tamamlaýjy gerek däldir.\n\nIne, Python-yň \"if\" beýanyny kod bloklary bilen ulanmagyň mysaly:\n\n",
+        "subdescriptionRu": "Python использует отступы для определения блоков кода вместо скобок. Стандартный отступ в Python — 4 пробела, хотя табуляции или любой другой размер пробелов также работают, если соблюдается единообразие. Обратите внимание, что блоки кода не требуют завершающих символов.\n\nВот пример использования оператора \"if\" в Python с кодовыми блоками:\n\n",
+        "code": "statement = False\nanother_statement = True\nif statement is True:\n    # do something\n    pass\nelif another_statement is True: # else if\n    # do something else\n    pass\nelse:\n    # do another thing\n    pass"
+      },
+      {
+        "subtitle": "",
+        "subdescription": "For example:",
+        "subdescriptionTm": "Meselem:",
+        "subdescriptionRu": "Например:",
+        "code": "x = 2\nif x == 2:\n    print(\"x equals two!\")\nelse:\n    print(\"x does not equal to two.\")"
+      },
+      {
+        "subtitle": "The 'is' operator",
+        "subtitleTm": "'is' operatory",
+        "subtitleRu": "Оператор 'is'",
+        "subdescription": "Unlike the double equals operator \"==\", the \"is\" operator does not match the values of the variables, but the instances themselves. For example:",
+        "subdescriptionTm": "Iki esse deňlik operatory \"==\" ýaly däl, \"is\" operatory üýtgeýjileriň bahalaryny däl-de, öz nusgalaryny deňeşdirýär. Meselem:",
+        "subdescriptionRu": "В отличие от оператора двойного равенства \"==\", оператор \"is\" сравнивает не значения переменных, а сами экземпляры объектов. Например:",
+        "code": "x = [1,2,3]\ny = [1,2,3]\nprint(x == y) # Prints out True\nprint(x is y) # Prints out False"
+      },
+      {
+        "subtitle": "The \"not\" operator",
+        "subtitleTm": "\"not\" operatory",
+        "subtitleRu": "Оператор \"not\"",
+        "subdescription": "Using \"not\" before a boolean expression inverts it:",
+        "subdescriptionTm": "Boolean booleanyň öňünde \"not\" ulanmak ony tersine öwürýär:",
+        "subdescriptionRu": "Использование \"not\" перед булевым выражением инвертирует его:",
+        "code": "print(not False) # Prints out True\nprint((not False) == (False)) # Prints out False"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "Loops",
+    "titleTm": "Sikller",
+    "titleRu": "Циклы",
+    "description": "for and while loops",
+    "descriptionTm": "\"for\" we \"while\" siklleri",
+    "descriptionRu": "Циклы for и while",
+    "progress": 0,
+    "text": "There are two types of loops in Python, for and while.",
+    "textTm": "Python-da iki görnüşli sikl bar: \"for\" we \"while\".",
+    "textRu": "В Python существуют два типа циклов: for и while.",
+    "body": [
+      {
+        "subtitle": "The \"for\" loop",
+        "subtitleTm": "\"for\" sikli",
+        "subtitleRu": "Цикл \"for\"",
+        "subdescription": "For loops iterate over a given sequence. Here is an example:",
+        "subdescriptionTm": "\"For\" siklleri berlen yzygiderlik boýunça gaýtalanyp geçýär. Ine, mysal:",
+        "subdescriptionRu": "Циклы for перебирают элементы заданной последовательности. Вот пример:",
+        "code": "primes = [2, 3, 5, 7]\nfor prime in primes:\n    print(prime)"
+      },
+      {
+        "subtitle": "",
+        "subdescription": "For loops can iterate over a sequence of numbers using the \"range\" and \"xrange\" functions. The difference between range and xrange is that the range function returns a new list with numbers of that specified range, whereas xrange returns an iterator, which is more efficient. (Python 3 uses the range function, which acts like xrange). Note that the range function is zero based.",
+        "subdescriptionTm": "\"For\" siklleri \"range\" we \"xrange\" funksiyalaryny ulanyp sanlaryň yzygiderligi boýunça gaýtalanyp geçip biler. \"range\" we \"xrange\" arasynda tapawut şundan ybarat: \"range\" funksiyasy belli bir aralykdaky sanlar bilen täze sanaw berýär, \"xrange\" bolsa has netijeli bolan iteratory berýär. (Python 3 \"range\" funksiyasyndan ulanyp, ol \"xrange\" ýaly hereket edýär). Üns beriň, \"range\" funksiyasy nol esaslydyr.",
+        "subdescriptionRu": "Циклы for могут перебирать последовательность чисел с помощью функций \"range\" и \"xrange\". Разница между range и xrange заключается в том, что функция range возвращает новый список с числами указанного диапазона, тогда как xrange возвращает итератор, который более эффективен. (В Python 3 используется функция range, которая работает как xrange). Обратите внимание, что функция range начинается с нуля.",
+        "code": "# Prints out the numbers 0,1,2,3,4\nfor x in range(5):\n    print(x)\n\n# Prints out 3,4,5\nfor x in range(3, 6):\n    print(x)\n\n# Prints out 3,5,7\nfor x in range(3, 8, 2):\n    print(x)"
+      },
+      {
+        "subtitle": "\"while\" loops",
+        "subtitleTm": "\"while\" siklleri",
+        "subtitleRu": "Циклы \"while\"",
+        "subdescription": "While loops repeat as long as a certain boolean condition is met. For example:",
+        "subdescriptionTm": "\"While\" siklleri belli bir boolean şert ýerine ýetirilençe gaýtalanýar. Meselem:",
+        "subdescriptionRu": "Циклы while повторяются, пока выполняется определённое булево условие. Например:",
+        "code": "# Prints out 0,1,2,3,4\n\ncount = 0\nwhile count < 5:\n    print(count)\n    count += 1  # This is the same as count = count + 1 "
+      },
+      {
+        "subtitle": "\"break\" and \"continue\" statements",
+        "subtitleTm": "\"break\" we \"continue\" beýany",
+        "subtitleRu": "Операторы \"break\" и \"continue\"",
+        "subdescription": "break is used to exit a for loop or a while loop, whereas continue is used to skip the current block, and return to the \"for\" or \"while\" statement. A few examples:",
+        "subdescriptionTm": "\"break\" \"for\" ýa-da \"while\" siklinden çykmak üçin ulanylýar, \"continue\" bolsa häzirki bloky geçip, \"for\" ýa-da \"while\" beýanyna gaýtadan dolanyp gelmek üçin ulanylýar. Ine, birnäçe mysal:",
+        "subdescriptionRu": "Оператор break используется для выхода из цикла for или while, тогда как continue используется для пропуска текущего блока и возврата к оператору for или while. Несколько примеров:",
+        "code": "# Prints out 0,1,2,3,4\n\ncount = 0\nwhile True:\n    print(count)\n    count += 1\n    if count >= 5:\n        break\n\n# Prints out only odd numbers - 1,3,5,7,9\nfor x in range(10):\n    # Check if x is even\n    if x % 2 == 0:\n        continue\n    print(x)"
+      },
+      {
+        "subtitle": "Can we use \\\"else\\\" clause for loops?",
+        "subtitleTm": "Sikller üçin \"else\" bölegini ulanmak bolarmy?",
+        "subtitleRu": "Можно ли использовать блок \"else\" для циклов?",
+        "subdescription": "Unlike languages like C,CPP.. we can use else for loops. When the loop condition of \"for\" or \"while\" statement fails then code part in \"else\" is executed. If a break statement is executed inside the for loop then the \"else\" part is skipped. Note that the \"else\" part is executed even if there is a continue statement.\n\nHere are a few examples:",
+        "subdescriptionTm": "C, C++ ýaly dillerden tapawutlylykda, Sikller üçin \"else\" bölegini ulanmak bolýar. \"For\" ýa-da \"while\" beýanynyň şertleri boşa çyksa, \"else\" bölegindäki kod ýerine ýetirilýär. Eger \"for\" sikliniň içinde \"break\" ýerine ýetirilse, \"else\" bölegi geçilýär. Üns beriň, \"continue\" beýany bolsa-da \"else\" bölegi ýerine ýetirilýär.\n\nIne, birnäçe mysal:",
+        "subdescriptionRu": "В отличие от языков, таких как C или C++, мы можем использовать else для циклов. Когда условие цикла for или while не выполняется, выполняется блок кода в else. Если внутри цикла for выполняется оператор break, блок else пропускается. Обратите внимание, что блок else выполняется даже при наличии оператора continue.\n\nВот несколько примеров:",
+        "code": "# Prints out 0,1,2,3,4 and then it prints \"count value reached 5\"\n\ncount=0\nwhile(count<5):\n    print(count)\n    count +=1\nelse:\n    print(\"count value reached %d\" %(count))\n\n# Prints out 1,2,3,4\nfor i in range(1, 10):\n    if(i%5==0):\n        break\n    print(i)\nelse:\n    print(\"this is not printed because for loop is terminated because of break but not due to fail in condition\")"
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "Functions",
+    "titleTm": "Funksiýalar",
+    "titleRu": "Функции",
+    "description": "def, return, parameters",
+    "progress": 0,
+    "text": "Functions are a convenient way to divide your code into useful blocks, allowing us to order our code, make it more readable, reuse it and save some time. Also functions are a key way to define interfaces so programmers can share their code.",
+    "textTm": "Funksiýalar kody peýdaly bloklara bölmegiň amatly usuly bolup, kody tertiplemäge, okalmagyny ýeňilleşdirmäge, gaýtadan ulanmaga we wagty tygşytlamaga mümkinçilik berýär. Mundan başga-da, funksiýalar programmistleriň kodlaryny paýlaşmagy üçin interfeýsleri kesgitlemegiň esasy usulydyr.",
+    "textRu": "Функции — это удобный способ разделить код на полезные блоки, что позволяет упорядочить код, сделать его более читаемым, использовать повторно и сэкономить время. Также функции являются ключевым способом определения интерфейсов, чтобы программисты могли делиться своим кодом.",
+    "body": [
+      {
+        "subtitle": "How do you write functions in Python?  ",
+        "subtitleTm": "Python-da funksiyalary nädip ýazmak bolýar?",
+        "subtitleRu": "Как писать функции в Python?",
+        "subdescription": "As we have seen on previous tutorials, Python makes use of blocks.\nA block is a area of code of written in the format of:",
+        "subdescriptionTm": "Öňki derslerde gördügimiz ýaly, Python kod bloklaryny ulanýar.\nBlok — aşakdaky formatda ýazylan kod sebitidir:",
+        "subdescriptionRu": "Как мы видели в предыдущих уроках, Python использует блоки кода.\nБлок — это участок кода, написанный в следующем формате:",
+        "code": "block_head:\n    1st block line\n    2nd block line\n    ..."
+      },
+      {
+        "subtitle": "",
+        "subdescription": "Where a block line is more Python code (even another block), and the block head is of the following format: block_keyword block_name(argument1,argument2, ...) Block keywords you already know are \"if\", \"for\", and \"while\".\nFunctions in python are defined using the block keyword \"def\", followed with the function's name as the block's name. For example:",
+        "subdescriptionTm": "Bir blok setiri has Python kody bolup biler (başga blok hem), we blok başlygy aşakdaky formatda bolýar: block_keyword block_name(argument1,argument2, ...) Siz eýýäm \"if\", \"for\", we \"while\" blok açar sözlerini bilýärsiňiz.\nPython-daky funksiýalar \"def\" blok açar sözi bilen kesgitlenýär, soňra funksiýanyň ady blok ady hökmünde gelýär. Mysal üçin:",
+        "subdescriptionRu": "Где строка блока — это больше Python кода (даже другой блок), а заголовок блока имеет следующий формат: block_keyword block_name(argument1,argument2, ...) Ключевые слова блока, которые вы уже знаете: \"if\", \"for\" и \"while\".\nФункции в Python определяются с помощью ключевого слова блока \"def\", за которым следует имя функции как имя блока. Например:",
+        "code": "def my_function():\n    print(\"Hello From My Function!\")"
+      },
+      {
+        "subtitle": "",
+        "subdescription": "Functions may also receive arguments (variables passed from the caller to the function). For example:",
+        "subdescriptionTm": "Funksiýalar hem argumentleri alyp biler (çagyryjy tarapyndan funksiýa berilýän üýtgeýänler). Mysal üçin:",
+        "subdescriptionRu": "Функции также могут принимать аргументы (переменные, передаваемые вызвавшим кодом в функцию). Например:",
+        "code": "def my_function_with_args(username, greeting):\n    print(\"Hello, %s , From My Function!, I wish you %s\"%(username, greeting))"
+      },
+      {
+        "subtitle": "",
+        "subdescription": "Functions may return a value to the caller, using the keyword- 'return'. For example:",
+        "subdescriptionTm": "Funksiýalar 'return' açar sözi arkaly çagyryja bir baha ýa-da netije gaýtaryp biler. Mysal üçin:",
+        "subdescriptionRu": "Функции могут возвращать значение вызывающему коду, используя ключевое слово 'return'. Например:",
+        "code": "def sum_two_numbers(a, b):\n    return a + b"
+      },
+      {
+        "subtitle": "How do you call functions in Python?",
+        "subtitleTm": "Python-da funksiyalary nädip çagyrmaly?",
+        "subtitleRu": "Как вы вызываете функции в Python?",
+        "subdescription": "Simply write the function's name followed by (), placing any required arguments within the brackets. For example, lets call the functions written above (in the previous example):",
+        "subdescriptionTm": "Funksiýanyň adyny ýazyp, soňra (), zerur argumentleri möçberde goýuň. Mysal üçin, öňki mysalda ýazylan funksiyalary çagyralyň:",
+        "subdescriptionRu": "Просто напишите имя функции, за которым следуют (), поместив необходимые аргументы внутри скобок. Например, вызовем функции, написанные выше (в предыдущем примере):",
+        "code": "# Define our 3 functions\ndef my_function():\n    print(\"Hello From My Function!\")\n\ndef my_function_with_args(username, greeting):\n    print(\"Hello, %s, From My Function!, I wish you %s\"%(username, greeting))\n\ndef sum_two_numbers(a, b):\n    return a + b\n\n# print(a simple greeting)\nmy_function()\n\n#prints - \"Hello, John Doe, From My Function!, I wish you a great year!\"\nmy_function_with_args(\"John Doe\", \"a great year!\")\n\n# after this line x will hold the value 3!\nx = sum_two_numbers(1,2)"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "title": "Classes and Objects",
+    "titleTm": "Klaslar we Obýektler",
+    "titleRu": "Классы и Объекты",
+    "description": "classes and objects",
+    "descriptionTm": "klaslar we obýektler",
+    "descriptionRu": "классы и объекты",
+    "progress": 0,
+    "text": "Objects are an encapsulation of variables and functions into a single entity. Objects get their variables and functions from classes. Classes are essentially a template to create your objects.",
+    "textTm": "Obýektler üýtgeýänler we funksiýalary bir bitewi birlikde jemleýän bir gurluşdyr. Obýektler üýtgeýänlerini we funksiýalaryny klaslardan alýarlar. Sınıflar esasan hem obýektleriňizi döretmek üçin şablondyr.",
+    "textRu": "Объекты — это инкапсуляция переменных и функций в одной сущности. Объекты получают свои переменные и функции из классов. Классы по сути являются шаблоном для создания ваших объектов.",
+    "body": [
+      {
+        "subtitle": "",
+        "subdescription": "A very basic class would look something like this:",
+        "subdescriptionTm": "Örän ýönekeý bir klas şeýleräk görünýär:",
+        "subdescriptionRu": "Очень простой класс выглядел бы примерно так:",
+        "code": "class MyClass:\n    variable = \"blah\"\n\n    def function(self):\n        print(\"This is a message inside the class.\")"
+      },
+      {
+        "subtitle": "",
+        "subdescription": "We'll explain why you have to include that \"self\" as a parameter a little bit later. First, to assign the above class(template) to an object you would do the following:",
+        "subdescriptionTm": "“self” parametrini näme üçin goşmalylygyňyzy biraz soň düşündireris. Ilki bilen, ýokardaky klas (şablon) obýekte bellemek üçin aşakdakyny edersiňiz:",
+        "subdescriptionRu": "Мы немного позже объясним, почему нужно включать этот параметр \"self\". Сначала, чтобы присвоить вышеуказанный класс (шаблон) объекту, вы делаете следующее:",
+        "code": "class MyClass:\n    variable = \"blah\"\n\n    def function(self):\n        print(\"This is a message inside the class.\")\n\nmyobjectx = MyClass()"
+      },
+      {
+        "subtitle": "",
+        "subdescription": "Now the variable \"myobjectx\" holds an object of the class \"MyClass\" that contains the variable and the function defined within the class called \"MyClass\".",
+        "subdescriptionTm": "Indi \"myobjectx\" üýtgeýji \"MyClass\" klasynyň obýektini saklaýar, bu obýekte klasda kesgitlenen üýtgeýji we funksiýa bar, ady \"MyClass\".",
+        "subdescriptionRu": "Теперь переменная \"myobjectx\" содержит объект класса \"MyClass\", который включает переменную и функцию, определённые внутри класса с названием \"MyClass\".",
+        "code": ""
+      },
+      {
+        "subtitle": "Accessing Object Variables",
+        "subtitleTm": "Obýekt üýtgeýjilerine girmegi",
+        "subtitleRu": "Доступ к переменным объекта",
+        "subdescription": "To access the variable inside of the newly created object \"myobjectx\" you would do the following:",
+        "subdescriptionTm": "Täze döredilen \"myobjectx\" obýektiniň içindäki üýtgeýjiň üstünden girmegi üçin aşakdakyny edersiňiz:",
+        "subdescriptionRu": "Чтобы получить доступ к переменной внутри вновь созданного объекта \"myobjectx\", вы делаете следующее:",
+        "code": "class MyClass:\n    variable = \"blah\"\n\n    def function(self):\n        print(\"This is a message inside the class.\")\n\nmyobjectx = MyClass()\n\nmyobjectx.variable"
+      },
+      {
+        "subtitle": "",
+        "subdescription": "So for instance the below would output the string \"blah\":",
+        "subdescriptionTm": "Mysal üçin aşakdakyny çap ederse, \"blah\" setiri çykarylar:",
+        "subdescriptionRu": "Например, ниже будет выведена строка \"blah\":",
+        "code": "class MyClass:\n    variable = \"blah\"\n\n    def function(self):\n        print(\"This is a message inside the class.\")\n\nmyobjectx = MyClass()\n\nprint(myobjectx.variable)"
+      },
+      {
+        "subtitle": "",
+        "subdescription": "You can create multiple different objects that are of the same class(have the same variables and functions defined). However, each object contains independent copies of the variables defined in the class. For instance, if we were to define another object with the \"MyClass\" class and then change the string in the variable above:",
+        "subdescriptionTm": "Siz birmeňzeş klasdan (şol bir üýtgeýjiler we funksiýalar kesgitlenen) birnäçe dürli obýekt döredip bilersiňiz. Emma her bir obýekt klasda kesgitlenen üýtgeýjileriň garaşsyz nusgalaryny öz içine alýar. Mysal üçin, başga bir obýekti \"MyClass\" klas bilen kesgitlesen we soň ýokardaky üýtgeýjideki setiri üýtgerseniz:",
+        "subdescriptionRu": "Вы можете создать несколько разных объектов одного класса (с одинаковыми переменными и функциями). Однако каждый объект содержит независимые копии переменных, определённых в классе. Например, если мы определим ещё один объект с классом \"MyClass\" и затем изменим строку в переменной выше:",
+        "code": "class MyClass:\n    variable = \"blah\"\n\n    def function(self):\n        print(\"This is a message inside the class.\")\n\nmyobjectx = MyClass()\nmyobjecty = MyClass()\n\nmyobjecty.variable = \"yackity\"\n\n# Then print out both values\nprint(myobjectx.variable)\nprint(myobjecty.variable)"
+      },
+      {
+        "subtitle": "Accessing Object Functions",
+        "subtitleTm": "Obýekt funksiýalaryna girmegi",
+        "subtitleRu": "Доступ к функциям объекта",
+        "subdescription": "To access a function inside of an object you use notation similar to accessing a variable:",
+        "subdescriptionTm": "Obýektiň içindäki funksiýa girmegi üçin üýtgeýji girmegi ýaly bellik ulanylýar:",
+        "subdescriptionRu": "Чтобы получить доступ к функции внутри объекта, используется обозначение, похожее на доступ к переменной:",
+        "code": "class MyClass:\n    variable = \"blah\"\n\n    def function(self):\n        print(\"This is a message inside the class.\")\n\nmyobjectx = MyClass()\n\nmyobjectx.function()"
+      },
+      {
+        "subtitle": "",
+        "subdescription": "The above would print out the message, \"This is a message inside the class.\"",
+        "subdescriptionTm": "Ýokardaky programma şu habary çykarar: \"This is a message inside the class.\"",
+        "subdescriptionRu": "Вышеуказанное выведет сообщение: \"This is a message inside the class.\"",
+        "code": ""
+      },
+      {
+        "subtitle": "init()",
+        "subdescription": "The __init__() function, is a special function that is called when the class is being initiated. It's used for assigning values in a class.",
+        "subdescriptionTm": "__init__() funksiýasy, klas işläp başlanda çagrylýan aýratyn funksiýadyr. Ol klasda gymmatlyklary belliklemek üçin ulanylýar.",
+        "subdescriptionRu": "Функция __init__() — это специальная функция, которая вызывается при инициализации класса. Она используется для присвоения значений в классе.",
+        "code": "class NumberHolder:\n\n   def __init__(self, number):\n       self.number = number\n\n   def returnNumber(self):\n       return self.number\n\nvar = NumberHolder(7)\nprint(var.returnNumber()) #Prints '7'"
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "title": "Modules and Packages",
+    "titleTm": "Modullar we Paketler",
+    "titleRu": "Модули и Пакеты",
+    "description": "import, standard library",
+    "progress": 0,
+    "text": "In programming, a module is a piece of software that has a specific functionality. For example, when building a ping pong game, one module may be responsible for the game logic, and another module draws the game on the screen. Each module consists of a different file, which may be edited separately.",
+    "textTm": "Programmirlämekde modul belli bir funksiýany ýerine ýetirýän bir programma bölegi bolup durýar. Mysal üçin, ping-pong oýunyny döredende, bir modul oýunyň logikasyna jogapkär bolup biler, başga bir modul oýuny ekranda çykarýar. Her modul başga bir faýldan ybarat bolup, aýratyn üýtgedilip bilner.",
+    "textRu": "В программировании модуль — это часть программного обеспечения с определённой функциональностью. Например, при создании игры в пинг-понг один модуль может отвечать за логику игры, а другой — за отображение игры на экране. Каждый модуль состоит из отдельного файла, который можно редактировать отдельно.",
+    "body": [
+      {
+        "subtitle": "Writing modules",
+        "subtitleTm": "Modullary ýazmak",
+        "subtitleRu": "Создание модулей",
+        "subdescription": "Modules in Python are just Python files with a .py extension. The name of the module is the same as the file name. A Python module can have a set of functions, classes, or variables defined and implemented. The example above includes two files:\n\nmygame/\n\n    mygame/game.py\n\n    mygame/draw.py\n\nThe Python script game.py implements the game. It uses the function draw_game from the file draw.py, or in other words, the draw module that implements the logic for drawing the game on the screen.\n\nModules are imported from other modules using the import command. In this example, the game.py script may look something like this:",
+        "subdescriptionTm": "Python-däki modullar diňe .py uzantysy bolan Python faýllarydyr. Modul ady faýl ady bilen gabat gelýär. Python moduly kesgitlenen we ýerine ýetirilýän funksiýalaryň, klaslaryň ýa-da üýtgeýjileriň toplumyny öz içine alyp biler. Ýokardaky mysal iki faýly öz içine alýar:\n\nmygame/\n\n    mygame/game.py\n\n    mygame/draw.py\n\nPython skripti game.py oýuny ýerine ýetirýär. Ol draw.py faýlyndaky draw_game funksiyasyny ulanýar, ýa-da başga aýdylanda, oýuny ekranda çykarýan logikany ýerine ýetirýän draw modulyny ulanýar.\n\nModullar import buýrugy arkaly beýleki modullardan import edilýär. Bu mysalda game.py skripti şeýleräk görünip biler:",
+        "subdescriptionRu": "Модули в Python — это просто файлы Python с расширением .py. Имя модуля совпадает с именем файла. Python-модуль может содержать набор функций, классов или переменных, определённых и реализованных. Пример выше включает два файла:\n\nmygame/\n\n    mygame/game.py\n\n    mygame/draw.py\n\nСкрипт Python game.py реализует игру. Он использует функцию draw_game из файла draw.py, другими словами, модуль draw, который реализует логику отображения игры на экране.\n\nМодули импортируются из других модулей с помощью команды import. В этом примере скрипт game.py может выглядеть примерно так:",
+        "code": "# game.py\n# import the draw module\nimport draw\n\ndef play_game():\n    ...\n\ndef main():\n    result = play_game()\n    draw.draw_game(result)\n\n# this means that if this script is executed, then \n# main() will be executed\nif __name__ == '__main__':\n    main()"
+      },
+      {
+        "subtitle": "",
+        "subdescription": "The draw module may look something like this:",
+        "subdescriptionTm": "Draw moduly şeýleräk görünip biler:",
+        "subdescriptionRu": "Модуль draw может выглядеть примерно так:",
+        "code": "# draw.py\n\ndef draw_game():\n    ...\n\ndef clear_screen(screen):\n    ..."
+      },
+      {
+        "subtitle": "",
+        "subdescription": "In this example, the game module imports the draw module, which enables it to use functions implemented in that module. The main function uses the local function play_game to run the game, and then draws the result of the game using a function implemented in the draw module called draw_game. To use the function draw_game from the draw module, we need to specify in which module the function is implemented, using the dot operator. To reference the draw_game function from the game module, we need to import the draw module and then call draw.draw_game().\n\nWhen the import draw directive runs, the Python interpreter looks for a file in the directory in which the script was executed with the module name and a .py suffix. In this case it will look for draw.py. If it is found, it will be imported. If it's not found, it will continue looking for built-in modules.\n\nYou may have noticed that when importing a module, a .pyc file is created. This is a compiled Python file. Python compiles files into Python bytecode so that it won't have to parse the files each time modules are loaded. If a .pyc file exists, it gets loaded instead of the .py file. This process is transparent to the user.",
+        "subdescriptionTm": "Bu mysalda game moduly draw modulyny import edýär we ol modulda ýerine ýetirilen funksiýalary ulanmak mümkinçiligini berýär. Esasy funksiýa ýerli play_game funksiyasyny ulanyp oýuny işledýär we soň oýunyň netijesini draw modulynda ýerine ýetirilen draw_game funksiyasyny ulanyp çykarýar. Draw modulyndaky draw_game funksiýasyny ulanmak üçin, dot operatoruny ulanyp, funksiýanyň haýsy modulda ýerine ýetirilendigini kesgitlemeli. Game modulyndan draw_game funksiýasyna ýüz tutmak üçin draw modulyny import edip, soňra draw.draw_game() çagyrmaly.\n\nImport draw buýrugy işläp başlanda, Python interpretatory skript işledilen katalogda modul ady we .py uzantysy bilen faýl gözleýär. Bu ýagdaýda draw.py faýly gözlenýär. Eger tapylsa, import edilýär. Tapylmasa, Python gurşawy modullary gözlemäge dowam edýär.\n\nSiz moduly import edeniňizde .pyc faýl döredilýändigini görüp bilersiňiz. Bu kompýýuterde taýýarlanan Python faýlydyr. Python faýllary Python bytecode-a kompýýutirleýär, şonda modullar her gezek ýüklenende faýllary täzeden parse etmeli bolmaýar. Eger .pyc faýly bar bolsa, ol .py faýlynyň ýerine ýüklenýär. Bu proses ulanyja görünmezdir.",
+        "subdescriptionRu": "В этом примере модуль game импортирует модуль draw, что позволяет использовать функции, реализованные в этом модуле. Основная функция использует локальную функцию play_game для запуска игры, а затем выводит результат игры с помощью функции draw_game, реализованной в модуле draw. Чтобы использовать функцию draw_game из модуля draw, нужно указать, в каком модуле функция реализована, используя точечный оператор. Чтобы обратиться к функции draw_game из модуля game, необходимо импортировать модуль draw, а затем вызвать draw.draw_game().\n\nКогда выполняется директива import draw, интерпретатор Python ищет файл в директории, где был запущен скрипт, с именем модуля и суффиксом .py. В этом случае он будет искать draw.py. Если файл найден, он импортируется. Если не найден, продолжается поиск встроенных модулей.\n\nВы могли заметить, что при импорте модуля создаётся файл .pyc. Это скомпилированный файл Python. Python компилирует файлы в байт-код Python, чтобы не приходилось парсить файлы каждый раз при загрузке модулей. Если файл .pyc существует, он загружается вместо .py файла. Этот процесс прозрачен для пользователя.",
+        "code": ""
+      },
+      {
+        "subtitle": "Importing module objects to the current namespace",
+        "subtitleTm": "Modul obýektlerini häzirki ad giňişligine import etmek",
+        "subtitleRu": "Импорт объектов модуля в текущее пространство имён",
+        "subdescription": "A namespace is a system where every object is named and can be accessed in Python. We import the function draw_game into the main script's namespace by using the from command.",
+        "subdescriptionTm": "Ad giňişligi – bu her bir obýektiň ady berilen we Python-da elýeterli bolýan ulgamy. Biz draw_game funksiyasyny esasy skriptiň ad giňişligine from buýrugy arkaly import edýäris.",
+        "subdescriptionRu": "Пространство имён — это система, где каждый объект имеет имя и к нему можно обращаться в Python. Мы импортируем функцию draw_game в пространство имён основного скрипта с помощью команды from.",
+        "code": "# game.py\n# import the draw module\nfrom draw import draw_game\n\ndef main():\n    result = play_game()\n    draw_game(result)"
+      },
+      {
+        "subtitle": "",
+        "subdescription": "You may have noticed that in this example, the name of the module does not precede draw_game, because we've specified the module name using the import command.\nThe advantages of this notation is that you don't have to reference the module over and over. However, a namespace cannot have two objects with the same name, so the import command may replace an existing object in the namespace.",
+        "subdescriptionTm": "Bu mysalda modul adynyň draw_game-den öň gelmeýändigini gören bolmagyňyz mümkin, sebäbi biz modul adyny import buýrugy arkaly kesgitledik.\nBu bellik görnüşiniň artykmaçlygy şundadyr: modul bilen gaýtadan-gaýtadan ýüz tutmaly däl. Emma ad giňişliginde iki obýektiň birmeňzeş ady bolup bilmez, şonuň üçin import buýrugy ad giňişligindäki bar bolan obýekti çalşyp biler.",
+        "subdescriptionRu": "Вы могли заметить, что в этом примере имя модуля не предшествует draw_game, потому что мы указали имя модуля с помощью команды import.\nПреимущество такого обозначения в том, что не нужно постоянно ссылаться на модуль. Однако в пространстве имён не может быть двух объектов с одинаковым именем, поэтому команда import может заменить существующий объект в пространстве имён.",
+        "code": ""
+      },
+      {
+        "subtitle": "Importing all objects from a module",
+        "subtitleTm": "Moduldaky ähli obýektleri import etmek",
+        "subtitleRu": "Импорт всех объектов из модуля",
+        "subdescription": "You can use the import * command to import all the objects in a module like this:",
+        "subdescriptionTm": "Moduldaky ähli obýektleri import etmek üçin import * buýrugyny şeýleräk ulanyp bilersiňiz:",
+        "subdescriptionRu": "Вы можете использовать команду import *, чтобы импортировать все объекты из модуля следующим образом:",
+        "code": "# game.py\n# import the draw module\nfrom draw import *\n\ndef main():\n    result = play_game()\n    draw_game(result)"
+      },
+      {
+        "subtitle": "",
+        "subdescription": "This might be a bit risky as changes in the module may affect the module which imports it, but it is shorter, and doesn't require you to specify every object you want to import from the module.",
+        "subdescriptionTm": "Bu biraz töwekgelçilikli bolup biler, sebäbi moduldaky üýtgeşmeler ony import edýän modula täsir edip biler, ýöne bu gysga we moduldan import etmek isleýän ähli obýektleri kesgitlemegiňizi talap etmeýär.",
+        "subdescriptionRu": "Это может быть немного рискованно, так как изменения в модуле могут повлиять на модуль, который его импортирует, но это короче и не требует указывать каждый объект, который вы хотите импортировать из модуля.",
+        "code": ""
+      },
+      {
+        "subtitle": "Custom import name",
+        "subtitleTm": "Özbaşdak import ady",
+        "subtitleRu": "Собственное имя при импорте",
+        "subdescription": "Modules may be loaded under any name you want. This is useful when importing a module conditionally to use the same name in the rest of the code.\n\nFor example, if you have two draw modules with slighty different names, you may do the following:",
+        "subdescriptionTm": "Modullar islendik isleýän adyňyz bilen ýüklenip bilner. Bu, modul şertli ýagdaýda import edilende we kodyň galan böleginde şol bir ady ulanmak isleýän wagty peýdalydyr.\n\nMysal üçin, eger iki draw modulynyň ady biraz tapawutly bolsa, şeýleräk edip bilersiňiz:",
+        "subdescriptionRu": "Модули могут быть загружены под любым именем, которое вы хотите. Это полезно при условном импорте модуля, чтобы использовать одно и то же имя в остальной части кода.\n\nНапример, если у вас есть два модуля draw с немного разными именами, вы можете сделать следующее:",
+        "code": "# game.py\n# import the draw module\nif visual_mode:\n    # in visual mode, we draw using graphics\n    import draw_visual as draw\nelse:\n    # in textual mode, we print out text\n    import draw_textual as draw\n\ndef main():\n    result = play_game()\n    # this can either be visual or textual depending on visual_mode\n    draw.draw_game(result)"
+      },
+      {
+        "subtitle": "Module initialization",
+        "subtitleTm": "Modulyň işläp başlatyşy",
+        "subtitleRu": "Инициализация модуля",
+        "subdescription": "The first time a module is loaded into a running Python script, it is initialized by executing the code in the module once. If another module in your code imports the same module again, it will not be loaded again, so local variables inside the module act as a \"singleton,\" meaning they are initialized only once.\n\nYou can then use this to initialize objects. For example:",
+        "subdescriptionTm": "Modul ilkinji gezek işleýän Python skriptine ýükleneninde, moduldaky kod bir gezek işledilip işläp başlatylýar. Eger kodyňyzdaky başga bir modul şol bir moduly täzeden import ederse, ol täzeden ýüklenmez, şonuň üçin modul içindäki ýerli üýtgeýjiler \"singleton\" häsiýetini edýär, ýagny diňe bir gezek işläp başlatylýar.\n\nŞu zady obýektleri işläp başlatmak üçin ulanyp bilersiňiz. Mysal üçin:",
+        "subdescriptionRu": "При первом загрузке модуля в работающий скрипт Python он инициализируется путем однократного выполнения кода модуля. Если другой модуль в вашем коде импортирует тот же модуль снова, он не будет загружен повторно, поэтому локальные переменные внутри модуля ведут себя как \"singleton\", то есть инициализируются только один раз.\n\nВы можете использовать это для инициализации объектов. Например:",
+        "code": "# draw.py\n\ndef draw_game():\n    # when clearing the screen we can use the main screen object initialized in this module\n    clear_screen(main_screen)\n    ...\n\ndef clear_screen(screen):\n    ...\n\nclass Screen():\n    ...\n\n# initialize main_screen as a singleton\nmain_screen = Screen()"
+      },
+      {
+        "subtitle": "Extending module load path",
+        "subtitleTm": "Modul ýüklemegiň ýoluny giňeltmek",
+        "subtitleRu": "Расширение пути загрузки модуля",
+        "subdescription": "There are a couple of ways to tell the Python interpreter where to look for modules, aside from the default local directory and built-in modules. You can use the environment variable PYTHONPATH to specify additional directories to look for modules like this:",
+        "subdescriptionTm": "Python interpretatoryna modul gözlejek ýerleri görkezmegiň birnäçe ýoly bar, adatdaky ýerli katalog we gurşawy modullardan başga-da. Modul gözlemek üçin goşmaça kataloglary görkezmek üçin PYTHONPATH gurşaw üýtgeýjisini şeýleräk ulanyp bilersiňiz:",
+        "subdescriptionRu": "Существует несколько способов указать интерпретатору Python, где искать модули, помимо стандартного локального каталога и встроенных модулей. Вы можете использовать переменную окружения PYTHONPATH, чтобы указать дополнительные каталоги для поиска модулей следующим образом:",
+        "code": "PYTHONPATH=/foo python game.py"
+      },
+      {
+        "subtitle": "",
+        "subdescription": "This executes game.py, and enables the script to load modules from the foo directory, as well as the local directory.\n\nYou may also use the sys.path.append function. Execute it before running the import command:\n\n    script.py\n\n",
+        "subdescriptionTm": "Bu game.py skriptini işledýär we skriptiň modulary foo katalogyndan hem-de ýerli katalogdan ýüklemegine mümkinçilik berýär.\n\nŞeýle hem sys.path.append funksiyasyny ulanyp bilersiňiz. Ony import buýrugy işlediňden öň ýerine ýetiriň:\n\n    script.py\n\n",
+        "subdescriptionRu": "Это выполняет game.py и позволяет скрипту загружать модули из каталога foo, а также из локального каталога.\n\nВы также можете использовать функцию sys.path.append. Выполните её перед командой import:\n\n    script.py\n\n",
+        "code": "sys.path.append(\"/foo\")"
+      },
+      {
+        "subtitle": "",
+        "subdescription": "Now the foo directory has been added to the list of paths where modules are looked for.",
+        "subdescriptionTm": "Indi foo katalogy modul gözlenýän ýollaryň sanawyna goşuldy.",
+        "subdescriptionRu": "Теперь каталог foo добавлен в список путей, где ищутся модули.",
+        "code": ""
+      },
+      {
+        "subtitle": "Exploring built-in modules",
+        "subtitleTm": "Gurşawy modullary öwrenmek",
+        "subtitleRu": "Изучение встроенных модулей",
+        "subdescription": "Check out the full list of built-in modules in the Python standard library here.\n\nTwo very important functions come in handy when exploring modules in Python - the dir and help functions.\n\nTo import the module urllib, which enables us to create read data from URLs, we import the module:",
+        "subdescriptionTm": "Python standart kitaphanasyndaky gurşawy modullaryň doly sanawyny şu ýerde barlaň.\n\nPython-däki modullary öwrenýän wagty iki örän möhüm funksiýa peýdaly bolýar – dir we help funksiyalary.\n\nURL-lardan maglumat okamak we işlemek üçin urllib modulyny import edýäris:",
+        "subdescriptionRu": "Здесь можно ознакомиться с полным списком встроенных модулей стандартной библиотеки Python.\n\nДве очень важные функции помогают при изучении модулей в Python — функции dir и help.\n\nЧтобы импортировать модуль urllib, который позволяет работать с данными с URL, мы импортируем модуль:",
+        "code": "# import the library\nimport urllib\n\n# use it\nurllib.urlopen(...)"
+      },
+      {
+        "subtitle": "",
+        "subdescription": "We can look for which functions are implemented in each module by using the dir function:",
+        "subdescriptionTm": "Her bir modulda haýsy funksiýalaryň ýerine ýetirilenligini dir funksiyasyny ulanyp barlap bileris:",
+        "subdescriptionRu": "Мы можем узнать, какие функции реализованы в каждом модуле, используя функцию dir:",
+        "code": ">>> import urllib\n>>> dir(urllib)\n['ContentTooShortError', 'FancyURLopener', 'MAXFTPCACHE', 'URLopener', '__all__', '__builtins__', \n'__doc__', '__file__', '__name__', '__package__', '__version__', '_ftperrors', '_get_proxies', \n'_get_proxy_settings', '_have_ssl', '_hexdig', '_hextochr', '_hostprog', '_is_unicode', '_localhost', \n'_noheaders', '_nportprog', '_passwdprog', '_portprog', '_queryprog', '_safe_map', '_safe_quoters', \n'_tagprog', '_thishost', '_typeprog', '_urlopener', '_userprog', '_valueprog', 'addbase', 'addclosehook', \n'addinfo', 'addinfourl', 'always_safe', 'basejoin', 'c', 'ftpcache', 'ftperrors', 'ftpwrapper', 'getproxies', \n'getproxies_environment', 'getproxies_macosx_sysconf', 'i', 'localhost', 'main', 'noheaders', 'os', \n'pathname2url', 'proxy_bypass', 'proxy_bypass_environment', 'proxy_bypass_macosx_sysconf', 'quote', \n'quote_plus', 'reporthook', 'socket', 'splitattr', 'splithost', 'splitnport', 'splitpasswd', 'splitport', \n'splitquery', 'splittag', 'splittype', 'splituser', 'splitvalue', 'ssl', 'string', 'sys', 'test', 'test1', \n'thishost', 'time', 'toBytes', 'unquote', 'unquote_plus', 'unwrap', 'url2pathname', 'urlcleanup', 'urlencode', \n'urlopen', 'urlretrieve']"
+      },
+      {
+        "subtitle": "",
+        "subdescription": "When we find the function in the module we want to use, we can read more about it with the help function, using the Python interpreter:",
+        "subdescriptionTm": "Ulanyp islegimiz funksiýa modulyň içinde tapylanda, Python interpretatoryny ulanyp, help funksýasy bilen onuň hakynda has giňişleýin maglumat alyp bileris:",
+        "subdescriptionRu": "Когда мы находим нужную функцию в модуле, мы можем узнать о ней больше с помощью функции help, используя интерпретатор Python:",
+        "code": "help(urllib.urlopen)"
+      },
+      {
+        "subtitle": "Writing packages",
+        "subdescription": "Packages are namespaces containing multiple packages and modules. They're just directories, but with certain requirements.\n\nEach package in Python is a directory which MUST contain a special file called __init__.py. This file, which can be empty, indicates that the directory it's in is a Python package. That way it can be imported the same way as a module.\n\nIf we create a directory called foo, which marks the package name, we can then create a module inside that package called bar. Then we add the __init__.py file inside the foo directory.\n\nTo use the module bar, we can import it in two ways:",
+        "subdescriptionTm": "Paketler birnäçe paketleri we modullary öz içine alýan ad giňişlikleridir. Olar diňe kataloglar bolup, belli talaplara eýedir.\n\nPython-daky her bir paket katalog bolup, içinde __init__.py atly aýratyn faýl bolmaly. Bu faýl boş bolup biler we katalogyň Python paketi bolandygyny görkezýär. Şuňa görä ol moduly import etmek ýaly import edilip bilner.\n\nEger foo atly katalog döredip, ol paket adyny nyşanlasak, şol paket içinde bar atly modul döredip bileris. Soňra foo katalogynyň içine __init__.py faýlyny goşýarys.\n\nBar modulyny ulanmak üçin ony iki görnüşde import edip bileris:",
+        "subdescriptionRu": "Пакеты — это пространства имён, содержащие несколько пакетов и модулей. Это просто каталоги, но с определёнными требованиями.\n\nКаждый пакет в Python — это каталог, который ДОЛЖЕН содержать специальный файл __init__.py. Этот файл, который может быть пустым, указывает, что каталог является пакетом Python. Таким образом, его можно импортировать так же, как модуль.\n\nЕсли мы создадим каталог с именем foo, который обозначает имя пакета, мы можем создать внутри него модуль bar. Затем добавляем файл __init__.py в каталог foo.\n\nЧтобы использовать модуль bar, его можно импортировать двумя способами:",
+        "code": "import foo.bar"
+      },
+      {
+        "subtitle": "",
+        "subdescription": "or:",
+        "subdescriptionTm": "ýa-da:",
+        "subdescriptionRu": "или:",
+        "code": "from foo import bar"
+      },
+      {
+        "subtitle": "",
+        "subdescription": "In the first example above, we have to use the foo prefix whenever we access the module bar. In the second example, we don't, because we've imported the module to our module's namespace.\nThe __init__.py file can also decide which modules the package exports as the API, while keeping other modules internal, by overriding the __all__ variable like so:",
+        "subdescriptionTm": "Ýokardaky birinji mysalda, bar modulyna ýüz tutanymyzda hemişe foo prefiksini ulanmak zerurdyr. Ikinji mysalda bu gerek däl, sebäbi moduly modulymyz ad giňişligine import etdik.\n__init__.py faýly paketiň haýsy modullary API hökmünde eksport etjekdigini kesgitlemäge, beýleki modullary içerki saklamaga hem mümkinçilik berýär, __all__ üýtgeýjisini şuňa meňzeş ýolla täzeden kesgitlemek arkaly:",
+        "subdescriptionRu": "В первом примере выше мы должны использовать префикс foo каждый раз при обращении к модулю bar. Во втором примере это не требуется, так как мы импортировали модуль в пространство имён нашего модуля.\nФайл __init__.py также может решать, какие модули пакет экспортирует как API, оставляя другие модули внутренними, переопределяя переменную __all__ следующим образом:",
+        "code": "__init__.py:\n\n__all__ = [\"bar\"]"
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "title": "Input and Output",
+    "titleTm": "Input we Output",
+    "titleRu": "Ввод и вывод",
+    "description": "input and output",
+    "descriptionTm": "input we output",
+    "descriptionRu": "ввод и вывод",
+    "progress": 0,
+    "text": "Taking Input and showing Output in required way plays an important role in interactive coding. So lets focus on input and output of various data types.",
+    "textTm": "Gerekli görnüşde input almak we output görkezmek interaktiw kodlamada möhüm orun eýeleýär. Şonuň üçin dürli maglumat tiplarynyň input we output-na ünsi jemläris.",
+    "textRu": "Приём ввода и вывод данных в требуемом виде играет важную роль в интерактивном кодировании. Поэтому сосредоточимся на вводе и выводе различных типов данных.",
+    "body": [
+      {
+        "subtitle": "input()",
+        "subdescription": "this is used to take input as long as it reached end of line.Note that there should not be any spaces.Taking input terminates with a new line character and if there are any spaces in the input line it results in error",
+        "subdescriptionTm": "Bu, setiriň ahyryna çenli input almak üçin ulanylýar. Boşluklaryň ýokdugyna üns beriň. Input almak täze setir belgisi bilen tamamlanýar, eger input setirinde boşluklar bar bolsa, bu säwlik döreder.",
+        "subdescriptionRu": "Это используется для ввода данных до конца строки. Обратите внимание, что пробелов быть не должно. Ввод данных завершается символом новой строки, и если в строке ввода есть пробелы, это приводит к ошибке.",
+        "code": "# Prints out the input received from stdin\nastring=input()# give hello as input\nprint(input())"
+      },
+      {
+        "subtitle": "",
+        "subdescription": "after taking the input we can convert them to our required data type using functions like int(),float(),str()",
+        "subdescriptionTm": "Input alanymyzdan soň, ony islenýän maglumat görnüşine int(), float(), str() ýaly funksiyalar arkaly öwürip bileris.",
+        "subdescriptionRu": "После ввода данных мы можем преобразовать их в нужный тип с помощью функций int(), float(), str()",
+        "code": "num=int(input())\nprint num\ndecimalnum=input()\ndecimalnum=float(input()\nprint decimalnum"
+      },
+      {
+        "subtitle": "how to take two two or more data types as input from a single line separated by spaces?",
+        "subtitleTm": "Bir setirdäki birnäçe maglumat görnüşini boşluk bilen aýryp input hökmünde nähili almak?",
+        "subtitleRu": "Как принять два или более типов данных с одной строки, разделённой пробелами?",
+        "subdescription": "Here we make use split() and map() functions",
+        "subdescriptionTm": "Bunda split() we map() funksiyalaryny ulanýarys",
+        "subdescriptionRu": "Здесь мы используем функции split() и map()",
+        "code": "#give two integers in first line and more than two integers in third line\na, b = map(int, input().split())\narray = input().split()\nsum = 0\nfor each in array:\n    sum = sum + int(each)\nprint(a, b, sum)  # prints first two integers from first line and sum of integers of second line"
+      },
+      {
+        "subtitle": "Output formatting",
+        "subtitleTm": "Output formatlamak",
+        "subtitleRu": "Форматирование вывода",
+        "subdescription": "You might have already noticed that print statement automatically inserts a new line. The use of comma like in the above code prints the values in a single line separated by a space. The sys module provides various functions for output formatting but here we learn how to use basic knowledge of formatting to output in our required way. Lets see a few examples to learn output formatting",
+        "subdescriptionTm": "Siz belki hem görüpdirsiňiz, print beýannamasy awtomatiki ýagdaýda täze setir goşýar. Ýokardaky kodyň içinde ulanylan goşmaça ýazgylar (comma) bahalary bir setirde, boşluk bilen aýrylyp çykarmaga mümkinçilik berýär. sys moduly output formatlamak üçin dürli funksiyalary berýär, ýöne biz bu ýerde formatlamaň esasy bilimlerini ulanmagy öwrenip, islenýän görnüşde output görkezip öwreneris. Gel, birnäçe mysal görüp, output formatlamany öwreneliň.",
+        "subdescriptionRu": "Вы, возможно, уже заметили, что оператор print автоматически вставляет новую строку. Использование запятой, как в приведённом коде, выводит значения в одной строке, разделённые пробелом. Модуль sys предоставляет различные функции для форматирования вывода, но здесь мы учимся использовать базовые знания форматирования для вывода данных в нужном виде. Давайте посмотрим несколько примеров, чтобы изучить форматирование вывода.",
+        "code": "a = 5\nb = 0.63\nc = \"hello\"\nprint(\"a is : %d, b is %0.4f,c is %s\" % (a,b,c))"
+      },
+      {
+        "subtitle": "",
+        "subdescription": "The output must be self explanatory.",
+        "subdescriptionTm": "Output özü düşündiriji bolmaly.",
+        "subdescriptionRu": "Вывод должен быть самодостаточным и понятным.",
+        "code": ""
+      }
+    ]
+  }
+]
