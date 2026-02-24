@@ -41,11 +41,11 @@ class MainActivity : ComponentActivity() {
                     // твой контент
 
 
-                    if (showSplash) {
-                        SplashScreen(onFinished = { showSplash = false })
-                    }else {
+//                    if (showSplash) {
+//                        SplashScreen(onFinished = { showSplash = false })
+//                    }else {
                         MainScreen(lyricist)
-                    }
+//                    }
                 }
             }
         }

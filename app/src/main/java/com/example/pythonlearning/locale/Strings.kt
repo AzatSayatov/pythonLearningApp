@@ -30,7 +30,8 @@ data class Strings(
     val questionNo :( index: Int,count: Int) -> String,
     val practiceTasks: String,
     val taskDescription: String,
-    val hint: String
+    val hint: String,
+    val books: String
 )
 
 
@@ -60,7 +61,8 @@ val RuStrings = Strings(
     questionNo = { index, count -> "Вопрос ${index} из ${count}" },
     practiceTasks = "Практические задания",
     taskDescription = "Условие",
-    hint = "Подсказка"
+    hint = "Подсказка",
+    books = "Книги"
 )
 
 
@@ -90,7 +92,8 @@ val EnStrings = Strings(
     questionNo = { index, count -> "Question ${index} from ${count}" },
     practiceTasks = "Practice Tasks",
     taskDescription = "Description",
-    hint = "Hint"
+    hint = "Hint",
+    books = "Books"
 )
 
 @LyricistStrings(languageTag = Locales.TM, default = true)
@@ -119,5 +122,6 @@ val TmStrings = Strings(
     questionNo = { index, count -> "$count soragdan $index - nji(y)" },
     practiceTasks = "Amallary ýerine ýetiriň",
     taskDescription = "Şerti",
-    hint = "Kömek üçin"
+    hint = "Kömek üçin",
+    books = "Kitaplar"
 )

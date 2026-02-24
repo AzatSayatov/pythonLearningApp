@@ -36,13 +36,14 @@ fun MainScreen(lyricist: Lyricist<Strings>) {
             modifier = Modifier.padding(padding)
         ) {
             composable("lessons") { LessonsScreen(navController) }
+            composable("books") { BooksScreen(navController) }
             composable("tasks") {
                 TasksScreen(
                     onTaskClick = { task ->
                         navController.navigate("task_detail/${task.id}")
                     },
                     onOpenBook = {
-                        navController.navigate("pdf_viewer")
+                        navController.navigate("books")
                     }
                 )
             }
@@ -64,9 +65,12 @@ fun MainScreen(lyricist: Lyricist<Strings>) {
                     navController.navigate("tests")
                 }
             }
-            composable("pdf_viewer") {
+            composable("pdf_viewer/{fileName}/{title}") { backStackEntry ->
+                val fileName = backStackEntry.arguments?.getString("fileName") ?: "python_crash_course.pdf"
+                val title = backStackEntry.arguments?.getString("title") ?: "python_crash_course.pdf"
                 PdfViewerScreen(
-                    pdfFileName = "python_crash_course.pdf",
+                    pdfFileName = fileName,
+                    title = title,
                     onBack = { navController.popBackStack() }
                 )
             }

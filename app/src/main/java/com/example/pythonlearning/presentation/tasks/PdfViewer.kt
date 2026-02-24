@@ -27,6 +27,7 @@ import java.io.File
 @Composable
 fun PdfViewerScreen(
     pdfFileName: String = "python_crash_course.pdf",
+    title: String = "Python Crash Course",
     onBack: () -> Unit = {}
 ) {
     val context = LocalContext.current
@@ -76,7 +77,7 @@ fun PdfViewerScreen(
         containerColor = Color.White, // ✅ фон всего экрана белый
         topBar = {
             TopAppBar(
-                title = { Text("Python Crash Course", color = Color.Black) },
+                title = { Text(title, color = Color.Black) },
                 navigationIcon = {
                     IconButton(onClick = onBack) {
                         Icon(
