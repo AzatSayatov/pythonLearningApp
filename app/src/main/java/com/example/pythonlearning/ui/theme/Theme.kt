@@ -14,14 +14,14 @@ import androidx.compose.ui.platform.LocalContext
 
 private val DarkColorScheme = darkColorScheme(
     primary = BluePrimary,
-    secondary = SecondaryBg,
-    tertiary = WhiteBg,
-    background = WhiteBg,
-    surface = BlackBG,
-    onBackground = Color(0xFF1C1B1F),
-    onSurface = Color(0xFF1C1B1F),
+    secondary = DarkBg,
+    tertiary = DarkCard,
+    background = DarkBg,
+    surface = Color.White,
+    onBackground = Color.White,
+    onSurface = Color.White,
     onPrimary = Color.White,
-    onSecondary = Color.White,
+    onSecondary = Color(0xFFB0B0D0),
     onTertiary = Color.White,
 )
 
@@ -41,7 +41,6 @@ private val LightColorScheme = lightColorScheme(
 @Composable
 fun PythonLearningTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
-    // Dynamic color is available on Android 12+
     dynamicColor: Boolean = false,
     content: @Composable () -> Unit
 ) {
@@ -50,7 +49,6 @@ fun PythonLearningTheme(
             val context = LocalContext.current
             if (darkTheme) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
         }
-
         darkTheme -> DarkColorScheme
         else -> LightColorScheme
     }

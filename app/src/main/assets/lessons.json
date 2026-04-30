@@ -748,5 +748,692 @@
         "code": ""
       }
     ]
+  },
+  {
+    "id": 10,
+    "title": "Exception Handling",
+    "titleTm": "Öňünden görülmedik ýagdaýlary dolandyrmak",
+    "titleRu": "Обработка исключений",
+    "description": "try, except, finally",
+    "descriptionTm": "try, except, finally",
+    "descriptionRu": "try, except, finally",
+    "progress": 0,
+    "text": "Exception handling is a mechanism to deal with runtime errors gracefully. Instead of crashing, Python allows you to catch and handle errors using try/except blocks.",
+    "textTm": "Öňünden görülmedik ýagdaýlary dolandyrmak - işleýiş wagtyndaky ýalňyşlyklary özüňize görä çözmek mehanizmi. Python çökmegiň ýerine try/except bloklary arkaly ýalňyşlyklary tutmaga we dolandyrmaga mümkinçilik berýär.",
+    "textRu": "Обработка исключений — механизм для корректной работы с ошибками времени выполнения. Вместо того чтобы аварийно завершить работу, Python позволяет перехватывать и обрабатывать ошибки с помощью блоков try/except.",
+    "body": [
+      {
+        "subtitle": "try and except",
+        "subtitleTm": "try we except",
+        "subtitleRu": "try и except",
+        "subdescription": "Wrap risky code in a try block and handle errors in except:",
+        "subdescriptionTm": "Howply kody try blokyna salyň we ýalňyşlyklary except-de dolandyryň:",
+        "subdescriptionRu": "Оберните рискованный код в блок try и обработайте ошибки в except:",
+        "code": "try:\n    x = int(input('Enter number: '))\n    print(10 / x)\nexcept ZeroDivisionError:\n    print('Cannot divide by zero!')\nexcept ValueError:\n    print('Please enter a valid number!')"
+      },
+      {
+        "subtitle": "finally",
+        "subtitleTm": "finally",
+        "subtitleRu": "finally",
+        "subdescription": "The finally block always executes, whether an error occurred or not:",
+        "subdescriptionTm": "finally blogy ýalňyşlyk bolsun ýa-da bolmasyn hemişe ýerine ýetirilýär:",
+        "subdescriptionRu": "Блок finally всегда выполняется, независимо от того, произошла ошибка или нет:",
+        "code": "try:\n    f = open('file.txt')\n    data = f.read()\nexcept FileNotFoundError:\n    print('File not found')\nfinally:\n    print('Done')"
+      },
+      {
+        "subtitle": "raise",
+        "subtitleTm": "raise",
+        "subtitleRu": "raise",
+        "subdescription": "You can manually raise exceptions:",
+        "subdescriptionTm": "Öňünden görülmedik ýagdaýlary el bilen zyňyp bilersiňiz:",
+        "subdescriptionRu": "Вы можете вручную вызывать исключения:",
+        "code": "def check_age(age):\n    if age < 0:\n        raise ValueError('Age cannot be negative')\n    return age\n\ntry:\n    check_age(-5)\nexcept ValueError as e:\n    print(e)"
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "title": "List Comprehensions",
+    "titleTm": "Sanaw düzmesi",
+    "titleRu": "Генераторы списков",
+    "description": "[x for x in ...]",
+    "descriptionTm": "[x for x in ...]",
+    "descriptionRu": "[x for x in ...]",
+    "progress": 0,
+    "text": "List comprehensions provide a concise way to create lists. They consist of brackets containing an expression followed by a for clause.",
+    "textTm": "Sanaw düzmeleri sanaw döretmegiň gysgaça usulydyr. Olar for bölegi bolan aňlatmany öz içine alýan ýaýlardan ybaratdyr.",
+    "textRu": "Генераторы списков предоставляют лаконичный способ создания списков. Они состоят из выражения в скобках, за которым следует предложение for.",
+    "body": [
+      {
+        "subtitle": "Basic syntax",
+        "subtitleTm": "Esasy sintaksis",
+        "subtitleRu": "Базовый синтаксис",
+        "subdescription": "Create a list of squares:",
+        "subdescriptionTm": "Kwadratlar sanawyny döretmek:",
+        "subdescriptionRu": "Создание списка квадратов:",
+        "code": "# Traditional way\nsquares = []\nfor x in range(10):\n    squares.append(x**2)\n\n# List comprehension\nsquares = [x**2 for x in range(10)]\nprint(squares)"
+      },
+      {
+        "subtitle": "With condition",
+        "subtitleTm": "Şert bilen",
+        "subtitleRu": "С условием",
+        "subdescription": "Filter elements with a condition:",
+        "subdescriptionTm": "Şert bilen elementleri süzüň:",
+        "subdescriptionRu": "Фильтрация элементов с условием:",
+        "code": "# Even numbers\nevens = [x for x in range(20) if x % 2 == 0]\nprint(evens)\n\n# Words longer than 3 chars\nwords = ['hi', 'hello', 'world', 'py']\nlong_words = [w for w in words if len(w) > 3]\nprint(long_words)"
+      },
+      {
+        "subtitle": "Nested comprehensions",
+        "subtitleTm": "Içgin düzmeler",
+        "subtitleRu": "Вложенные генераторы",
+        "subdescription": "Matrix flattening example:",
+        "subdescriptionTm": "Matrisany tekizlemek mysaly:",
+        "subdescriptionRu": "Пример выравнивания матрицы:",
+        "code": "matrix = [[1,2,3],[4,5,6],[7,8,9]]\nflat = [x for row in matrix for x in row]\nprint(flat)"
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "title": "Tuples",
+    "titleTm": "Demetler",
+    "titleRu": "Кортежи",
+    "description": "Immutable sequences",
+    "descriptionTm": "Üýtgedip bolmaýan yzygiderlikler",
+    "descriptionRu": "Неизменяемые последовательности",
+    "progress": 0,
+    "text": "A tuple is a collection which is ordered and unchangeable. Tuples are written with round brackets and cannot be modified after creation.",
+    "textTm": "Demet - tertipleşdirilen we üýtgedip bolmaýan ýygyndydyr. Demetler tegelek ýaýlar bilen ýazylýar we döredilenden soň üýtgedilip bilinmez.",
+    "textRu": "Кортеж — это упорядоченная и неизменяемая коллекция. Кортежи записываются в круглых скобках и не могут быть изменены после создания.",
+    "body": [
+      {
+        "subtitle": "Creating tuples",
+        "subtitleTm": "Demet döretmek",
+        "subtitleRu": "Создание кортежей",
+        "subdescription": "Tuples are immutable lists:",
+        "subdescriptionTm": "Demetler üýtgedip bolmaýan sanawlardyr:",
+        "subdescriptionRu": "Кортежи — это неизменяемые списки:",
+        "code": "t = (1, 2, 3)\nprint(t[0])  # 1\nprint(len(t))  # 3\n\n# Single element tuple needs comma\nsingle = (42,)\nprint(type(single))  # tuple"
+      },
+      {
+        "subtitle": "Unpacking",
+        "subtitleTm": "Açmak",
+        "subtitleRu": "Распаковка",
+        "subdescription": "Tuple unpacking assigns values to variables:",
+        "subdescriptionTm": "Demet açmak bahalary üýtgeýjilere belleýär:",
+        "subdescriptionRu": "Распаковка кортежа присваивает значения переменным:",
+        "code": "point = (3, 5)\nx, y = point\nprint(f'x={x}, y={y}')\n\n# Swap variables\na, b = 10, 20\na, b = b, a\nprint(a, b)  # 20 10"
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "title": "String Methods",
+    "titleTm": "Setir usullary",
+    "titleRu": "Методы строк",
+    "description": "split, join, replace, strip...",
+    "descriptionTm": "split, join, replace, strip...",
+    "descriptionRu": "split, join, replace, strip...",
+    "progress": 0,
+    "text": "Python strings have many built-in methods for manipulation. These methods allow you to search, replace, split, and format strings efficiently.",
+    "textTm": "Python setirlerinde köp sanly gurlan usullar bar. Bu usullar setirleri gözlemäge, çalyşmaga, bölmäge we formatlmaga mümkinçilik berýär.",
+    "textRu": "Python-строки имеют множество встроенных методов для манипуляций. Эти методы позволяют эффективно искать, заменять, разбивать и форматировать строки.",
+    "body": [
+      {
+        "subtitle": "Common string methods",
+        "subtitleTm": "Umumy setir usullary",
+        "subtitleRu": "Общие методы строк",
+        "subdescription": "Essential string operations:",
+        "subdescriptionTm": "Esasy setir amallary:",
+        "subdescriptionRu": "Основные операции со строками:",
+        "code": "s = '  Hello, World!  '\nprint(s.strip())       # 'Hello, World!'\nprint(s.upper())       # '  HELLO, WORLD!  '\nprint(s.lower())       # '  hello, world!  '\nprint(s.replace('World', 'Python'))\nprint(s.strip().split(', '))  # ['Hello', 'World!']"
+      },
+      {
+        "subtitle": "join and split",
+        "subtitleTm": "join we split",
+        "subtitleRu": "join и split",
+        "subdescription": "Splitting and joining strings:",
+        "subdescriptionTm": "Setirleri bölmek we birleşdirmek:",
+        "subdescriptionRu": "Разбивка и объединение строк:",
+        "code": "words = 'python is awesome'\nword_list = words.split()  # ['python', 'is', 'awesome']\nprint(word_list)\n\njoined = '-'.join(word_list)\nprint(joined)  # python-is-awesome"
+      },
+      {
+        "subtitle": "find and startswith",
+        "subtitleTm": "find we startswith",
+        "subtitleRu": "find и startswith",
+        "subdescription": "Searching in strings:",
+        "subdescriptionTm": "Setirlerde gözlemek:",
+        "subdescriptionRu": "Поиск в строках:",
+        "code": "s = 'Python Programming'\nprint(s.find('Pro'))     # 7\nprint(s.startswith('Py'))  # True\nprint(s.endswith('ing'))   # True\nprint('Python' in s)       # True"
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "title": "File I/O",
+    "titleTm": "Faýl bilen işlemek",
+    "titleRu": "Работа с файлами",
+    "description": "open, read, write",
+    "descriptionTm": "open, read, write",
+    "descriptionRu": "open, read, write",
+    "progress": 0,
+    "text": "Python provides built-in functions for reading and writing files. The open() function is used to open a file and returns a file object.",
+    "textTm": "Python faýllary okamak we ýazmak üçin gurlan funksiyalary üpjün edýär. open() funksiyasy faýly açmak we faýl obýekti gaýtarmak üçin ulanylýar.",
+    "textRu": "Python предоставляет встроенные функции для чтения и записи файлов. Функция open() используется для открытия файла и возвращает файловый объект.",
+    "body": [
+      {
+        "subtitle": "Reading files",
+        "subtitleTm": "Faýllary okamak",
+        "subtitleRu": "Чтение файлов",
+        "subdescription": "Use with statement to automatically close files:",
+        "subdescriptionTm": "Faýllary awtomatiki ýapmak üçin with beýannamasyny ulanyň:",
+        "subdescriptionRu": "Используйте оператор with для автоматического закрытия файлов:",
+        "code": "# Reading entire file\nwith open('example.txt', 'r') as f:\n    content = f.read()\n    print(content)\n\n# Reading line by line\nwith open('example.txt', 'r') as f:\n    for line in f:\n        print(line.strip())"
+      },
+      {
+        "subtitle": "Writing files",
+        "subtitleTm": "Faýllara ýazmak",
+        "subtitleRu": "Запись в файлы",
+        "subdescription": "Write and append modes:",
+        "subdescriptionTm": "Ýazmak we goşmak rejimleri:",
+        "subdescriptionRu": "Режимы записи и добавления:",
+        "code": "# Write (overwrites)\nwith open('output.txt', 'w') as f:\n    f.write('Hello\\n')\n    f.write('World\\n')\n\n# Append (adds to end)\nwith open('output.txt', 'a') as f:\n    f.write('Python!\\n')"
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "title": "Lambda Functions",
+    "titleTm": "Lambda funksiyalar",
+    "titleRu": "Лямбда-функции",
+    "description": "Anonymous functions",
+    "descriptionTm": "Atsyz funksiyalar",
+    "descriptionRu": "Анонимные функции",
+    "progress": 0,
+    "text": "A lambda function is a small anonymous function. Lambda functions can take any number of arguments but can only have one expression.",
+    "textTm": "Lambda funksiýa kiçi atsyz funksiýadyr. Lambda funksiyalar islendik sanda argument alyp biler, ýöne diňe bir aňlatmasy bolup biler.",
+    "textRu": "Лямбда-функция — это небольшая анонимная функция. Лямбда-функции могут принимать любое количество аргументов, но содержат только одно выражение.",
+    "body": [
+      {
+        "subtitle": "Basic lambda",
+        "subtitleTm": "Esasy lambda",
+        "subtitleRu": "Базовая лямбда",
+        "subdescription": "Lambda syntax: lambda arguments: expression",
+        "subdescriptionTm": "Lambda sintaksis: lambda argumentler: aňlatma",
+        "subdescriptionRu": "Синтаксис лямбды: lambda аргументы: выражение",
+        "code": "# Regular function\ndef add(x, y):\n    return x + y\n\n# Lambda equivalent\nadd = lambda x, y: x + y\nprint(add(3, 5))  # 8\n\nsquare = lambda x: x**2\nprint(square(4))  # 16"
+      },
+      {
+        "subtitle": "Lambda with map and filter",
+        "subtitleTm": "map we filter bilen lambda",
+        "subtitleRu": "Лямбда с map и filter",
+        "subdescription": "Common use of lambda with higher-order functions:",
+        "subdescriptionTm": "Lambda-ny ýokary derejeli funksiyalar bilen ulanmak:",
+        "subdescriptionRu": "Частое использование лямбды с функциями высшего порядка:",
+        "code": "nums = [1, 2, 3, 4, 5]\n\n# Double each number\ndoubled = list(map(lambda x: x * 2, nums))\nprint(doubled)  # [2, 4, 6, 8, 10]\n\n# Keep only even numbers\nevens = list(filter(lambda x: x % 2 == 0, nums))\nprint(evens)  # [2, 4]"
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "title": "Decorators",
+    "titleTm": "Dekoratorlar",
+    "titleRu": "Декораторы",
+    "description": "@decorator syntax",
+    "descriptionTm": "@dekorator sintaksis",
+    "descriptionRu": "Синтаксис @decorator",
+    "progress": 0,
+    "text": "A decorator is a function that wraps another function to extend its behavior without modifying the original function. They use the @ symbol.",
+    "textTm": "Dekorator - başga bir funksiýany asyl funksiýany üýtgetmezden öz hereketini giňeltmek üçin gurşap alýan funksiýadyr. Olar @ belgisini ulanýar.",
+    "textRu": "Декоратор — это функция, которая оборачивает другую функцию для расширения её поведения без изменения исходной функции. Они используют символ @.",
+    "body": [
+      {
+        "subtitle": "Basic decorator",
+        "subtitleTm": "Esasy dekorator",
+        "subtitleRu": "Базовый декоратор",
+        "subdescription": "Creating and using a decorator:",
+        "subdescriptionTm": "Dekorator döretmek we ulanmak:",
+        "subdescriptionRu": "Создание и использование декоратора:",
+        "code": "def my_decorator(func):\n    def wrapper():\n        print('Before function')\n        func()\n        print('After function')\n    return wrapper\n\n@my_decorator\ndef say_hello():\n    print('Hello!')\n\nsay_hello()"
+      },
+      {
+        "subtitle": "Practical decorators",
+        "subtitleTm": "Amaly dekoratorlar",
+        "subtitleRu": "Практические декораторы",
+        "subdescription": "Timer decorator example:",
+        "subdescriptionTm": "Taýmer dekoratorynyň mysaly:",
+        "subdescriptionRu": "Пример декоратора-таймера:",
+        "code": "import time\n\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        end = time.time()\n        print(f'{func.__name__} took {end-start:.4f}s')\n        return result\n    return wrapper\n\n@timer\ndef slow_function():\n    time.sleep(0.1)\n\nslow_function()"
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "title": "Generators",
+    "titleTm": "Generatorlar",
+    "titleRu": "Генераторы",
+    "description": "yield keyword",
+    "descriptionTm": "yield açar söz",
+    "descriptionRu": "Ключевое слово yield",
+    "progress": 0,
+    "text": "Generators are functions that return an iterator. They use the yield keyword to return values one at a time, making them memory efficient for large sequences.",
+    "textTm": "Generatorlar iterator gaýtarýan funksiyalardyr. Olar her gezek bir baha gaýtarmak üçin yield açar sözüni ulanýar, bu hem uly yzygiderlikler üçin ýady tygşytly ulanmaga kömek edýär.",
+    "textRu": "Генераторы — это функции, возвращающие итератор. Они используют ключевое слово yield для возврата значений по одному, что делает их эффективными по памяти для больших последовательностей.",
+    "body": [
+      {
+        "subtitle": "Creating generators",
+        "subtitleTm": "Generator döretmek",
+        "subtitleRu": "Создание генераторов",
+        "subdescription": "Use yield instead of return:",
+        "subdescriptionTm": "return ýerine yield ulanyň:",
+        "subdescriptionRu": "Используйте yield вместо return:",
+        "code": "def count_up(n):\n    i = 0\n    while i < n:\n        yield i\n        i += 1\n\nfor num in count_up(5):\n    print(num)  # 0, 1, 2, 3, 4\n\n# Generator expression\ngen = (x**2 for x in range(10))\nprint(list(gen))"
+      },
+      {
+        "subtitle": "Infinite generator",
+        "subtitleTm": "Çäksiz generator",
+        "subtitleRu": "Бесконечный генератор",
+        "subdescription": "Generators can be infinite:",
+        "subdescriptionTm": "Generatorlar çäksiz bolup biler:",
+        "subdescriptionRu": "Генераторы могут быть бесконечными:",
+        "code": "def fibonacci():\n    a, b = 0, 1\n    while True:\n        yield a\n        a, b = b, a + b\n\nfib = fibonacci()\nfor _ in range(8):\n    print(next(fib), end=' ')  # 0 1 1 2 3 5 8 13"
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "title": "Regular Expressions",
+    "titleTm": "Kadaly aňlatmalar",
+    "titleRu": "Регулярные выражения",
+    "description": "re module",
+    "descriptionTm": "re moduly",
+    "descriptionRu": "Модуль re",
+    "progress": 0,
+    "text": "Regular expressions (regex) are sequences of characters that define search patterns. Python's re module provides regex support for powerful string searching and manipulation.",
+    "textTm": "Kadaly aňlatmalar (regex) gözleg nusgalaryny kesgitleýän simwollar yzygiderlikleridir. Python-yň re moduly güýçli setir gözlemek we dolandyrmak üçin regex goldawyny üpjün edýär.",
+    "textRu": "Регулярные выражения (regex) — это последовательности символов, определяющие шаблоны поиска. Модуль re в Python обеспечивает поддержку регулярных выражений для мощного поиска и манипуляций со строками.",
+    "body": [
+      {
+        "subtitle": "Basic regex",
+        "subtitleTm": "Esasy regex",
+        "subtitleRu": "Базовые регулярные выражения",
+        "subdescription": "Common regex patterns:",
+        "subdescriptionTm": "Umumy regex nusgalary:",
+        "subdescriptionRu": "Общие шаблоны regex:",
+        "code": "import re\n\ntext = 'Hello World 123'\n\n# Search\nmatch = re.search(r'\\d+', text)\nif match:\n    print(match.group())  # 123\n\n# Find all\nwords = re.findall(r'[A-Z][a-z]+', text)\nprint(words)  # ['Hello', 'World']"
+      },
+      {
+        "subtitle": "Replace and split",
+        "subtitleTm": "Çalyşmak we bölmek",
+        "subtitleRu": "Замена и разбиение",
+        "subdescription": "Using regex for replacements:",
+        "subdescriptionTm": "Çalyşmalar üçin regex ulanmak:",
+        "subdescriptionRu": "Использование regex для замен:",
+        "code": "import re\n\ntext = 'cat bat rat sat'\nresult = re.sub(r'[cbr]at', 'dog', text)\nprint(result)  # dog dog dog sat\n\n# Validate email\nemail = 'test@example.com'\nif re.match(r'^[\\w.-]+@[\\w.-]+\\.\\w+$', email):\n    print('Valid email')"
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "title": "Inheritance",
+    "titleTm": "Miras almak",
+    "titleRu": "Наследование",
+    "description": "OOP: extends parent class",
+    "descriptionTm": "OOP: ata klasdan miras almak",
+    "descriptionRu": "ООП: наследование родительского класса",
+    "progress": 0,
+    "text": "Inheritance allows a class to inherit attributes and methods from another class. The child class inherits all properties of the parent class and can also have its own.",
+    "textTm": "Miras almak klasyň başga bir klasdan atributlary we usullary miras almagyna mümkinçilik berýär. Çaga klas ata klasyn ähli aýratynlyklaryny miras alýar we özüniňkilerem bolup biler.",
+    "textRu": "Наследование позволяет классу наследовать атрибуты и методы от другого класса. Дочерний класс наследует все свойства родительского и может иметь собственные.",
+    "body": [
+      {
+        "subtitle": "Basic inheritance",
+        "subtitleTm": "Esasy miras almak",
+        "subtitleRu": "Базовое наследование",
+        "subdescription": "Animal and Dog example:",
+        "subdescriptionTm": "Haýwan we It mysaly:",
+        "subdescriptionRu": "Пример Animal и Dog:",
+        "code": "class Animal:\n    def __init__(self, name):\n        self.name = name\n    \n    def speak(self):\n        return 'Some sound'\n\nclass Dog(Animal):\n    def speak(self):\n        return f'{self.name} says: Woof!'\n\nclass Cat(Animal):\n    def speak(self):\n        return f'{self.name} says: Meow!'\n\nd = Dog('Rex')\nprint(d.speak())"
+      },
+      {
+        "subtitle": "super()",
+        "subtitleTm": "super()",
+        "subtitleRu": "super()",
+        "subdescription": "Calling parent class methods:",
+        "subdescriptionTm": "Ata klas usullaryny çagyrmak:",
+        "subdescriptionRu": "Вызов методов родительского класса:",
+        "code": "class Vehicle:\n    def __init__(self, brand, speed):\n        self.brand = brand\n        self.speed = speed\n\nclass Car(Vehicle):\n    def __init__(self, brand, speed, doors):\n        super().__init__(brand, speed)\n        self.doors = doors\n    \n    def info(self):\n        return f'{self.brand}: {self.speed}km/h, {self.doors} doors'\n\ncar = Car('Toyota', 180, 4)\nprint(car.info())"
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "title": "Iterators",
+    "titleTm": "Iteratorlar",
+    "titleRu": "Итераторы",
+    "description": "__iter__ and __next__",
+    "descriptionTm": "__iter__ we __next__",
+    "descriptionRu": "__iter__ и __next__",
+    "progress": 0,
+    "text": "An iterator is an object that contains a countable number of values. Iterators implement __iter__() and __next__() methods, allowing traversal of a collection.",
+    "textTm": "Iterator sanap bolýan bahalar sanyny öz içine alýan obýektdir. Iteratorlar ýygyndy arkaly geçmegi mümkin edýän __iter__() we __next__() usullaryny amala aşyrýar.",
+    "textRu": "Итератор — объект, содержащий счётное количество значений. Итераторы реализуют методы __iter__() и __next__(), позволяющие перебирать коллекцию.",
+    "body": [
+      {
+        "subtitle": "Custom iterator",
+        "subtitleTm": "Özel iterator",
+        "subtitleRu": "Пользовательский итератор",
+        "subdescription": "Creating an iterator class:",
+        "subdescriptionTm": "Iterator klasy döretmek:",
+        "subdescriptionRu": "Создание класса итератора:",
+        "code": "class Counter:\n    def __init__(self, low, high):\n        self.current = low\n        self.high = high\n    \n    def __iter__(self):\n        return self\n    \n    def __next__(self):\n        if self.current > self.high:\n            raise StopIteration\n        self.current += 1\n        return self.current - 1\n\nfor n in Counter(1, 5):\n    print(n)"
+      },
+      {
+        "subtitle": "iter() and next()",
+        "subtitleTm": "iter() we next()",
+        "subtitleRu": "iter() и next()",
+        "subdescription": "Using built-in iterator functions:",
+        "subdescriptionTm": "Gurlan iterator funksiyalaryny ulanmak:",
+        "subdescriptionRu": "Использование встроенных функций итератора:",
+        "code": "my_list = [1, 2, 3]\nit = iter(my_list)\nprint(next(it))  # 1\nprint(next(it))  # 2\nprint(next(it))  # 3"
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "title": "Context Managers",
+    "titleTm": "Kontekst dolandyryjylary",
+    "titleRu": "Контекстные менеджеры",
+    "description": "with statement",
+    "descriptionTm": "with beýannama",
+    "descriptionRu": "Оператор with",
+    "progress": 0,
+    "text": "Context managers manage resources like files and database connections. The 'with' statement ensures resources are properly acquired and released.",
+    "textTm": "Kontekst dolandyryjylary faýllar we maglumat bazasy baglanyşyklary ýaly çeşmeleri dolandyrýar. 'with' beýannama çeşmeleriň dogry edinilmegini we boşadylmagyny üpjün edýär.",
+    "textRu": "Контекстные менеджеры управляют ресурсами, такими как файлы и соединения с базой данных. Оператор 'with' обеспечивает правильное получение и освобождение ресурсов.",
+    "body": [
+      {
+        "subtitle": "Using with",
+        "subtitleTm": "with ulanmak",
+        "subtitleRu": "Использование with",
+        "subdescription": "The with statement automatically closes resources:",
+        "subdescriptionTm": "with beýannama çeşmeleri awtomatiki ýapýar:",
+        "subdescriptionRu": "Оператор with автоматически закрывает ресурсы:",
+        "code": "# Without context manager\nf = open('file.txt', 'w')\ntry:\n    f.write('Hello')\nfinally:\n    f.close()\n\n# With context manager (better)\nwith open('file.txt', 'w') as f:\n    f.write('Hello')"
+      },
+      {
+        "subtitle": "Custom context manager",
+        "subtitleTm": "Özel kontekst dolandyryjy",
+        "subtitleRu": "Пользовательский контекстный менеджер",
+        "subdescription": "Using __enter__ and __exit__:",
+        "subdescriptionTm": "__enter__ we __exit__ ulanmak:",
+        "subdescriptionRu": "Использование __enter__ и __exit__:",
+        "code": "class Timer:\n    def __enter__(self):\n        import time\n        self.start = time.time()\n        return self\n    \n    def __exit__(self, *args):\n        import time\n        self.end = time.time()\n        print(f'Time: {self.end - self.start:.3f}s')\n\nwith Timer():\n    total = sum(range(1000000))"
+      }
+    ]
+  },
+  {
+    "id": 22,
+    "title": "Closures",
+    "titleTm": "Ýapylmalar",
+    "titleRu": "Замыкания",
+    "description": "Functions inside functions",
+    "descriptionTm": "Funksiyalaryň içindäki funksiyalar",
+    "descriptionRu": "Функции внутри функций",
+    "progress": 0,
+    "text": "A closure is a function that remembers values from its enclosing scope even when the program flow is no longer in that scope.",
+    "textTm": "Ýapylma - programma akymy artyk şol çäkde bolmasa-da öz gurşawyndaky bahalary ýatda saklaýan funksiýadyr.",
+    "textRu": "Замыкание — это функция, которая запоминает значения из охватывающей области видимости, даже когда поток выполнения программы больше не находится в этой области.",
+    "body": [
+      {
+        "subtitle": "Closure example",
+        "subtitleTm": "Ýapylma mysaly",
+        "subtitleRu": "Пример замыкания",
+        "subdescription": "Inner function captures outer variable:",
+        "subdescriptionTm": "Içki funksiýa daşky üýtgeýjini tutýar:",
+        "subdescriptionRu": "Внутренняя функция захватывает внешнюю переменную:",
+        "code": "def make_multiplier(n):\n    def multiplier(x):\n        return x * n  # n is captured\n    return multiplier\n\ndouble = make_multiplier(2)\ntriple = make_multiplier(3)\n\nprint(double(5))   # 10\nprint(triple(5))   # 15"
+      },
+      {
+        "subtitle": "Counter closure",
+        "subtitleTm": "Sanaç ýapylmasy",
+        "subtitleRu": "Замыкание-счётчик",
+        "subdescription": "Closures can maintain state:",
+        "subdescriptionTm": "Ýapylmalar ýagdaýy saklar:",
+        "subdescriptionRu": "Замыкания могут поддерживать состояние:",
+        "code": "def make_counter():\n    count = 0\n    def counter():\n        nonlocal count\n        count += 1\n        return count\n    return counter\n\nc = make_counter()\nprint(c())  # 1\nprint(c())  # 2\nprint(c())  # 3"
+      }
+    ]
+  },
+  {
+    "id": 23,
+    "title": "Type Hints",
+    "titleTm": "Görnüş bellikleri",
+    "titleRu": "Аннотации типов",
+    "description": "Function type annotations",
+    "descriptionTm": "Funksiýa görnüş bellikleri",
+    "descriptionRu": "Аннотации типов функций",
+    "progress": 0,
+    "text": "Type hints allow you to specify the expected data types of function parameters and return values. They improve code readability and help with IDE support.",
+    "textTm": "Görnüş bellikleri funksiýa parametrleriniň we gaýdyş bahalarynda garaşylýan maglumat görnüşlerini görkezmäge mümkinçilik berýär.",
+    "textRu": "Аннотации типов позволяют указывать ожидаемые типы данных параметров функций и возвращаемых значений. Они улучшают читаемость кода.",
+    "body": [
+      {
+        "subtitle": "Basic type hints",
+        "subtitleTm": "Esasy görnüş bellikleri",
+        "subtitleRu": "Базовые аннотации типов",
+        "subdescription": "Adding type annotations to functions:",
+        "subdescriptionTm": "Funksiyalara görnüş bellikleri goşmak:",
+        "subdescriptionRu": "Добавление аннотаций типов к функциям:",
+        "code": "def greet(name: str) -> str:\n    return f'Hello, {name}!'\n\ndef add(x: int, y: int) -> int:\n    return x + y\n\ndef process(data: list[int]) -> dict[str, int]:\n    return {'sum': sum(data), 'count': len(data)}\n\nprint(greet('Alice'))\nprint(add(3, 4))"
+      },
+      {
+        "subtitle": "Optional and Union types",
+        "subtitleTm": "Optional we Union görnüşler",
+        "subtitleRu": "Optional и Union типы",
+        "subdescription": "Using typing module:",
+        "subdescriptionTm": "typing modulyny ulanmak:",
+        "subdescriptionRu": "Использование модуля typing:",
+        "code": "from typing import Optional, Union, List\n\ndef find_user(user_id: int) -> Optional[str]:\n    users = {1: 'Alice', 2: 'Bob'}\n    return users.get(user_id)\n\ndef format_value(val: Union[int, float, str]) -> str:\n    return str(val)\n\nprint(find_user(1))  # Alice\nprint(find_user(99))  # None"
+      }
+    ]
+  },
+  {
+    "id": 24,
+    "title": "Collections Module",
+    "titleTm": "Collections moduly",
+    "titleRu": "Модуль collections",
+    "description": "Counter, defaultdict, deque",
+    "descriptionTm": "Counter, defaultdict, deque",
+    "descriptionRu": "Counter, defaultdict, deque",
+    "progress": 0,
+    "text": "The collections module provides specialized container datatypes that are alternatives to Python's built-in list, dict, and tuple.",
+    "textTm": "collections moduly Python-yň gurlan sanaw, sözlük we demetine alternatiw bolan ýöriteleşdirilen konteyner maglumat görnüşlerini üpjün edýär.",
+    "textRu": "Модуль collections предоставляет специализированные контейнерные типы данных, которые являются альтернативами встроенным list, dict и tuple Python.",
+    "body": [
+      {
+        "subtitle": "Counter",
+        "subtitleTm": "Counter",
+        "subtitleRu": "Counter",
+        "subdescription": "Count element occurrences:",
+        "subdescriptionTm": "Element ýygylyklaryny sanamak:",
+        "subdescriptionRu": "Подсчёт вхождений элементов:",
+        "code": "from collections import Counter\n\nwords = 'apple banana apple cherry banana apple'\ncount = Counter(words.split())\nprint(count)\nprint(count.most_common(2))"
+      },
+      {
+        "subtitle": "defaultdict and deque",
+        "subtitleTm": "defaultdict we deque",
+        "subtitleRu": "defaultdict и deque",
+        "subdescription": "Other useful collection types:",
+        "subdescriptionTm": "Beýleki peýdaly ýygyndy görnüşleri:",
+        "subdescriptionRu": "Другие полезные типы коллекций:",
+        "code": "from collections import defaultdict, deque\n\n# defaultdict\ngraph = defaultdict(list)\ngraph['A'].append('B')\ngraph['A'].append('C')\nprint(dict(graph))\n\n# deque (double-ended queue)\ndq = deque([1, 2, 3])\ndq.appendleft(0)\ndq.append(4)\nprint(dq)"
+      }
+    ]
+  },
+  {
+    "id": 25,
+    "title": "JSON Module",
+    "titleTm": "JSON moduly",
+    "titleRu": "Модуль JSON",
+    "description": "Encode and decode JSON",
+    "descriptionTm": "JSON kodlamak we açmak",
+    "descriptionRu": "Кодирование и декодирование JSON",
+    "progress": 0,
+    "text": "JSON (JavaScript Object Notation) is a lightweight data format. Python's json module provides methods to encode Python objects to JSON strings and decode JSON strings to Python objects.",
+    "textTm": "JSON (JavaScript Obýekt Notasiýasy) ýeňil maglumat formatydyr. Python-yň json moduly Python obýektlerini JSON setirlerine kodlamak we JSON setirlerini Python obýektlerine açmak usullaryny üpjün edýär.",
+    "textRu": "JSON (JavaScript Object Notation) — лёгкий формат данных. Модуль json Python предоставляет методы для кодирования объектов Python в строки JSON и декодирования строк JSON в объекты Python.",
+    "body": [
+      {
+        "subtitle": "dumps and loads",
+        "subtitleTm": "dumps we loads",
+        "subtitleRu": "dumps и loads",
+        "subdescription": "Converting between Python and JSON:",
+        "subdescriptionTm": "Python we JSON arasynda öwürmek:",
+        "subdescriptionRu": "Конвертация между Python и JSON:",
+        "code": "import json\n\n# Python to JSON\ndata = {'name': 'Alice', 'age': 25, 'hobbies': ['coding', 'reading']}\njson_str = json.dumps(data, indent=2)\nprint(json_str)\n\n# JSON to Python\nparsed = json.loads(json_str)\nprint(parsed['name'])  # Alice"
+      },
+      {
+        "subtitle": "Reading/Writing JSON files",
+        "subtitleTm": "JSON faýllaryny okamak/ýazmak",
+        "subtitleRu": "Чтение/запись JSON файлов",
+        "subdescription": "Working with JSON files:",
+        "subdescriptionTm": "JSON faýllar bilen işlemek:",
+        "subdescriptionRu": "Работа с JSON файлами:",
+        "code": "import json\n\n# Write JSON file\ndata = [{'id': 1, 'name': 'Alice'}, {'id': 2, 'name': 'Bob'}]\nwith open('data.json', 'w') as f:\n    json.dump(data, f, indent=2)\n\n# Read JSON file\nwith open('data.json', 'r') as f:\n    loaded = json.load(f)\nprint(loaded[0]['name'])  # Alice"
+      }
+    ]
+  },
+  {
+    "id": 26,
+    "title": "Map, Filter, Reduce",
+    "titleTm": "Map, Filter, Reduce",
+    "titleRu": "Map, Filter, Reduce",
+    "description": "Functional programming tools",
+    "descriptionTm": "Funksional programmirleme gurallary",
+    "descriptionRu": "Инструменты функционального программирования",
+    "progress": 0,
+    "text": "map(), filter(), and reduce() are functional programming tools. They apply functions to sequences and can often replace explicit for loops.",
+    "textTm": "map(), filter() we reduce() funksional programmirleme gurallardyr. Olar yzygiderliklere funksiyalary ulanýar we köplenç aýlawlaryň ýerini tutup biler.",
+    "textRu": "map(), filter() и reduce() — инструменты функционального программирования. Они применяют функции к последовательностям и могут заменить явные циклы.",
+    "body": [
+      {
+        "subtitle": "map() and filter()",
+        "subtitleTm": "map() we filter()",
+        "subtitleRu": "map() и filter()",
+        "subdescription": "Transform and filter sequences:",
+        "subdescriptionTm": "Yzygiderlikleri öwürmek we süzmek:",
+        "subdescriptionRu": "Преобразование и фильтрация последовательностей:",
+        "code": "nums = [1, 2, 3, 4, 5, 6]\n\n# map: apply function to each element\nsquared = list(map(lambda x: x**2, nums))\nprint(squared)  # [1, 4, 9, 16, 25, 36]\n\n# filter: keep elements where function is True\nevens = list(filter(lambda x: x % 2 == 0, nums))\nprint(evens)  # [2, 4, 6]"
+      },
+      {
+        "subtitle": "reduce()",
+        "subtitleTm": "reduce()",
+        "subtitleRu": "reduce()",
+        "subdescription": "Reduce sequence to single value:",
+        "subdescriptionTm": "Yzygiderligi ýeke bahaya getirmek:",
+        "subdescriptionRu": "Сводка последовательности к одному значению:",
+        "code": "from functools import reduce\n\nnums = [1, 2, 3, 4, 5]\n\n# Product of all numbers\nproduct = reduce(lambda x, y: x * y, nums)\nprint(product)  # 120\n\n# Find maximum\nmax_val = reduce(lambda x, y: x if x > y else y, nums)\nprint(max_val)  # 5"
+      }
+    ]
+  },
+  {
+    "id": 27,
+    "title": "*args and **kwargs",
+    "titleTm": "*args we **kwargs",
+    "titleRu": "*args и **kwargs",
+    "description": "Variable function arguments",
+    "descriptionTm": "Üýtgeýji funksiýa argumentleri",
+    "descriptionRu": "Переменные аргументы функций",
+    "progress": 0,
+    "text": "*args allows a function to accept any number of positional arguments, while **kwargs allows it to accept any number of keyword arguments.",
+    "textTm": "*args funksiýanyň islendik sanda pozisiýa argumentlerini kabul etmegine mümkinçilik berýär, **kwargs bolsa islendik sanda açar sözli argumentleri kabul etmegine mümkinçilik berýär.",
+    "textRu": "*args позволяет функции принимать любое количество позиционных аргументов, а **kwargs — любое количество именованных аргументов.",
+    "body": [
+      {
+        "subtitle": "*args",
+        "subtitleTm": "*args",
+        "subtitleRu": "*args",
+        "subdescription": "Variable positional arguments:",
+        "subdescriptionTm": "Üýtgeýji pozisiýa argumentleri:",
+        "subdescriptionRu": "Переменные позиционные аргументы:",
+        "code": "def sum_all(*args):\n    total = 0\n    for n in args:\n        total += n\n    return total\n\nprint(sum_all(1, 2))        # 3\nprint(sum_all(1, 2, 3, 4)) # 10\n\ndef first_last(*args):\n    return args[0], args[-1]\n\nprint(first_last(10, 20, 30, 40))"
+      },
+      {
+        "subtitle": "**kwargs",
+        "subtitleTm": "**kwargs",
+        "subtitleRu": "**kwargs",
+        "subdescription": "Variable keyword arguments:",
+        "subdescriptionTm": "Üýtgeýji açar sözli argumentler:",
+        "subdescriptionRu": "Переменные именованные аргументы:",
+        "code": "def print_info(**kwargs):\n    for key, value in kwargs.items():\n        print(f'{key}: {value}')\n\nprint_info(name='Alice', age=25, city='NYC')\n\n# Combining *args and **kwargs\ndef show(*args, **kwargs):\n    print('Args:', args)\n    print('Kwargs:', kwargs)\n\nshow(1, 2, 3, x=10, y=20)"
+      }
+    ]
+  },
+  {
+    "id": 28,
+    "title": "Virtual Environments",
+    "titleTm": "Wirtual gurşawlar",
+    "titleRu": "Виртуальные среды",
+    "description": "venv and pip",
+    "descriptionTm": "venv we pip",
+    "descriptionRu": "venv и pip",
+    "progress": 0,
+    "text": "Virtual environments allow you to have isolated Python environments for different projects. pip is the package manager for Python.",
+    "textTm": "Wirtual gurşawlar dürli taslamalar üçin izolirleşdirilen Python gurşawlara eýe bolmaga mümkinçilik berýär. pip Python üçin paket dolandyryjysydyr.",
+    "textRu": "Виртуальные среды позволяют иметь изолированные среды Python для разных проектов. pip — это менеджер пакетов для Python.",
+    "body": [
+      {
+        "subtitle": "Creating virtual environment",
+        "subtitleTm": "Wirtual gurşaw döretmek",
+        "subtitleRu": "Создание виртуальной среды",
+        "subdescription": "Create and activate virtual env:",
+        "subdescriptionTm": "Wirtual gurşaw döretmek we işletmek:",
+        "subdescriptionRu": "Создание и активация виртуальной среды:",
+        "code": "# Create virtual environment\n# python -m venv myenv\n\n# Activate (Linux/Mac)\n# source myenv/bin/activate\n\n# Activate (Windows)\n# myenv\\Scripts\\activate\n\n# Deactivate\n# deactivate\nprint('Virtual environment setup done!')"
+      },
+      {
+        "subtitle": "pip commands",
+        "subtitleTm": "pip buýruklary",
+        "subtitleRu": "Команды pip",
+        "subdescription": "Package management with pip:",
+        "subdescriptionTm": "pip bilen paket dolandyryjysy:",
+        "subdescriptionRu": "Управление пакетами с помощью pip:",
+        "code": "# Install a package\n# pip install requests\n\n# Install specific version\n# pip install requests==2.28.0\n\n# List installed packages\n# pip list\n\n# Save requirements\n# pip freeze > requirements.txt\n\n# Install from requirements\n# pip install -r requirements.txt\nprint('pip commands are run in terminal, not in Python!')"
+      }
+    ]
+  },
+  {
+    "id": 29,
+    "title": "Python Best Practices",
+    "titleTm": "Python iň gowy tejribeleri",
+    "titleRu": "Лучшие практики Python",
+    "description": "PEP8, clean code, tips",
+    "descriptionTm": "PEP8, arassa kod, maslahatlar",
+    "descriptionRu": "PEP8, чистый код, советы",
+    "progress": 0,
+    "text": "Writing clean, readable Python code follows PEP8 style guide. Good Python code is readable, reusable, and well-documented.",
+    "textTm": "Arassa, okalýan Python kody PEP8 stil gollanmasyna eýerýär. Gowy Python kody okalýar, täzeden ulanylýar we gowy resminamalaşdyrylýar.",
+    "textRu": "Написание чистого, читаемого кода Python следует руководству по стилю PEP8. Хороший Python-код читаем, пригоден для повторного использования и хорошо документирован.",
+    "body": [
+      {
+        "subtitle": "PEP8 style guide",
+        "subtitleTm": "PEP8 stil gollanmasy",
+        "subtitleRu": "Руководство по стилю PEP8",
+        "subdescription": "Key Python coding conventions:",
+        "subdescriptionTm": "Python kodlamanyň esasy düzgünleri:",
+        "subdescriptionRu": "Основные соглашения о кодировании Python:",
+        "code": "# Good variable names (snake_case)\nuser_name = 'Alice'\nmax_count = 100\n\n# Good function names\ndef calculate_area(width, height):\n    return width * height\n\n# Good class names (PascalCase)\nclass UserAccount:\n    pass\n\n# Constants in UPPER_CASE\nMAX_SIZE = 1000"
+      },
+      {
+        "subtitle": "Pythonic code",
+        "subtitleTm": "Pythonik kod",
+        "subtitleRu": "Питонический код",
+        "subdescription": "Write idiomatic Python:",
+        "subdescriptionTm": "Idiomaçy Python ýazyň:",
+        "subdescriptionRu": "Пишите идиоматический Python:",
+        "code": "# Use enumerate instead of range+len\nfruits = ['apple', 'banana', 'cherry']\nfor i, fruit in enumerate(fruits):\n    print(f'{i}: {fruit}')\n\n# Use zip to iterate pairs\nnames = ['Alice', 'Bob']\nscores = [95, 87]\nfor name, score in zip(names, scores):\n    print(f'{name}: {score}')\n\n# Use any() and all()\nnums = [1, 2, 3, 4, 5]\nprint(any(x > 4 for x in nums))  # True\nprint(all(x > 0 for x in nums))  # True"
+      }
+    ]
   }
 ]

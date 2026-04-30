@@ -1,8 +1,6 @@
 package com.example.pythonlearning.presentation
 
-import android.net.Uri
 import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -14,21 +12,22 @@ import com.example.pythonlearning.locale.Strings
 import com.example.pythonlearning.presentation.lesson.LessonDetailScreen
 import com.example.pythonlearning.presentation.lesson.LessonsScreen
 import com.example.pythonlearning.presentation.pythonTest.TestDetailScreen
-import com.example.pythonlearning.presentation.pythonTest.TestsScreen
 import com.example.pythonlearning.presentation.tasks.PdfViewerScreen
 import com.example.pythonlearning.presentation.tasks.TaskDetailScreen
 import com.example.pythonlearning.presentation.tasks.TasksScreen
 import com.example.pythonlearning.ui.theme.SecondaryBg
 
 @Composable
-fun MainScreen(lyricist: Lyricist<Strings>) {
+fun MainScreen(
+    lyricist: Lyricist<Strings>,
+    darkTheme: Boolean,
+    onDarkThemeToggle: (Boolean) -> Unit
+) {
     val navController = rememberNavController()
 
     Scaffold(
         containerColor = SecondaryBg,
-        bottomBar = {
-            BottomBar(navController)
-        }
+        bottomBar = { BottomBar(navController) }
     ) { padding ->
         NavHost(
             navController = navController,
@@ -39,20 +38,29 @@ fun MainScreen(lyricist: Lyricist<Strings>) {
             composable("books") { BooksScreen(navController) }
             composable("tasks") {
                 TasksScreen(
-                    onTaskClick = { task ->
-                        navController.navigate("task_detail/${task.id}")
-                    },
-                    onOpenBook = {
-                        navController.navigate("books")
-                    }
+                    onTaskClick = { task -> navController.navigate("task_detail/${task.id}") },
+                    onOpenBook = { navController.navigate("books") }
                 )
             }
             composable("playground") { PlaygroundScreen() }
-            composable("tests") { TestsScreen(navController, lyricist) }
+            composable("settings") {
+                SettingsScreen(
+                    lyricist = lyricist,
+                    darkTheme = darkTheme,
+                    onDarkThemeToggle = onDarkThemeToggle
+                )
+            }
 
             composable("lesson_detail/{lessonId}") { backStackEntry ->
                 val lessonId = backStackEntry.arguments?.getString("lessonId")?.toInt() ?: 0
-                LessonDetailScreen(lessonId)
+                LessonDetailScreen(lessonId, navController)
+            }
+
+            composable("lesson_test/{lessonId}") { backStackEntry ->
+                val lessonId = backStackEntry.arguments?.getString("lessonId")?.toInt() ?: 0
+                TestDetailScreen(lessonId = lessonId, onFinished = {
+                    navController.popBackStack()
+                })
             }
 
             composable("task_detail/{taskId}") { backStackEntry ->
@@ -60,11 +68,6 @@ fun MainScreen(lyricist: Lyricist<Strings>) {
                 TaskDetailScreen(taskId)
             }
 
-            composable("test_detail") {
-                TestDetailScreen {
-                    navController.navigate("tests")
-                }
-            }
             composable("pdf_viewer/{fileName}/{title}") { backStackEntry ->
                 val fileName = backStackEntry.arguments?.getString("fileName") ?: "python_crash_course.pdf"
                 val title = backStackEntry.arguments?.getString("title") ?: "python_crash_course.pdf"
@@ -77,8 +80,3 @@ fun MainScreen(lyricist: Lyricist<Strings>) {
         }
     }
 }
-
-//@Composable
-//fun BottomBar(x0: NavHostController) {
-//    TODO("Not yet implemented")
-//}
