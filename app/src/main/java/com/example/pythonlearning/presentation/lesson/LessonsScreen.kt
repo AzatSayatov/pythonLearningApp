@@ -106,7 +106,7 @@ fun LessonsScreen(navController: NavController) {
                         color = MaterialTheme.colorScheme.surface
                     )
                     Text(
-                        text = "Learn Python step by step",
+                        text = lyricist.learnStepByStep,
                         style = MaterialTheme.typography.bodyMedium,
                         color = MaterialTheme.colorScheme.surface.copy(0.55f)
                     )
@@ -172,6 +172,7 @@ private fun HeroBanner(
     val bgColor = if (isDark) Color(0xFF1A2744) else Color(0xFFEEF4FF)
     val textColor = if (isDark) Color.White else Color(0xFF1A1A2E)
     val subtitleColor = if (isDark) Color(0xFFBBBBDD) else Color(0xFF4A4A6A)
+    val lyricist = LocalStrings.current
 
     Card(
         modifier = Modifier
@@ -190,14 +191,14 @@ private fun HeroBanner(
         ) {
             Column(modifier = Modifier.weight(1f)) {
                 Text(
-                    text = "Hello, $userName! 👋",
+                    text = lyricist.helloUser(userName),
                     style = MaterialTheme.typography.titleLarge,
                     fontWeight = FontWeight.Bold,
                     color = textColor
                 )
                 Spacer(Modifier.height(4.dp))
                 Text(
-                    text = "Start learning Python\nthe easy way.",
+                    text = lyricist.startLearningSubtitle,
                     style = MaterialTheme.typography.bodyMedium,
                     color = subtitleColor,
                     lineHeight = 20.sp
@@ -205,7 +206,7 @@ private fun HeroBanner(
                 if (completedCount > 0) {
                     Spacer(Modifier.height(6.dp))
                     Text(
-                        text = "$completedCount / $totalCount completed",
+                        text = lyricist.completedOf(completedCount,totalCount),
                         style = MaterialTheme.typography.labelMedium,
                         color = BluePrimary
                     )
@@ -219,7 +220,7 @@ private fun HeroBanner(
                         .padding(horizontal = 16.dp, vertical = 10.dp)
                 ) {
                     Text(
-                        text = "Continue Learning →",
+                        text = lyricist.continueLearning,
                         color = Color.White,
                         fontWeight = FontWeight.SemiBold,
                         fontSize = 13.sp
@@ -244,7 +245,7 @@ fun LessonListItem(
     onClick: () -> Unit
 ) {
     val completed = testScore >= 70
-
+    val lyricist = LocalStrings.current
     Card(
         modifier = Modifier
             .fillMaxWidth()
@@ -316,7 +317,7 @@ fun LessonListItem(
                     !isUnlocked -> Text("🔒", fontSize = 16.sp)
                     completed -> {
                         Text(
-                            text = "Completed",
+                            text = lyricist.completed,
                             color = Color(0xFF22C55E),
                             fontSize = 11.sp,
                             fontWeight = FontWeight.SemiBold

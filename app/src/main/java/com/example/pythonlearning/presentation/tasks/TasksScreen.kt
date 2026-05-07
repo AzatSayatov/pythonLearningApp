@@ -73,9 +73,9 @@ private val taskIcons = mapOf(
 )
 
 private val difficultyConfig = mapOf(
-    Difficulty.BEGINNER to Triple("🌱", "Beginner", Color(0xFF16A34A)),
-    Difficulty.INTERMEDIATE to Triple("📈", "Intermediate", Color(0xFFD97706)),
-    Difficulty.ADVANCED to Triple("🔥", "Advanced", Color(0xFFDC2626))
+    Difficulty.BEGINNER to Pair("🌱", Color(0xFF16A34A)),
+    Difficulty.INTERMEDIATE to Pair("📈", Color(0xFFD97706)),
+    Difficulty.ADVANCED to Pair("🔥", Color(0xFFDC2626))
 )
 
 @Composable
@@ -114,7 +114,7 @@ fun TasksScreen(
                         color = MaterialTheme.colorScheme.surface
                     )
                     Text(
-                        text = "Practice and improve your skills",
+                        text = lyricist.practiceSubtitle,
                         style = MaterialTheme.typography.bodyMedium,
                         color = MaterialTheme.colorScheme.surface.copy(0.55f)
                     )
@@ -135,7 +135,13 @@ fun TasksScreen(
         // Sections by difficulty
         Difficulty.entries.forEach { difficulty ->
             val filtered = PythonTasks.tasks.filter { it.difficulty == difficulty }
-            val (emoji, label, color) = difficultyConfig[difficulty]!!
+            val (emoji, color) = difficultyConfig[difficulty]!!
+
+            val label = when (difficulty) {
+                Difficulty.BEGINNER -> lyricist.beginner
+                Difficulty.INTERMEDIATE -> lyricist.intermediate
+                Difficulty.ADVANCED -> lyricist.advanced
+            }
 
             item {
                 Row(
@@ -170,7 +176,7 @@ fun TasksScreen(
                             .padding(horizontal = 10.dp, vertical = 4.dp)
                     ) {
                         Text(
-                            text = "${filtered.size} Tasks",
+                            text = lyricist.tasksCount(filtered.size),
                             color = color,
                             fontSize = 12.sp,
                             fontWeight = FontWeight.SemiBold

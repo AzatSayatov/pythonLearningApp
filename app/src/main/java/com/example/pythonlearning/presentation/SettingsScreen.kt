@@ -1,5 +1,14 @@
 package com.example.pythonlearning.presentation
 
+import androidx.compose.animation.AnimatedVisibility
+import androidx.compose.animation.core.EaseInQuart
+import androidx.compose.animation.core.EaseOutQuart
+import androidx.compose.animation.core.animateFloatAsState
+import androidx.compose.animation.core.tween
+import androidx.compose.animation.expandVertically
+import androidx.compose.animation.fadeIn
+import androidx.compose.animation.fadeOut
+import androidx.compose.animation.shrinkVertically
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -34,6 +43,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontStyle
@@ -73,6 +83,11 @@ fun SettingsScreen(
         "ru" -> "🇷🇺 Русский"
         else -> "🇬🇧 English"
     }
+    val rotation by animateFloatAsState(
+        targetValue = if (showAbout) 0f else 180f,
+        animationSpec = tween(300),
+        label = "arrow"
+    )
 
     Column(
         modifier = Modifier
@@ -218,30 +233,30 @@ fun SettingsScreen(
                 )
             }
 
-            Divider()
+//            Divider()
 
-            Row(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .clickable { showLangDialog = true }
-                    .padding(horizontal = 16.dp, vertical = 14.dp),
-                horizontalArrangement = Arrangement.SpaceBetween,
-                verticalAlignment = Alignment.CenterVertically
-            ) {
-                Row(verticalAlignment = Alignment.CenterVertically) {
-                    Text("🌐  ", fontSize = 18.sp)
-                    Text(
-                        text = strings.language,
-                        style = MaterialTheme.typography.bodyLarge,
-                        color = MaterialTheme.colorScheme.surface
-                    )
-                }
-                Text(
-                    text = currentLangFlag,
-                    style = MaterialTheme.typography.bodyMedium,
-                    color = BluePrimary
-                )
-            }
+//            Row(
+//                modifier = Modifier
+//                    .fillMaxWidth()
+//                    .clickable { showLangDialog = true }
+//                    .padding(horizontal = 16.dp, vertical = 14.dp),
+//                horizontalArrangement = Arrangement.SpaceBetween,
+//                verticalAlignment = Alignment.CenterVertically
+//            ) {
+//                Row(verticalAlignment = Alignment.CenterVertically) {
+//                    Text("🌐  ", fontSize = 18.sp)
+//                    Text(
+//                        text = strings.language,
+//                        style = MaterialTheme.typography.bodyLarge,
+//                        color = MaterialTheme.colorScheme.surface
+//                    )
+//                }
+//                Text(
+//                    text = currentLangFlag,
+//                    style = MaterialTheme.typography.bodyMedium,
+//                    color = BluePrimary
+//                )
+//            }
         }
 
         Spacer(Modifier.height(16.dp))
@@ -277,15 +292,26 @@ fun SettingsScreen(
                     }
                 }
                 Text(
-                    text = if (showAbout) "▲" else "▼",
+                    text = "▲",
                     color = MaterialTheme.colorScheme.surface.copy(0.4f),
-                    fontSize = 12.sp
+                    fontSize = 12.sp,
+                    modifier = Modifier.rotate(rotation)
                 )
             }
 
-            if (showAbout) {
-                Divider()
-                AboutContent()
+            AnimatedVisibility(
+                visible = showAbout,
+                enter = expandVertically(
+                    animationSpec = tween(durationMillis = 300, easing = EaseOutQuart)
+                ) + fadeIn(animationSpec = tween(300)),
+                exit = shrinkVertically(
+                    animationSpec = tween(durationMillis = 250, easing = EaseInQuart)
+                ) + fadeOut(animationSpec = tween(200))
+            ) {
+                Column {
+                    Divider()
+                    AboutContent()
+                }
             }
         }
 
@@ -356,12 +382,12 @@ fun SettingsScreen(
                         showEditProfile = false
                     }
                 }) {
-                    Text("Save", color = BluePrimary, fontWeight = FontWeight.Bold)
+                    Text(strings.save, color = BluePrimary, fontWeight = FontWeight.Bold)
                 }
             },
             dismissButton = {
                 TextButton(onClick = { showEditProfile = false }) {
-                    Text("Cancel", color = MaterialTheme.colorScheme.surface.copy(0.6f))
+                    Text(strings.cancel, color = MaterialTheme.colorScheme.surface.copy(0.6f))
                 }
             }
         )
@@ -408,6 +434,7 @@ fun SettingsScreen(
 
 @Composable
 private fun AboutContent() {
+    val strings = LocalStrings.current
     Column(
         modifier = Modifier
             .fillMaxWidth()
@@ -436,9 +463,7 @@ private fun AboutContent() {
         Divider()
 
         Text(
-            text = "PyLearn helps you master Python from the very basics to advanced topics. " +
-                    "Go through structured lessons, test your knowledge, and sharpen your skills " +
-                    "with hands-on coding tasks — all in one place.",
+            text = strings.aboutDescription,
             style = MaterialTheme.typography.bodyMedium,
             color = MaterialTheme.colorScheme.surface.copy(0.75f),
             lineHeight = 20.sp
@@ -448,31 +473,31 @@ private fun AboutContent() {
 
         // Feature list
         Text(
-            text = "What's inside",
+            text = strings.aboutWhatsInside,
             style = MaterialTheme.typography.labelLarge,
             color = MaterialTheme.colorScheme.surface.copy(0.5f),
             fontWeight = FontWeight.SemiBold
         )
-        AboutFeature("📚", "30 structured Python lessons")
-        AboutFeature("✅", "Per-lesson tests with 10 questions each")
-        AboutFeature("💪", "30 coding tasks across 3 difficulty levels")
-        AboutFeature("⚡", "Live Python code playground")
-        AboutFeature("🔒", "Progress-based lesson unlocking (70% to pass)")
-        AboutFeature("🌐", "3 languages: English, Русский, Türkmen")
-        AboutFeature("🌙", "Light & dark theme support")
+        AboutFeature("📚", strings.aboutFeature1)
+        AboutFeature("✅", strings.aboutFeature2)
+        AboutFeature("💪", strings.aboutFeature3)
+        AboutFeature("⚡", strings.aboutFeature4)
+        AboutFeature("🔒", strings.aboutFeature5)
+        AboutFeature("🌐", strings.aboutFeature6)
+        AboutFeature("🌙", strings.aboutFeature7)
 
         Divider()
 
         // Tech info
         Text(
-            text = "Built with",
+            text = strings.aboutBuiltWith,
             style = MaterialTheme.typography.labelLarge,
             color = MaterialTheme.colorScheme.surface.copy(0.5f),
             fontWeight = FontWeight.SemiBold
         )
-        AboutFeature("🤖", "Kotlin + Jetpack Compose")
-        AboutFeature("🐍", "Chaquopy — Python 3.10 on Android")
-        AboutFeature("🎨", "Material Design 3")
+        AboutFeature("🤖", strings.aboutTech1)
+        AboutFeature("🐍", strings.aboutTech2)
+        AboutFeature("🎨", strings.aboutTech3)
 
         Divider()
 
@@ -481,7 +506,7 @@ private fun AboutContent() {
             horizontalArrangement = Arrangement.Center
         ) {
             Text(
-                text = "Made with ❤ · 2025",
+                text = strings.madeWith,
                 style = MaterialTheme.typography.bodySmall,
                 color = MaterialTheme.colorScheme.surface.copy(0.4f)
             )

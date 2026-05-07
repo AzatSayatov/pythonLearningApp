@@ -1,5 +1,10 @@
 package com.example.pythonlearning.presentation.tasks
 
+import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
+import androidx.compose.foundation.horizontalScroll
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -7,6 +12,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
@@ -27,6 +33,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.example.pythonlearning.LocalStrings
 import com.example.pythonlearning.PythonRunner
 import com.example.pythonlearning.data.tasks.AppLanguage
@@ -36,6 +43,29 @@ import com.example.pythonlearning.data.tasks.localizedDescription
 import com.example.pythonlearning.data.tasks.localizedHint
 import com.example.pythonlearning.data.tasks.localizedTitle
 import com.example.pythonlearning.presentation.pythonTest.loadLocale
+import com.example.pythonlearning.ui.theme.BluePrimary
+
+private val pythonKeywords = listOf(
+    "print(", "input(", "len(", "range(", "int(", "float(", "str(", "bool(",
+    "list(", "dict(", "tuple(", "set(", "type(", "isinstance(", "hasattr(",
+    "if ", "elif ", "else:", "for ", "while ", "break", "continue", "pass",
+    "def ", "class ", "return ", "import ", "from ", "as ", "with ", "lambda ",
+    "try:", "except ", "finally:", "raise ", "yield ", "global ", "nonlocal ",
+    "True", "False", "None", "and ", "or ", "not ", "in ", "is ",
+    "append(", "extend(", "pop(", "remove(", "insert(", "sort(", "reverse(",
+    "split(", "join(", "strip(", "replace(", "upper(", "lower(", "format(",
+    "open(", "read(", "write(", "close(", "enumerate(", "zip(", "map(", "filter(",
+    "sorted(", "max(", "min(", "sum(", "abs(", "round("
+)
+
+private fun getSuggestions(text: String): List<String> {
+    if (text.isEmpty()) return emptyList()
+    val lastWord = text.split(" ", "\n", "(", ".", ",").last()
+    if (lastWord.length < 2) return emptyList()
+    return pythonKeywords
+        .filter { it.startsWith(lastWord, ignoreCase = true) && it != lastWord }
+        .take(6)
+}
 
 @Composable
 fun TaskDetailScreen(taskId: Int) {
@@ -54,6 +84,8 @@ fun TaskDetailScreen(taskId: Int) {
         else -> AppLanguage.EN
     }
 
+    val suggestions = remember(code) { getSuggestions(code) }
+
     val difficultyColor = when (task.difficulty) {
         Difficulty.BEGINNER -> Color(0xFF4CAF50)
         Difficulty.INTERMEDIATE -> Color(0xFFFFC107)
@@ -63,6 +95,7 @@ fun TaskDetailScreen(taskId: Int) {
     Column(
         modifier = Modifier
             .fillMaxSize()
+            .background(MaterialTheme.colorScheme.secondary)
             .padding(16.dp)
     ) {
         // Title + badge
@@ -70,7 +103,7 @@ fun TaskDetailScreen(taskId: Int) {
             Text(
                 text = task.localizedTitle(lang),
                 style = MaterialTheme.typography.headlineSmall,
-                color = MaterialTheme.colorScheme.surface,
+                color = MaterialTheme.colorScheme.onBackground,
                 modifier = Modifier.weight(1f)
             )
             Surface(
@@ -97,20 +130,20 @@ fun TaskDetailScreen(taskId: Int) {
             modifier = Modifier.fillMaxWidth(),
             shape = RoundedCornerShape(12.dp),
             colors = CardDefaults.cardColors(
-                containerColor = Color.White
+                containerColor = MaterialTheme.colorScheme.surfaceVariant
             )
         ) {
             Column(modifier = Modifier.padding(14.dp)) {
                 Text(
-                    text = "📋 ${lyricist.taskDescription}", // "Условие"
+                    text = "📋 ${lyricist.taskDescription}",
                     style = MaterialTheme.typography.labelMedium,
-                    color = Color.Black.copy(alpha = 0.6f)
+                    color = MaterialTheme.colorScheme.onSurfaceVariant
                 )
                 Spacer(modifier = Modifier.height(6.dp))
                 Text(
                     text = task.localizedDescription(lang),
                     style = MaterialTheme.typography.bodyMedium,
-                    color = Color.Black
+                    color = MaterialTheme.colorScheme.onSurface
                 )
                 if (task.hint.isNotEmpty()) {
                     Spacer(modifier = Modifier.height(8.dp))
@@ -134,10 +167,45 @@ fun TaskDetailScreen(taskId: Int) {
                 .weight(1f),
             label = { Text(lyricist.code) },
             textStyle = TextStyle(
-                color = MaterialTheme.colorScheme.surface,
+                color = MaterialTheme.colorScheme.onSurface,
                 fontFamily = FontFamily.Monospace
             )
         )
+
+        // Autocomplete suggestions
+        if (suggestions.isNotEmpty()) {
+            Row(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .horizontalScroll(rememberScrollState())
+                    .padding(vertical = 4.dp),
+                horizontalArrangement = Arrangement.spacedBy(6.dp)
+            ) {
+                suggestions.forEach { suggestion ->
+                    Box(
+                        modifier = Modifier
+                            .background(BluePrimary.copy(0.15f), RoundedCornerShape(6.dp))
+                            .clickable {
+                                val lines = code.split("\n").toMutableList()
+                                if (lines.isNotEmpty()) {
+                                    val lastLine = lines.last()
+                                    val lastWord = lastLine.split(" ", "(", ".", ",").last()
+                                    lines[lines.lastIndex] = lastLine.dropLast(lastWord.length) + suggestion
+                                    code = lines.joinToString("\n")
+                                }
+                            }
+                            .padding(horizontal = 10.dp, vertical = 6.dp)
+                    ) {
+                        Text(
+                            text = suggestion,
+                            color = BluePrimary,
+                            fontSize = 12.sp,
+                            fontFamily = FontFamily.Monospace
+                        )
+                    }
+                }
+            }
+        }
 
         Spacer(modifier = Modifier.height(8.dp))
 
@@ -168,14 +236,14 @@ fun TaskDetailScreen(taskId: Int) {
             Text(
                 "> ",
                 fontFamily = FontFamily.Monospace,
-                color = MaterialTheme.colorScheme.surface
+                color = MaterialTheme.colorScheme.onBackground
             )
             OutlinedTextField(
                 value = inputData,
                 onValueChange = { inputData = it },
                 modifier = Modifier.weight(1f),
                 placeholder = {
-                    Text(lyricist.input, color = MaterialTheme.colorScheme.surface)
+                    Text(lyricist.input, color = MaterialTheme.colorScheme.onSurfaceVariant)
                 },
                 singleLine = false,
             )

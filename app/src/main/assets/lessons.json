@@ -27,6 +27,78 @@
         "subdescriptionTm": "Python egri ýaýlaryň ýerine bloklar üçin indentasiýa ulanýar. Salgylar we boşluklar hem goldanýar, ýöne adaty indentasiýa dört boşluk ulanmak üçin adaty Python koduny talap edýär. Mysal üçin:",
         "subdescriptionRu": "В Python для блочных отступов используются фигурные скобки, а не отступы в виде фигурных скобок. Поддерживаются как табуляция, так и пробелы, но для стандартного отступа в Python требуется использовать четыре пробела. Например:",
         "code": "x = 1\nif x == 1:\n    # indented four spaces\n    print(\"x is 1.\")"
+      },
+      {
+        "subtitle": "Printing Multiple Lines",
+        "subtitleTm": "Birnäçe setiri çap etmek",
+        "subtitleRu": "Вывод нескольких строк",
+        "subdescription": "You can print multiple lines by calling print multiple times:",
+        "subdescriptionTm": "Birnäçe setiri çap etmek üçin print birnäçe gezek ulanyp bilersiňiz:",
+        "subdescriptionRu": "Вы можете вывести несколько строк, вызвав print несколько раз:",
+        "code": "print(\"Hello\")\nprint(\"World\")"
+      },
+      {
+        "subtitle": "Printing Numbers",
+        "subtitleTm": "Sanlary çap etmek",
+        "subtitleRu": "Вывод чисел",
+        "subdescription": "Python can print numbers directly:",
+        "subdescriptionTm": "Python sanlary göni çap edip biler:",
+        "subdescriptionRu": "Python может выводить числа напрямую:",
+        "code": "print(5)\nprint(3 + 2)"
+      },
+      {
+        "subtitle": "Using Variables",
+        "subtitleTm": "Üýtgeýjileri ulanmak",
+        "subtitleRu": "Использование переменных",
+        "subdescription": "You can store values in variables and print them:",
+        "subdescriptionTm": "Gymmatlary üýtgeýjilerde saklap, çap edip bilersiňiz:",
+        "subdescriptionRu": "Вы можете сохранять значения в переменных и выводить их:",
+        "code": "x = 10\nprint(x)"
+      },
+      {
+        "subtitle": "String and Number Together",
+        "subtitleTm": "Tekst we san bilelikde",
+        "subtitleRu": "Строка и число вместе",
+        "subdescription": "You can print text and variables together:",
+        "subdescriptionTm": "Tekst we üýtgeýjileri bilelikde çap edip bolýar:",
+        "subdescriptionRu": "Можно выводить текст и переменные вместе:",
+        "code": "x = 5\nprint(\"Value is:\", x)"
+      },
+      {
+        "subtitle": "Basic If Statement",
+        "subtitleTm": "Esasy if şert",
+        "subtitleRu": "Базовое условие if",
+        "subdescription": "Use indentation to define blocks:",
+        "subdescriptionTm": "Bloklary kesgitlemek üçin indentasiýa ulanyň:",
+        "subdescriptionRu": "Используйте отступы для определения блоков:",
+        "code": "x = 2\nif x > 1:\n    print(\"x is greater than 1\")"
+      },
+      {
+        "subtitle": "If-Else Statement",
+        "subtitleTm": "If-else şert",
+        "subtitleRu": "Конструкция if-else",
+        "subdescription": "Python supports conditional branches:",
+        "subdescriptionTm": "Python şertli şahalary goldaýar:",
+        "subdescriptionRu": "Python поддерживает условные конструкции:",
+        "code": "x = 0\nif x > 0:\n    print(\"Positive\")\nelse:\n    print(\"Zero or negative\")"
+      },
+      {
+        "subtitle": "Comments",
+        "subtitleTm": "Kommentariýalar",
+        "subtitleRu": "Комментарии",
+        "subdescription": "Comments start with # and are ignored by Python:",
+        "subdescriptionTm": "Kommentariýalar # bilen başlaýar we Python tarapyndan üns berilmeýär:",
+        "subdescriptionRu": "Комментарии начинаются с # и игнорируются Python:",
+        "code": "# This is a comment\nprint(\"Hello!\")"
+      },
+      {
+        "subtitle": "Indentation Error Example",
+        "subtitleTm": "Indentasiýa ýalňyşlygy mysaly",
+        "subtitleRu": "Пример ошибки отступа",
+        "subdescription": "Incorrect indentation will cause an error:",
+        "subdescriptionTm": "Nädogry indentasiýa ýalňyşlyga getirýär:",
+        "subdescriptionRu": "Неправильные отступы приведут к ошибке:",
+        "code": "x = 1\nif x == 1:\nprint(\"Wrong indentation\")"
       }
     ]
   },
@@ -93,6 +165,96 @@
         "subdescriptionTm": "Sanjlar bilen setirler arasynda operatorlary garyşdyrmak goldanylmaýar:",
         "subdescriptionRu": "Смешивание операторов между числами и строками не поддерживается:",
         "code": "# This will not work!\none = 1\ntwo = 2\nhello = \"hello\"\n\nprint(one + two + hello)"
+      },
+      {
+        "subtitle": "Type Checking",
+        "subtitleTm": "Görnüşi barlamak",
+        "subtitleRu": "Проверка типа",
+        "subdescription": "You can check the type of a variable using type():",
+        "subdescriptionTm": "Üýtgeýjiniň görnüşini type() arkaly barlap bolýar:",
+        "subdescriptionRu": "Вы можете проверить тип переменной с помощью type():",
+        "code": "x = 5\nprint(type(x))\n\ny = 5.5\nprint(type(y))"
+      },
+      {
+        "subtitle": "String Length",
+        "subtitleTm": "Setiriň uzynlygy",
+        "subtitleRu": "Длина строки",
+        "subdescription": "Use len() to get the length of a string:",
+        "subdescriptionTm": "Setiriň uzynlygyny almak üçin len() ulanyň:",
+        "subdescriptionRu": "Используйте len() для получения длины строки:",
+        "code": "text = \"hello\"\nprint(len(text))"
+      },
+      {
+        "subtitle": "Type Conversion",
+        "subtitleTm": "Görnüş öwürmek",
+        "subtitleRu": "Преобразование типов",
+        "subdescription": "You can convert between types:",
+        "subdescriptionTm": "Görnüşleriň arasynda öwrüp bolýar:",
+        "subdescriptionRu": "Можно преобразовывать типы:",
+        "code": "x = 5\nprint(float(x))\n\ny = 5.7\nprint(int(y))"
+      },
+      {
+        "subtitle": "Boolean Type",
+        "subtitleTm": "Boolean görnüşi",
+        "subtitleRu": "Булевый тип",
+        "subdescription": "Python also supports boolean values:",
+        "subdescriptionTm": "Python boolean (dogry/ýalňyş) gymmatlary hem goldaýar:",
+        "subdescriptionRu": "Python также поддерживает булевые значения:",
+        "code": "x = True\ny = False\nprint(x, y)"
+      },
+      {
+        "subtitle": "Comparisons",
+        "subtitleTm": "Deňeşdirmeler",
+        "subtitleRu": "Сравнения",
+        "subdescription": "Comparison operators return boolean values:",
+        "subdescriptionTm": "Deňeşdiriş operatorlary boolean netijäni berýär:",
+        "subdescriptionRu": "Операторы сравнения возвращают булевы значения:",
+        "code": "print(5 > 3)\nprint(2 == 4)"
+      },
+      {
+        "subtitle": "String Repetition",
+        "subtitleTm": "Setiri gaýtalamak",
+        "subtitleRu": "Повторение строки",
+        "subdescription": "You can repeat strings using * operator:",
+        "subdescriptionTm": "Setirleri * bilen gaýtalap bolýar:",
+        "subdescriptionRu": "Можно повторять строки с помощью оператора *:",
+        "code": "text = \"ha\"\nprint(text * 3)"
+      },
+      {
+        "subtitle": "Multiple Variables Same Value",
+        "subtitleTm": "Birnäçe üýtgeýji bir gymmat",
+        "subtitleRu": "Несколько переменных — одно значение",
+        "subdescription": "You can assign the same value to multiple variables:",
+        "subdescriptionTm": "Bir gymmaty birnäçe üýtgeýjä berip bolýar:",
+        "subdescriptionRu": "Можно присвоить одно значение нескольким переменным:",
+        "code": "a = b = c = 10\nprint(a, b, c)"
+      },
+      {
+        "subtitle": "Variable Swapping",
+        "subtitleTm": "Üýtgeýjileri çalyşmak",
+        "subtitleRu": "Обмен переменных",
+        "subdescription": "Python allows swapping variables easily:",
+        "subdescriptionTm": "Python-da üýtgeýjileri aňsat çalşyp bolýar:",
+        "subdescriptionRu": "В Python можно легко менять значения переменных местами:",
+        "code": "a = 1\nb = 2\na, b = b, a\nprint(a, b)"
+      },
+      {
+        "subtitle": "String Formatting",
+        "subtitleTm": "Setir formatlamak",
+        "subtitleRu": "Форматирование строки",
+        "subdescription": "You can format strings using f-strings:",
+        "subdescriptionTm": "Setirleri f-string arkaly formatlap bolýar:",
+        "subdescriptionRu": "Можно форматировать строки с помощью f-строк:",
+        "code": "name = \"John\"\nage = 25\nprint(f\"My name is {name}, I am {age}\")"
+      },
+      {
+        "subtitle": "None Type",
+        "subtitleTm": "None görnüşi",
+        "subtitleRu": "Тип None",
+        "subdescription": "Python has a special None type:",
+        "subdescriptionTm": "Python-da ýörite None görnüşi bar:",
+        "subdescriptionRu": "В Python есть специальный тип None:",
+        "code": "x = None\nprint(type(x))"
       }
     ]
   },
@@ -207,6 +369,105 @@
         "subdescriptionTm": "Ähli gatnaşyjylaryň sanawyny almak üçin \"union\" usulyny ulanyň:",
         "subdescriptionRu": "Чтобы получить список всех участников, используйте метод \"union\":",
         "code": "a = set([\"Jake\", \"John\", \"Eric\"])\nb = set([\"John\", \"Jill\"])\n\nprint(a.union(b))"
+      },
+      {
+        "subtitle": "List Length",
+        "subtitleTm": "Sanawyň uzynlygy",
+        "subtitleRu": "Длина списка",
+        "subdescription": "You can get the number of elements in a list using len():",
+        "subdescriptionTm": "Sanawdaky elementleriň sanyny len() arkaly alyp bolýar:",
+        "subdescriptionRu": "Количество элементов в списке можно получить с помощью len():",
+        "code": "mylist = [1, 2, 3]\nprint(len(mylist))"
+      },
+      {
+        "subtitle": "List Insert",
+        "subtitleTm": "Sanawa goşmak (insert)",
+        "subtitleRu": "Вставка в список",
+        "subdescription": "You can insert an item at a specific position:",
+        "subdescriptionTm": "Elementi belli bir orna goşup bolýar:",
+        "subdescriptionRu": "Можно вставить элемент в определённую позицию:",
+        "code": "mylist = [1, 3]\nmylist.insert(1, 2)\nprint(mylist)"
+      },
+      {
+        "subtitle": "List Remove",
+        "subtitleTm": "Sanawdan aýyrmak",
+        "subtitleRu": "Удаление из списка",
+        "subdescription": "You can remove an element from a list:",
+        "subdescriptionTm": "Sanawdan elementi aýyryp bolýar:",
+        "subdescriptionRu": "Можно удалить элемент из списка:",
+        "code": "mylist = [1, 2, 3]\nmylist.remove(2)\nprint(mylist)"
+      },
+      {
+        "subtitle": "List Slicing",
+        "subtitleTm": "Sanawy kesmek",
+        "subtitleRu": "Срез списка",
+        "subdescription": "You can access parts of a list using slicing:",
+        "subdescriptionTm": "Sanawyň bir bölegine slicing arkaly girip bolýar:",
+        "subdescriptionRu": "Можно получить часть списка с помощью среза:",
+        "code": "mylist = [1, 2, 3, 4, 5]\nprint(mylist[1:4])"
+      },
+      {
+        "subtitle": "Dictionary Access",
+        "subtitleTm": "Sözlükden maglumat almak",
+        "subtitleRu": "Доступ к словарю",
+        "subdescription": "Access values using keys:",
+        "subdescriptionTm": "Açar arkaly bahany alyp bolýar:",
+        "subdescriptionRu": "Доступ к значениям через ключи:",
+        "code": "phonebook = {\"John\": 123}\nprint(phonebook[\"John\"])"
+      },
+      {
+        "subtitle": "Dictionary Update",
+        "subtitleTm": "Sözlügi täzelemek",
+        "subtitleRu": "Обновление словаря",
+        "subdescription": "You can update dictionary values:",
+        "subdescriptionTm": "Sözlükdäki bahany üýtgedip bolýar:",
+        "subdescriptionRu": "Можно обновить значение в словаре:",
+        "code": "phonebook = {\"John\": 123}\nphonebook[\"John\"] = 999\nprint(phonebook)"
+      },
+      {
+        "subtitle": "Dictionary Keys",
+        "subtitleTm": "Sözlük açarlary",
+        "subtitleRu": "Ключи словаря",
+        "subdescription": "Get all keys from a dictionary:",
+        "subdescriptionTm": "Sözlükdäki ähli açarlary alyp bolýar:",
+        "subdescriptionRu": "Получить все ключи словаря:",
+        "code": "phonebook = {\"John\": 123, \"Jack\": 456}\nprint(phonebook.keys())"
+      },
+      {
+        "subtitle": "Dictionary Values",
+        "subtitleTm": "Sözlük bahalary",
+        "subtitleRu": "Значения словаря",
+        "subdescription": "Get all values from a dictionary:",
+        "subdescriptionTm": "Sözlükdäki ähli bahalary alyp bolýar:",
+        "subdescriptionRu": "Получить все значения словаря:",
+        "code": "phonebook = {\"John\": 123, \"Jack\": 456}\nprint(phonebook.values())"
+      },
+      {
+        "subtitle": "Set Add",
+        "subtitleTm": "Toplama goşmak",
+        "subtitleRu": "Добавление в множество",
+        "subdescription": "You can add elements to a set:",
+        "subdescriptionTm": "Toplama täze element goşup bolýar:",
+        "subdescriptionRu": "Можно добавить элемент в множество:",
+        "code": "myset = set()\nmyset.add(1)\nmyset.add(2)\nprint(myset)"
+      },
+      {
+        "subtitle": "Set Remove",
+        "subtitleTm": "Toplamdan aýyrmak",
+        "subtitleRu": "Удаление из множества",
+        "subdescription": "Remove an element from a set:",
+        "subdescriptionTm": "Toplamdan elementi aýyryp bolýar:",
+        "subdescriptionRu": "Удаление элемента из множества:",
+        "code": "myset = {1, 2, 3}\nmyset.remove(2)\nprint(myset)"
+      },
+      {
+        "subtitle": "Set Check Membership",
+        "subtitleTm": "Toplamda barlag",
+        "subtitleRu": "Проверка в множестве",
+        "subdescription": "Check if an element exists in a set:",
+        "subdescriptionTm": "Elementiň toplumda bardygyny barlap bolýar:",
+        "subdescriptionRu": "Проверка наличия элемента в множестве:",
+        "code": "myset = {1, 2, 3}\nprint(2 in myset)"
       }
     ]
   },
@@ -275,6 +536,96 @@
         "subdescriptionTm": "Setirlerde bolşy ýaly, Python köpeltme operatoryny ulanyp gaýtalanýan yzygiderli täze sanawlary döretmegi goldaýar:",
         "subdescriptionRu": "Как и со строками, Python поддерживает создание новых списков с повторяющейся последовательностью с помощью оператора умножения:",
         "code": "print([1,2,3] * 3)"
+      },
+      {
+        "subtitle": "Subtraction and Division",
+        "subtitleTm": "Alyş we bölme",
+        "subtitleRu": "Вычитание и деление",
+        "subdescription": "Basic subtraction and division operations:",
+        "subdescriptionTm": "Esasy alyş we bölme amallary:",
+        "subdescriptionRu": "Базовые операции вычитания и деления:",
+        "code": "a = 10 - 5\nb = 10 / 2\nprint(a)\nprint(b)"
+      },
+      {
+        "subtitle": "Floor Division",
+        "subtitleTm": "Doly bölme",
+        "subtitleRu": "Целочисленное деление",
+        "subdescription": "Floor division returns integer result:",
+        "subdescriptionTm": "Doly bölme diňe bitewi netijäni berýär:",
+        "subdescriptionRu": "Целочисленное деление возвращает только целую часть:",
+        "code": "result = 10 // 3\nprint(result)"
+      },
+      {
+        "subtitle": "Comparison Operators",
+        "subtitleTm": "Deňeşdiriş operatorlary",
+        "subtitleRu": "Операторы сравнения",
+        "subdescription": "Compare values using comparison operators:",
+        "subdescriptionTm": "Gymmatlary deňeşdiriş operatorlary arkaly deňeşdiriň:",
+        "subdescriptionRu": "Сравнение значений с помощью операторов:",
+        "code": "print(5 == 5)\nprint(5 != 3)\nprint(5 > 3)\nprint(2 < 1)"
+      },
+      {
+        "subtitle": "Logical Operators",
+        "subtitleTm": "Logiki operatorlar",
+        "subtitleRu": "Логические операторы",
+        "subdescription": "Combine conditions using logical operators:",
+        "subdescriptionTm": "Şertleri logiki operatorlar bilen birleşdiriň:",
+        "subdescriptionRu": "Объединение условий с помощью логических операторов:",
+        "code": "print(True and False)\nprint(True or False)\nprint(not True)"
+      },
+      {
+        "subtitle": "Assignment Operators",
+        "subtitleTm": "Berkidme operatorlary",
+        "subtitleRu": "Операторы присваивания",
+        "subdescription": "You can combine operations with assignment:",
+        "subdescriptionTm": "Amallary berkitme bilen birleşdirip bolýar:",
+        "subdescriptionRu": "Можно совмещать операции с присваиванием:",
+        "code": "x = 5\nx += 3\nprint(x)"
+      },
+      {
+        "subtitle": "Multiple Assignment Operations",
+        "subtitleTm": "Birnäçe berkitme amallary",
+        "subtitleRu": "Множественные операции присваивания",
+        "subdescription": "More assignment operator examples:",
+        "subdescriptionTm": "Başga berkitme operator mysallary:",
+        "subdescriptionRu": "Другие примеры операторов присваивания:",
+        "code": "x = 10\nx -= 2\nx *= 3\nx /= 4\nprint(x)"
+      },
+      {
+        "subtitle": "Membership Operators",
+        "subtitleTm": "Agzalyk operatorlary",
+        "subtitleRu": "Операторы принадлежности",
+        "subdescription": "Check if value exists in a sequence:",
+        "subdescriptionTm": "Gymmatyň sanawda bardygyny barlaň:",
+        "subdescriptionRu": "Проверка наличия значения:",
+        "code": "mylist = [1, 2, 3]\nprint(2 in mylist)\nprint(5 not in mylist)"
+      },
+      {
+        "subtitle": "Identity Operators",
+        "subtitleTm": "Identifikasiýa operatorlary",
+        "subtitleRu": "Операторы идентичности",
+        "subdescription": "Check if two variables refer to the same object:",
+        "subdescriptionTm": "Iki üýtgeýjiniň bir obýekte degişlidigini barlaýar:",
+        "subdescriptionRu": "Проверяет, указывают ли переменные на один объект:",
+        "code": "a = [1,2]\nb = a\nprint(a is b)\nprint(a is not b)"
+      },
+      {
+        "subtitle": "Operator Precedence",
+        "subtitleTm": "Operatorlaryň tertibi",
+        "subtitleRu": "Приоритет операторов",
+        "subdescription": "Operators follow precedence rules:",
+        "subdescriptionTm": "Operatorlar belli tertip boýunça ýerine ýetirilýär:",
+        "subdescriptionRu": "Операторы выполняются по приоритету:",
+        "code": "result = 2 + 3 * 4\nprint(result)"
+      },
+      {
+        "subtitle": "Using Parentheses",
+        "subtitleTm": "Ýaýlary ulanmak",
+        "subtitleRu": "Использование скобок",
+        "subdescription": "Parentheses can change the order of operations:",
+        "subdescriptionTm": "Skobkalar amallaryň tertibini üýtgedip biler:",
+        "subdescriptionRu": "Скобки могут изменить порядок выполнения операций:",
+        "code": "result = (2 + 3) * 4\nprint(result)"
       }
     ]
   },
@@ -347,6 +698,105 @@
         "subdescriptionTm": "Boolean booleanyň öňünde \"not\" ulanmak ony tersine öwürýär:",
         "subdescriptionRu": "Использование \"not\" перед булевым выражением инвертирует его:",
         "code": "print(not False) # Prints out True\nprint((not False) == (False)) # Prints out False"
+      },
+      {
+        "subtitle": "Simple If Statement",
+        "subtitleTm": "Ýönekeý if şert",
+        "subtitleRu": "Простое условие if",
+        "subdescription": "Basic if statement example:",
+        "subdescriptionTm": "Ýönekeý if mysaly:",
+        "subdescriptionRu": "Простой пример if:",
+        "code": "x = 5\nif x > 3:\n    print(\"x is greater than 3\")"
+      },
+      {
+        "subtitle": "If-Else Example",
+        "subtitleTm": "If-else mysaly",
+        "subtitleRu": "Пример if-else",
+        "subdescription": "Use else to handle alternative cases:",
+        "subdescriptionTm": "Else başga ýagdaýlar üçin ulanylýar:",
+        "subdescriptionRu": "Else используется для альтернативных случаев:",
+        "code": "x = 1\nif x > 2:\n    print(\"Greater\")\nelse:\n    print(\"Not greater\")"
+      },
+      {
+        "subtitle": "If-Elif-Else",
+        "subtitleTm": "If-elif-else",
+        "subtitleRu": "If-elif-else",
+        "subdescription": "Check multiple conditions:",
+        "subdescriptionTm": "Birnäçe şertleri barlaň:",
+        "subdescriptionRu": "Проверка нескольких условий:",
+        "code": "x = 0\nif x > 0:\n    print(\"Positive\")\nelif x == 0:\n    print(\"Zero\")\nelse:\n    print(\"Negative\")"
+      },
+      {
+        "subtitle": "Nested If",
+        "subtitleTm": "Içerki if",
+        "subtitleRu": "Вложенный if",
+        "subdescription": "You can nest if statements:",
+        "subdescriptionTm": "If şertleri içinde başga if ulanyp bolýar:",
+        "subdescriptionRu": "Можно использовать вложенные if:",
+        "code": "x = 5\nif x > 0:\n    if x < 10:\n        print(\"x is between 0 and 10\")"
+      },
+      {
+        "subtitle": "Checking Multiple Conditions",
+        "subtitleTm": "Birnäçe şert barlagy",
+        "subtitleRu": "Проверка нескольких условий",
+        "subdescription": "Combine conditions using and:",
+        "subdescriptionTm": "Şertleri and bilen birleşdiriň:",
+        "subdescriptionRu": "Объединение условий с помощью and:",
+        "code": "x = 5\nif x > 0 and x < 10:\n    print(\"x is between 0 and 10\")"
+      },
+      {
+        "subtitle": "Using or Operator",
+        "subtitleTm": "or operatory ulanmak",
+        "subtitleRu": "Использование оператора or",
+        "subdescription": "Check if at least one condition is true:",
+        "subdescriptionTm": "Iň bolmanda bir şert dogry bolsa:",
+        "subdescriptionRu": "Если хотя бы одно условие истинно:",
+        "code": "x = 10\nif x < 5 or x > 8:\n    print(\"Condition is true\")"
+      },
+      {
+        "subtitle": "Boolean Variable in If",
+        "subtitleTm": "Boolean üýtgeýji if-de",
+        "subtitleRu": "Булевая переменная в if",
+        "subdescription": "You can directly use boolean variables:",
+        "subdescriptionTm": "Boolean üýtgeýjini göni ulanyp bolýar:",
+        "subdescriptionRu": "Можно напрямую использовать булевы переменные:",
+        "code": "is_active = True\nif is_active:\n    print(\"Active\")"
+      },
+      {
+        "subtitle": "Ternary Operator",
+        "subtitleTm": "Gysga if (ternary)",
+        "subtitleRu": "Тернарный оператор",
+        "subdescription": "Short if-else in one line:",
+        "subdescriptionTm": "Bir setirde gysga if-else:",
+        "subdescriptionRu": "Короткий if-else в одной строке:",
+        "code": "x = 5\nresult = \"Positive\" if x > 0 else \"Negative\"\nprint(result)"
+      },
+      {
+        "subtitle": "Checking None",
+        "subtitleTm": "None barlagy",
+        "subtitleRu": "Проверка None",
+        "subdescription": "Check if variable is None:",
+        "subdescriptionTm": "Üýtgeýji None bolandygyny barlaň:",
+        "subdescriptionRu": "Проверка на None:",
+        "code": "x = None\nif x is None:\n    print(\"x is None\")"
+      },
+      {
+        "subtitle": "Empty List Condition",
+        "subtitleTm": "Boş sanaw şert",
+        "subtitleRu": "Пустой список в условии",
+        "subdescription": "Empty lists are considered False:",
+        "subdescriptionTm": "Boş sanaw False hökmünde kabul edilýär:",
+        "subdescriptionRu": "Пустые списки считаются False:",
+        "code": "mylist = []\nif not mylist:\n    print(\"List is empty\")"
+      },
+      {
+        "subtitle": "Chained Comparisons",
+        "subtitleTm": "Zynjyrlaýyn deňeşdirmeler",
+        "subtitleRu": "Цепные сравнения",
+        "subdescription": "Python allows chained comparisons:",
+        "subdescriptionTm": "Python zynjyrlaýyn deňeşdirmeleri goldaýar:",
+        "subdescriptionRu": "Python поддерживает цепные сравнения:",
+        "code": "x = 5\nif 1 < x < 10:\n    print(\"x is between 1 and 10\")"
       }
     ]
   },
@@ -405,6 +855,105 @@
         "subdescriptionTm": "C, C++ ýaly dillerden tapawutlylykda, Sikller üçin \"else\" bölegini ulanmak bolýar. \"For\" ýa-da \"while\" beýanynyň şertleri boşa çyksa, \"else\" bölegindäki kod ýerine ýetirilýär. Eger \"for\" sikliniň içinde \"break\" ýerine ýetirilse, \"else\" bölegi geçilýär. Üns beriň, \"continue\" beýany bolsa-da \"else\" bölegi ýerine ýetirilýär.\n\nIne, birnäçe mysal:",
         "subdescriptionRu": "В отличие от языков, таких как C или C++, мы можем использовать else для циклов. Когда условие цикла for или while не выполняется, выполняется блок кода в else. Если внутри цикла for выполняется оператор break, блок else пропускается. Обратите внимание, что блок else выполняется даже при наличии оператора continue.\n\nВот несколько примеров:",
         "code": "# Prints out 0,1,2,3,4 and then it prints \"count value reached 5\"\n\ncount=0\nwhile(count<5):\n    print(count)\n    count +=1\nelse:\n    print(\"count value reached %d\" %(count))\n\n# Prints out 1,2,3,4\nfor i in range(1, 10):\n    if(i%5==0):\n        break\n    print(i)\nelse:\n    print(\"this is not printed because for loop is terminated because of break but not due to fail in condition\")"
+      },
+      {
+        "subtitle": "Looping Through String",
+        "subtitleTm": "Setir boýunça aýlanmak",
+        "subtitleRu": "Перебор строки",
+        "subdescription": "You can loop through each character in a string:",
+        "subdescriptionTm": "Setirdäki her bir nyşany gaýtalap bolýar:",
+        "subdescriptionRu": "Можно пройтись по каждому символу строки:",
+        "code": "text = \"hello\"\nfor char in text:\n    print(char)"
+      },
+      {
+        "subtitle": "Using enumerate()",
+        "subtitleTm": "enumerate() ulanmak",
+        "subtitleRu": "Использование enumerate()",
+        "subdescription": "enumerate() gives index and value:",
+        "subdescriptionTm": "enumerate() indeks we gymmat berýär:",
+        "subdescriptionRu": "enumerate() возвращает индекс и значение:",
+        "code": "mylist = [\"a\", \"b\", \"c\"]\nfor i, val in enumerate(mylist):\n    print(i, val)"
+      },
+      {
+        "subtitle": "Nested Loops",
+        "subtitleTm": "Içerki sikller",
+        "subtitleRu": "Вложенные циклы",
+        "subdescription": "Loops inside loops:",
+        "subdescriptionTm": "Sikl içinde sikl:",
+        "subdescriptionRu": "Циклы внутри циклов:",
+        "code": "for i in range(3):\n    for j in range(2):\n        print(i, j)"
+      },
+      {
+        "subtitle": "Loop with List Modification",
+        "subtitleTm": "Sanawy üýtgedip sikl",
+        "subtitleRu": "Изменение списка в цикле",
+        "subdescription": "Modify list elements inside loop:",
+        "subdescriptionTm": "Sanaw elementlerini siklde üýtgedip bolýar:",
+        "subdescriptionRu": "Можно изменять элементы списка в цикле:",
+        "code": "nums = [1,2,3]\nfor i in range(len(nums)):\n    nums[i] *= 2\nprint(nums)"
+      },
+      {
+        "subtitle": "Using pass",
+        "subtitleTm": "pass ulanmak",
+        "subtitleRu": "Использование pass",
+        "subdescription": "pass does nothing but keeps syntax valid:",
+        "subdescriptionTm": "pass hiç zat etmeýär, diňe sintaksisi dogry saklaýar:",
+        "subdescriptionRu": "pass ничего не делает, но сохраняет корректный синтаксис:",
+        "code": "for i in range(3):\n    pass"
+      },
+      {
+        "subtitle": "Infinite Loop",
+        "subtitleTm": "Çäksiz sikl",
+        "subtitleRu": "Бесконечный цикл",
+        "subdescription": "A loop that runs forever:",
+        "subdescriptionTm": "Hiç wagt gutarmaýan sikl:",
+        "subdescriptionRu": "Цикл, который выполняется бесконечно:",
+        "code": "# Be careful!\n# while True:\n#     print(\"Running...\")"
+      },
+      {
+        "subtitle": "Sum of Numbers",
+        "subtitleTm": "Sanlaryň jemi",
+        "subtitleRu": "Сумма чисел",
+        "subdescription": "Calculate sum using loop:",
+        "subdescriptionTm": "Sikl arkaly jem hasaplaň:",
+        "subdescriptionRu": "Вычисление суммы с помощью цикла:",
+        "code": "total = 0\nfor i in range(1, 6):\n    total += i\nprint(total)"
+      },
+      {
+        "subtitle": "Counting Down",
+        "subtitleTm": "Aşak sanamak",
+        "subtitleRu": "Обратный отсчёт",
+        "subdescription": "Loop backwards using range:",
+        "subdescriptionTm": "range arkaly tersine sanamak:",
+        "subdescriptionRu": "Обратный цикл с помощью range:",
+        "code": "for i in range(5, 0, -1):\n    print(i)"
+      },
+      {
+        "subtitle": "Loop with Condition Inside",
+        "subtitleTm": "Şert bilen sikl",
+        "subtitleRu": "Цикл с условием внутри",
+        "subdescription": "Use if inside loop:",
+        "subdescriptionTm": "Siklde if ulanmak:",
+        "subdescriptionRu": "Использование if внутри цикла:",
+        "code": "for i in range(10):\n    if i % 2 == 0:\n        print(i)"
+      },
+      {
+        "subtitle": "While with Else",
+        "subtitleTm": "While + else",
+        "subtitleRu": "While с else",
+        "subdescription": "Else runs after while completes:",
+        "subdescriptionTm": "While gutarandan soň else ýerine ýetirilýär:",
+        "subdescriptionRu": "Else выполняется после завершения while:",
+        "code": "i = 0\nwhile i < 3:\n    print(i)\n    i += 1\nelse:\n    print(\"Done\")"
+      },
+      {
+        "subtitle": "Loop Through Dictionary",
+        "subtitleTm": "Sözlük boýunça sikl",
+        "subtitleRu": "Цикл по словарю",
+        "subdescription": "Iterate through dictionary keys and values:",
+        "subdescriptionTm": "Sözlük açarlary we bahalary boýunça aýlanmak:",
+        "subdescriptionRu": "Перебор ключей и значений словаря:",
+        "code": "data = {\"a\":1, \"b\":2}\nfor key, value in data.items():\n    print(key, value)"
       }
     ]
   },
@@ -457,6 +1006,105 @@
         "subdescriptionTm": "Funksiýanyň adyny ýazyp, soňra (), zerur argumentleri möçberde goýuň. Mysal üçin, öňki mysalda ýazylan funksiyalary çagyralyň:",
         "subdescriptionRu": "Просто напишите имя функции, за которым следуют (), поместив необходимые аргументы внутри скобок. Например, вызовем функции, написанные выше (в предыдущем примере):",
         "code": "# Define our 3 functions\ndef my_function():\n    print(\"Hello From My Function!\")\n\ndef my_function_with_args(username, greeting):\n    print(\"Hello, %s, From My Function!, I wish you %s\"%(username, greeting))\n\ndef sum_two_numbers(a, b):\n    return a + b\n\n# print(a simple greeting)\nmy_function()\n\n#prints - \"Hello, John Doe, From My Function!, I wish you a great year!\"\nmy_function_with_args(\"John Doe\", \"a great year!\")\n\n# after this line x will hold the value 3!\nx = sum_two_numbers(1,2)"
+      },
+      {
+        "subtitle": "Function with Default Arguments",
+        "subtitleTm": "Default argumentli funksiýa",
+        "subtitleRu": "Функция с аргументами по умолчанию",
+        "subdescription": "You can define default values for parameters:",
+        "subdescriptionTm": "Parametrler üçin başlangyç bahalary berip bolýar:",
+        "subdescriptionRu": "Можно задавать значения параметров по умолчанию:",
+        "code": "def greet(name=\"Guest\"):\n    print(\"Hello\", name)\n\ngreet()\ngreet(\"John\")"
+      },
+      {
+        "subtitle": "Return Multiple Values",
+        "subtitleTm": "Birnäçe baha gaýtarmak",
+        "subtitleRu": "Возврат нескольких значений",
+        "subdescription": "Functions can return multiple values:",
+        "subdescriptionTm": "Funksiýalar birnäçe baha gaýtaryp biler:",
+        "subdescriptionRu": "Функции могут возвращать несколько значений:",
+        "code": "def get_values():\n    return 1, 2\n\na, b = get_values()\nprint(a, b)"
+      },
+      {
+        "subtitle": "Keyword Arguments",
+        "subtitleTm": "Açar argumentler",
+        "subtitleRu": "Именованные аргументы",
+        "subdescription": "You can call functions using named arguments:",
+        "subdescriptionTm": "Funksiýalary atlandyrylan argumentler bilen çagyrmak bolýar:",
+        "subdescriptionRu": "Можно вызывать функции с именованными аргументами:",
+        "code": "def greet(name, age):\n    print(name, age)\n\ngreet(age=25, name=\"John\")"
+      },
+      {
+        "subtitle": "*args Example",
+        "subtitleTm": "*args ulanmak",
+        "subtitleRu": "Использование *args",
+        "subdescription": "Use *args to pass multiple arguments:",
+        "subdescriptionTm": "*args arkaly birnäçe argument geçip bolýar:",
+        "subdescriptionRu": "С помощью *args можно передать несколько аргументов:",
+        "code": "def sum_all(*args):\n    print(sum(args))\n\nsum_all(1,2,3,4)"
+      },
+      {
+        "subtitle": "**kwargs Example",
+        "subtitleTm": "**kwargs ulanmak",
+        "subtitleRu": "Использование **kwargs",
+        "subdescription": "Use **kwargs for named arguments:",
+        "subdescriptionTm": "**kwargs arkaly atlandyrylan argumentler:",
+        "subdescriptionRu": "Использование **kwargs для именованных аргументов:",
+        "code": "def print_info(**kwargs):\n    for key, value in kwargs.items():\n        print(key, value)\n\nprint_info(name=\"John\", age=25)"
+      },
+      {
+        "subtitle": "Lambda Function",
+        "subtitleTm": "Lambda funksiýasy",
+        "subtitleRu": "Лямбда-функция",
+        "subdescription": "Short anonymous functions:",
+        "subdescriptionTm": "Gysga anonim funksiýalar:",
+        "subdescriptionRu": "Короткие анонимные функции:",
+        "code": "add = lambda a, b: a + b\nprint(add(2,3))"
+      },
+      {
+        "subtitle": "Function Inside Function",
+        "subtitleTm": "Funksiýa içinde funksiýa",
+        "subtitleRu": "Функция внутри функции",
+        "subdescription": "Functions can be nested:",
+        "subdescriptionTm": "Funksiýalar biri-biriniň içinde bolup biler:",
+        "subdescriptionRu": "Функции могут быть вложенными:",
+        "code": "def outer():\n    def inner():\n        print(\"Inner function\")\n    inner()\n\nouter()"
+      },
+      {
+        "subtitle": "Return Function",
+        "subtitleTm": "Funksiýa gaýtarmak",
+        "subtitleRu": "Возврат функции",
+        "subdescription": "Functions can return other functions:",
+        "subdescriptionTm": "Funksiýalar başga funksiýany gaýtaryp biler:",
+        "subdescriptionRu": "Функции могут возвращать другие функции:",
+        "code": "def outer():\n    def inner():\n        print(\"Hello\")\n    return inner\n\nf = outer()\nf()"
+      },
+      {
+        "subtitle": "Recursive Function",
+        "subtitleTm": "Rekursiw funksiýa",
+        "subtitleRu": "Рекурсивная функция",
+        "subdescription": "Function calling itself:",
+        "subdescriptionTm": "Funksiýanyň özüni çagyrmagy:",
+        "subdescriptionRu": "Функция вызывает саму себя:",
+        "code": "def factorial(n):\n    if n == 1:\n        return 1\n    return n * factorial(n-1)\n\nprint(factorial(5))"
+      },
+      {
+        "subtitle": "Docstring",
+        "subtitleTm": "Docstring",
+        "subtitleRu": "Докстрока",
+        "subdescription": "Functions can have descriptions:",
+        "subdescriptionTm": "Funksiýalaryň düşündirişi bolup biler:",
+        "subdescriptionRu": "Функции могут иметь описание:",
+        "code": "def my_function():\n    \"\"\"This is a function\"\"\"\n    print(\"Hello\")\n\nprint(my_function.__doc__)"
+      },
+      {
+        "subtitle": "Function with List",
+        "subtitleTm": "Sanaw bilen funksiýa",
+        "subtitleRu": "Функция со списком",
+        "subdescription": "Pass lists into functions:",
+        "subdescriptionTm": "Sanawlary funksiýa berip bolýar:",
+        "subdescriptionRu": "Передача списка в функцию:",
+        "code": "def print_list(lst):\n    for item in lst:\n        print(item)\n\nprint_list([1,2,3])"
       }
     ]
   },
@@ -539,6 +1187,105 @@
         "subdescriptionTm": "__init__() funksiýasy, klas işläp başlanda çagrylýan aýratyn funksiýadyr. Ol klasda gymmatlyklary belliklemek üçin ulanylýar.",
         "subdescriptionRu": "Функция __init__() — это специальная функция, которая вызывается при инициализации класса. Она используется для присвоения значений в классе.",
         "code": "class NumberHolder:\n\n   def __init__(self, number):\n       self.number = number\n\n   def returnNumber(self):\n       return self.number\n\nvar = NumberHolder(7)\nprint(var.returnNumber()) #Prints '7'"
+      },
+      {
+        "subtitle": "Class with Multiple Attributes",
+        "subtitleTm": "Birnäçe atributly klas",
+        "subtitleRu": "Класс с несколькими атрибутами",
+        "subdescription": "Classes can have multiple attributes:",
+        "subdescriptionTm": "Klasda birnäçe atribut bolup biler:",
+        "subdescriptionRu": "Класс может иметь несколько атрибутов:",
+        "code": "class Person:\n    def __init__(self, name, age):\n        self.name = name\n        self.age = age\n\np = Person(\"John\", 25)\nprint(p.name, p.age)"
+      },
+      {
+        "subtitle": "Changing Object Attributes",
+        "subtitleTm": "Obýekt atributlaryny üýtgetmek",
+        "subtitleRu": "Изменение атрибутов объекта",
+        "subdescription": "You can modify object attributes:",
+        "subdescriptionTm": "Obýektiň atributlaryny üýtgedip bolýar:",
+        "subdescriptionRu": "Можно изменять атрибуты объекта:",
+        "code": "p = Person(\"John\", 25)\np.age = 30\nprint(p.age)"
+      },
+      {
+        "subtitle": "Deleting Attributes",
+        "subtitleTm": "Atributlary pozmak",
+        "subtitleRu": "Удаление атрибутов",
+        "subdescription": "You can delete attributes:",
+        "subdescriptionTm": "Atributlary pozup bolýar:",
+        "subdescriptionRu": "Можно удалить атрибуты:",
+        "code": "p = Person(\"John\", 25)\ndel p.age"
+      },
+      {
+        "subtitle": "String Representation (__str__)",
+        "subtitleTm": "__str__ ulanmak",
+        "subtitleRu": "Метод __str__",
+        "subdescription": "Define how object is printed:",
+        "subdescriptionTm": "Obýektiň nähili çap edilýändigini kesgitleýär:",
+        "subdescriptionRu": "Определяет, как объект выводится:",
+        "code": "class Person:\n    def __init__(self, name):\n        self.name = name\n\n    def __str__(self):\n        return f\"Person: {self.name}\"\n\np = Person(\"John\")\nprint(p)"
+      },
+      {
+        "subtitle": "Class Methods",
+        "subtitleTm": "Klas metodlary",
+        "subtitleRu": "Методы класса",
+        "subdescription": "Methods are functions inside classes:",
+        "subdescriptionTm": "Metodlar klas içindäki funksiýalar:",
+        "subdescriptionRu": "Методы — это функции внутри класса:",
+        "code": "class Dog:\n    def bark(self):\n        print(\"Woof!\")\n\nd = Dog()\nd.bark()"
+      },
+      {
+        "subtitle": "Inheritance",
+        "subtitleTm": "Miras almak",
+        "subtitleRu": "Наследование",
+        "subdescription": "Classes can inherit from other classes:",
+        "subdescriptionTm": "Klaslar başga klasdan miras alyp biler:",
+        "subdescriptionRu": "Классы могут наследовать другие классы:",
+        "code": "class Animal:\n    def speak(self):\n        print(\"Animal sound\")\n\nclass Dog(Animal):\n    pass\n\nd = Dog()\nd.speak()"
+      },
+      {
+        "subtitle": "Method Override",
+        "subtitleTm": "Metody üýtgetmek",
+        "subtitleRu": "Переопределение метода",
+        "subdescription": "Override parent method:",
+        "subdescriptionTm": "Ata klas metodyny üýtgetmek:",
+        "subdescriptionRu": "Переопределение метода родителя:",
+        "code": "class Animal:\n    def speak(self):\n        print(\"Animal sound\")\n\nclass Dog(Animal):\n    def speak(self):\n        print(\"Woof!\")\n\nd = Dog()\nd.speak()"
+      },
+      {
+        "subtitle": "Using super()",
+        "subtitleTm": "super() ulanmak",
+        "subtitleRu": "Использование super()",
+        "subdescription": "Call parent class method:",
+        "subdescriptionTm": "Ata klas metodyny çagyrmak:",
+        "subdescriptionRu": "Вызов метода родительского класса:",
+        "code": "class Animal:\n    def __init__(self, name):\n        self.name = name\n\nclass Dog(Animal):\n    def __init__(self, name):\n        super().__init__(name)\n\nd = Dog(\"Rex\")\nprint(d.name)"
+      },
+      {
+        "subtitle": "Class Variable",
+        "subtitleTm": "Klas üýtgeýjisi",
+        "subtitleRu": "Переменная класса",
+        "subdescription": "Shared variable across all objects:",
+        "subdescriptionTm": "Ähli obýektler üçin umumy üýtgeýji:",
+        "subdescriptionRu": "Общая переменная для всех объектов:",
+        "code": "class Counter:\n    count = 0\n\n    def __init__(self):\n        Counter.count += 1\n\nc1 = Counter()\nc2 = Counter()\nprint(Counter.count)"
+      },
+      {
+        "subtitle": "Static Method",
+        "subtitleTm": "Statik metod",
+        "subtitleRu": "Статический метод",
+        "subdescription": "Static methods do not use self:",
+        "subdescriptionTm": "Statik metodlar self ulanmaýar:",
+        "subdescriptionRu": "Статические методы не используют self:",
+        "code": "class Math:\n    @staticmethod\n    def add(a, b):\n        return a + b\n\nprint(Math.add(2,3))"
+      },
+      {
+        "subtitle": "Private Variables",
+        "subtitleTm": "Gizlin üýtgeýjiler",
+        "subtitleRu": "Приватные переменные",
+        "subdescription": "Private variables use underscore:",
+        "subdescriptionTm": "Gizlin üýtgeýjiler underscore bilen başlanýar:",
+        "subdescriptionRu": "Приватные переменные используют подчёркивание:",
+        "code": "class Test:\n    def __init__(self):\n        self._hidden = 5\n\nt = Test()\nprint(t._hidden)"
       }
     ]
   },
@@ -746,6 +1493,105 @@
         "subdescriptionTm": "Output özü düşündiriji bolmaly.",
         "subdescriptionRu": "Вывод должен быть самодостаточным и понятным.",
         "code": ""
+      },
+      {
+        "subtitle": "input() basic usage",
+        "subtitleTm": "input() esasy ulanylyşy",
+        "subtitleRu": "основное использование input()",
+        "subdescription": "Used to take a single line input from the user.",
+        "subdescriptionTm": "Ulanyjydan bir setir input almak üçin ulanylýar.",
+        "subdescriptionRu": "Используется для ввода одной строки от пользователя.",
+        "code": "name = input()\nprint(name)"
+      },
+      {
+        "subtitle": "input with prompt",
+        "subtitleTm": "habarly input almak",
+        "subtitleRu": "ввод с подсказкой",
+        "subdescription": "You can show a message while taking input.",
+        "subdescriptionTm": "Input alanyňyzda habar görkezmek bolýar.",
+        "subdescriptionRu": "Можно показывать сообщение при вводе.",
+        "code": "name = input('Enter your name: ')\nprint('Hello', name)"
+      },
+      {
+        "subtitle": "integer input",
+        "subtitleTm": "integer input",
+        "subtitleRu": "ввод целого числа",
+        "subdescription": "Convert input to integer using int().",
+        "subdescriptionTm": "Inputy int() arkaly san görnüşine öwürmek bolýar.",
+        "subdescriptionRu": "Преобразование ввода в целое число.",
+        "code": "age = int(input())\nprint(age)"
+      },
+      {
+        "subtitle": "float input",
+        "subtitleTm": "onluk san input",
+        "subtitleRu": "ввод дробного числа",
+        "subdescription": "Convert input to decimal number.",
+        "subdescriptionTm": "Inputy onluk san görnüşine öwürmek.",
+        "subdescriptionRu": "Преобразование ввода в дробное число.",
+        "code": "price = float(input())\nprint(price)"
+      },
+      {
+        "subtitle": "string conversion",
+        "subtitleTm": "string öwürmek",
+        "subtitleRu": "преобразование в строку",
+        "subdescription": "Convert input explicitly to string.",
+        "subdescriptionTm": "Inputy string görnüşine öwürmek.",
+        "subdescriptionRu": "Преобразование ввода в строку.",
+        "code": "x = str(123)\nprint(x)"
+      },
+      {
+        "subtitle": "multiple inputs in one line",
+        "subtitleTm": "bir setirde birnäçe input",
+        "subtitleRu": "несколько вводов в одной строке",
+        "subdescription": "Using split() to take multiple values.",
+        "subdescriptionTm": "split() arkaly bir setirde birnäçe input almak.",
+        "subdescriptionRu": "Использование split() для нескольких значений.",
+        "code": "a, b = input().split()\nprint(a)\nprint(b)"
+      },
+      {
+        "subtitle": "multiple integers input",
+        "subtitleTm": "birnäçe san input",
+        "subtitleRu": "ввод нескольких чисел",
+        "subdescription": "Using map() to convert inputs.",
+        "subdescriptionTm": "map() arkaly sanlara öwürmek.",
+        "subdescriptionRu": "Преобразование ввода с помощью map().",
+        "code": "a, b = map(int, input().split())\nprint(a + b)"
+      },
+      {
+        "subtitle": "sum of list input",
+        "subtitleTm": "sanlaryň jemi",
+        "subtitleRu": "сумма списка",
+        "subdescription": "Taking multiple numbers and summing them.",
+        "subdescriptionTm": "Sanlary alyp olaryň jemini hasaplamak.",
+        "subdescriptionRu": "Ввод чисел и их суммирование.",
+        "code": "arr = list(map(int, input().split()))\nprint(sum(arr))"
+      },
+      {
+        "subtitle": "basic output formatting",
+        "subtitleTm": "output formatlamak",
+        "subtitleRu": "форматирование вывода",
+        "subdescription": "Using comma in print for spacing.",
+        "subdescriptionTm": "Print içinde vergul bilen boşlukly çykarmak.",
+        "subdescriptionRu": "Использование запятой для вывода с пробелами.",
+        "code": "print('Hello', 'World')"
+      },
+      {
+        "subtitle": "formatted output",
+        "subtitleTm": "formatlanan output",
+        "subtitleRu": "форматированный вывод",
+        "subdescription": "Using % formatting style.",
+        "subdescriptionTm": "% arkaly formatlamak.",
+        "subdescriptionRu": "Форматирование с помощью %.",
+        "code": "a = 5\nb = 2.5\nprint('a=%d b=%.2f' % (a, b))"
+      },
+      {
+        "subtitle": "f-string output",
+        "subtitleTm": "f-string output",
+        "subtitleRu": "вывод через f-string",
+        "subdescription": "Using f-strings for clean output.",
+        "subdescriptionTm": "Täze usul - f-string bilen formatlamak.",
+        "subdescriptionRu": "Современный способ форматирования вывода.",
+        "code": "name = 'Alex'\nage = 20\nprint(f'Name: {name}, Age: {age}')"
       }
     ]
   },
@@ -775,19 +1621,73 @@
         "subtitle": "finally",
         "subtitleTm": "finally",
         "subtitleRu": "finally",
-        "subdescription": "The finally block always executes, whether an error occurred or not:",
-        "subdescriptionTm": "finally blogy ýalňyşlyk bolsun ýa-da bolmasyn hemişe ýerine ýetirilýär:",
-        "subdescriptionRu": "Блок finally всегда выполняется, независимо от того, произошла ошибка или нет:",
+        "subdescription": "The finally block always executes:",
+        "subdescriptionTm": "finally blogy hemişe ýerine ýetirilýär:",
+        "subdescriptionRu": "Блок finally выполняется всегда:",
         "code": "try:\n    f = open('file.txt')\n    data = f.read()\nexcept FileNotFoundError:\n    print('File not found')\nfinally:\n    print('Done')"
       },
       {
         "subtitle": "raise",
         "subtitleTm": "raise",
         "subtitleRu": "raise",
-        "subdescription": "You can manually raise exceptions:",
-        "subdescriptionTm": "Öňünden görülmedik ýagdaýlary el bilen zyňyp bilersiňiz:",
-        "subdescriptionRu": "Вы можете вручную вызывать исключения:",
-        "code": "def check_age(age):\n    if age < 0:\n        raise ValueError('Age cannot be negative')\n    return age\n\ntry:\n    check_age(-5)\nexcept ValueError as e:\n    print(e)"
+        "subdescription": "Manually raise exceptions:",
+        "subdescriptionTm": "El bilen error zyňmak:",
+        "subdescriptionRu": "Ручной вызов исключений:",
+        "code": "def check_age(age):\n    if age < 0:\n        raise ValueError('Age cannot be negative')\n    return age"
+      },
+      {
+        "subtitle": "IndexError",
+        "subtitleTm": "IndexError",
+        "subtitleRu": "IndexError",
+        "subdescription": "Occurs when accessing invalid list index:",
+        "subdescriptionTm": "Listanyň ýok indeksine ýüzlenende bolýar:",
+        "subdescriptionRu": "Возникает при обращении к несуществующему индексу списка:",
+        "code": "try:\n    arr = [1, 2, 3]\n    print(arr[10])\nexcept IndexError:\n    print('Index out of range!')"
+      },
+      {
+        "subtitle": "TypeError",
+        "subtitleTm": "TypeError",
+        "subtitleRu": "TypeError",
+        "subdescription": "Occurs when operation is applied to wrong type:",
+        "subdescriptionTm": "Nädogry data tipi ulanylanda bolýar:",
+        "subdescriptionRu": "Возникает при неправильных типах данных:",
+        "code": "try:\n    print('10' + 5)\nexcept TypeError:\n    print('Cannot add string and integer!')"
+      },
+      {
+        "subtitle": "KeyError",
+        "subtitleTm": "KeyError",
+        "subtitleRu": "KeyError",
+        "subdescription": "Occurs when dictionary key does not exist:",
+        "subdescriptionTm": "Dictionary-de ýok açar ulanylanda bolýar:",
+        "subdescriptionRu": "Возникает при отсутствии ключа в словаре:",
+        "code": "try:\n    data = {'name': 'Alex'}\n    print(data['age'])\nexcept KeyError:\n    print('Key not found!')"
+      },
+      {
+        "subtitle": "custom exception",
+        "subtitleTm": "özüň döreden exception",
+        "subtitleRu": "собственное исключение",
+        "subdescription": "You can create your own exceptions:",
+        "subdescriptionTm": "Öz error görnüşiňi döredip bilersiň:",
+        "subdescriptionRu": "Можно создавать свои исключения:",
+        "code": "class MyError(Exception):\n    pass\n\ntry:\n    raise MyError('Something went wrong')\nexcept MyError as e:\n    print(e)"
+      },
+      {
+        "subtitle": "multiple exceptions",
+        "subtitleTm": "birnäçe exception",
+        "subtitleRu": "несколько исключений",
+        "subdescription": "Handle multiple errors in one block:",
+        "subdescriptionTm": "Bir blokda birnäçe error dolandyrmak:",
+        "subdescriptionRu": "Обработка нескольких ошибок в одном блоке:",
+        "code": "try:\n    x = int(input())\n    print(10 / x)\nexcept (ValueError, ZeroDivisionError):\n    print('Invalid input!')"
+      },
+      {
+        "subtitle": "generic exception",
+        "subtitleTm": "umumy exception",
+        "subtitleRu": "общее исключение",
+        "subdescription": "Catch any error (not recommended for production):",
+        "subdescriptionTm": "Islendik error-y tutmak (maslahat berilmeýär):",
+        "subdescriptionRu": "Перехват всех ошибок (не рекомендуется):",
+        "code": "try:\n    x = int(input())\n    print(10 / x)\nexcept Exception as e:\n    print('Error:', e)"
       }
     ]
   },
@@ -811,7 +1711,7 @@
         "subdescription": "Create a list of squares:",
         "subdescriptionTm": "Kwadratlar sanawyny döretmek:",
         "subdescriptionRu": "Создание списка квадратов:",
-        "code": "# Traditional way\nsquares = []\nfor x in range(10):\n    squares.append(x**2)\n\n# List comprehension\nsquares = [x**2 for x in range(10)]\nprint(squares)"
+        "code": "squares = [x**2 for x in range(10)]\nprint(squares)"
       },
       {
         "subtitle": "With condition",
@@ -820,16 +1720,79 @@
         "subdescription": "Filter elements with a condition:",
         "subdescriptionTm": "Şert bilen elementleri süzüň:",
         "subdescriptionRu": "Фильтрация элементов с условием:",
-        "code": "# Even numbers\nevens = [x for x in range(20) if x % 2 == 0]\nprint(evens)\n\n# Words longer than 3 chars\nwords = ['hi', 'hello', 'world', 'py']\nlong_words = [w for w in words if len(w) > 3]\nprint(long_words)"
+        "code": "evens = [x for x in range(20) if x % 2 == 0]\nprint(evens)"
       },
       {
         "subtitle": "Nested comprehensions",
         "subtitleTm": "Içgin düzmeler",
         "subtitleRu": "Вложенные генераторы",
-        "subdescription": "Matrix flattening example:",
-        "subdescriptionTm": "Matrisany tekizlemek mysaly:",
-        "subdescriptionRu": "Пример выравнивания матрицы:",
+        "subdescription": "Flatten a matrix:",
+        "subdescriptionTm": "Matrisany tekizlemek:",
+        "subdescriptionRu": "Преобразование матрицы в список:",
         "code": "matrix = [[1,2,3],[4,5,6],[7,8,9]]\nflat = [x for row in matrix for x in row]\nprint(flat)"
+      },
+      {
+        "subtitle": "With if-else",
+        "subtitleTm": "if-else bilen",
+        "subtitleRu": "с if-else",
+        "subdescription": "Apply condition inside expression:",
+        "subdescriptionTm": "Aňlatmanyň içinde şert ulanmak:",
+        "subdescriptionRu": "Использование if-else внутри выражения:",
+        "code": "nums = [1,2,3,4,5]\nlabels = ['even' if x % 2 == 0 else 'odd' for x in nums]\nprint(labels)"
+      },
+      {
+        "subtitle": "String processing",
+        "subtitleTm": "String bilen işlemek",
+        "subtitleRu": "Работа со строками",
+        "subdescription": "Convert words to uppercase:",
+        "subdescriptionTm": "Sözleri UPPERCASE etmek:",
+        "subdescriptionRu": "Преобразование строк в верхний регистр:",
+        "code": "words = ['python', 'list', 'comprehension']\nupper = [w.upper() for w in words]\nprint(upper)"
+      },
+      {
+        "subtitle": "Remove vowels",
+        "subtitleTm": "Sesleri aýyrmak",
+        "subtitleRu": "Удаление гласных",
+        "subdescription": "Filter characters:",
+        "subdescriptionTm": "Harplary süzmek:",
+        "subdescriptionRu": "Фильтрация символов:",
+        "code": "text = 'hello world'\nvowels = 'aeiou'\nresult = [c for c in text if c not in vowels]\nprint(result)"
+      },
+      {
+        "subtitle": "Square only even numbers",
+        "subtitleTm": "Diňe jübüt sanlaryň kwadraty",
+        "subtitleRu": "Квадраты только чётных чисел",
+        "subdescription": "Combine condition and expression:",
+        "subdescriptionTm": "Şert we aňlatmany birleşdirmek:",
+        "subdescriptionRu": "Комбинация условия и выражения:",
+        "code": "nums = range(10)\nsquares = [x**2 for x in nums if x % 2 == 0]\nprint(squares)"
+      },
+      {
+        "subtitle": "Dictionary from list",
+        "subtitleTm": "Listden dictionary döretmek",
+        "subtitleRu": "Создание словаря из списка",
+        "subdescription": "Create key-value pairs:",
+        "subdescriptionTm": "Key-value jübütlerini döretmek:",
+        "subdescriptionRu": "Создание пар ключ-значение:",
+        "code": "nums = [1,2,3,4]\nsquare_dict = {x: x**2 for x in nums}\nprint(square_dict)"
+      },
+      {
+        "subtitle": "Flatten nested lists",
+        "subtitleTm": "Içgin listleri tekizlemek",
+        "subtitleRu": "Выравнивание вложенных списков",
+        "subdescription": "Another flatten example:",
+        "subdescriptionTm": "Başga tekizleme mysaly:",
+        "subdescriptionRu": "Ещё один пример выравнивания:",
+        "code": "data = [[10,20],[30,40],[50,60]]\nflat = [num for sub in data for num in sub]\nprint(flat)"
+      },
+      {
+        "subtitle": "Filter and transform",
+        "subtitleTm": "Süzmek we üýtgetmek",
+        "subtitleRu": "Фильтрация и преобразование",
+        "subdescription": "Double even numbers:",
+        "subdescriptionTm": "Jübüt sanlary iki esse etmek:",
+        "subdescriptionRu": "Удвоение чётных чисел:",
+        "code": "nums = range(10)\nresult = [x*2 for x in nums if x % 2 == 0]\nprint(result)"
       }
     ]
   },
@@ -853,16 +1816,79 @@
         "subdescription": "Tuples are immutable lists:",
         "subdescriptionTm": "Demetler üýtgedip bolmaýan sanawlardyr:",
         "subdescriptionRu": "Кортежи — это неизменяемые списки:",
-        "code": "t = (1, 2, 3)\nprint(t[0])  # 1\nprint(len(t))  # 3\n\n# Single element tuple needs comma\nsingle = (42,)\nprint(type(single))  # tuple"
+        "code": "t = (1, 2, 3)\nprint(t[0])\nprint(len(t))"
+      },
+      {
+        "subtitle": "Single element tuple",
+        "subtitleTm": "Bir elementli demet",
+        "subtitleRu": "Кортеж из одного элемента",
+        "subdescription": "Comma is required for single element tuple:",
+        "subdescriptionTm": "Bir elementli demet üçin vergul zerurdyr:",
+        "subdescriptionRu": "Для одного элемента нужна запятая:",
+        "code": "single = (42,)\nprint(type(single))"
       },
       {
         "subtitle": "Unpacking",
         "subtitleTm": "Açmak",
         "subtitleRu": "Распаковка",
-        "subdescription": "Tuple unpacking assigns values to variables:",
-        "subdescriptionTm": "Demet açmak bahalary üýtgeýjilere belleýär:",
-        "subdescriptionRu": "Распаковка кортежа присваивает значения переменным:",
-        "code": "point = (3, 5)\nx, y = point\nprint(f'x={x}, y={y}')\n\n# Swap variables\na, b = 10, 20\na, b = b, a\nprint(a, b)  # 20 10"
+        "subdescription": "Assign tuple values to variables:",
+        "subdescriptionTm": "Demet bahalaryny üýtgeýjilere bellemek:",
+        "subdescriptionRu": "Присваивание значений переменным:",
+        "code": "point = (3, 5)\nx, y = point\nprint(x, y)"
+      },
+      {
+        "subtitle": "Swap using tuple",
+        "subtitleTm": "Demet arkaly çalyşmak",
+        "subtitleRu": "Обмен через кортеж",
+        "subdescription": "Swap variables in one line:",
+        "subdescriptionTm": "Bir setirde üýtgeýjileri çalyşmak:",
+        "subdescriptionRu": "Обмен переменных в одну строку:",
+        "code": "a = 10\nb = 20\na, b = b, a\nprint(a, b)"
+      },
+      {
+        "subtitle": "Tuple indexing",
+        "subtitleTm": "Indeks bilen ýüzlenmek",
+        "subtitleRu": "Индексация кортежа",
+        "subdescription": "Access elements by index:",
+        "subdescriptionTm": "Indeks arkaly elementlere ýüzlenmek:",
+        "subdescriptionRu": "Доступ по индексу:",
+        "code": "t = (10, 20, 30, 40)\nprint(t[1])\nprint(t[-1])"
+      },
+      {
+        "subtitle": "Tuple slicing",
+        "subtitleTm": "Dilimlemek",
+        "subtitleRu": "Срезы кортежей",
+        "subdescription": "Get part of tuple:",
+        "subdescriptionTm": "Demetiň bir bölegini almak:",
+        "subdescriptionRu": "Получение части кортежа:",
+        "code": "t = (1, 2, 3, 4, 5)\nprint(t[1:4])"
+      },
+      {
+        "subtitle": "Tuple with loop",
+        "subtitleTm": "Döwlet bilen demet",
+        "subtitleRu": "Кортеж в цикле",
+        "subdescription": "Iterate through tuple:",
+        "subdescriptionTm": "Demet boýunça aýlanmak:",
+        "subdescriptionRu": "Перебор кортежа в цикле:",
+        "code": "t = (1, 2, 3)\nfor x in t:\n    print(x)"
+      },
+      {
+        "subtitle": "Tuple methods",
+        "subtitleTm": "Demet metodlary",
+        "subtitleRu": "Методы кортежей",
+        "subdescription": "count() and index() methods:",
+        "subdescriptionTm": "count() we index() metodlary:",
+        "subdescriptionRu": "Методы count() и index():",
+        "code": "t = (1, 2, 2, 3)\nprint(t.count(2))\nprint(t.index(3))"
+      },
+      {
+        "subtitle": "Tuple in function return",
+        "subtitleTm": "Funksiýadan demet gaýtarma",
+        "subtitleRu": "Возврат кортежа из функции",
+        "subdescription": "Functions can return multiple values:",
+        "subdescriptionTm": "Funksiýalar birnäçe baha gaýtaryp bilýär:",
+        "subdescriptionRu": "Функции могут возвращать несколько значений:",
+        "code": "def calc(a, b):\n    return a+b, a-b\n\nres = calc(10, 5)\nprint(res)"
       }
     ]
   },
@@ -883,28 +1909,91 @@
         "subtitle": "Common string methods",
         "subtitleTm": "Umumy setir usullary",
         "subtitleRu": "Общие методы строк",
-        "subdescription": "Essential string operations:",
+        "subdescription": "Basic string operations:",
         "subdescriptionTm": "Esasy setir amallary:",
         "subdescriptionRu": "Основные операции со строками:",
-        "code": "s = '  Hello, World!  '\nprint(s.strip())       # 'Hello, World!'\nprint(s.upper())       # '  HELLO, WORLD!  '\nprint(s.lower())       # '  hello, world!  '\nprint(s.replace('World', 'Python'))\nprint(s.strip().split(', '))  # ['Hello', 'World!']"
+        "code": "s = '  Hello, World!  '\nprint(s.strip())\nprint(s.upper())\nprint(s.lower())\nprint(s.replace('World', 'Python'))"
       },
       {
         "subtitle": "join and split",
         "subtitleTm": "join we split",
         "subtitleRu": "join и split",
         "subdescription": "Splitting and joining strings:",
-        "subdescriptionTm": "Setirleri bölmek we birleşdirmek:",
-        "subdescriptionRu": "Разбивка и объединение строк:",
-        "code": "words = 'python is awesome'\nword_list = words.split()  # ['python', 'is', 'awesome']\nprint(word_list)\n\njoined = '-'.join(word_list)\nprint(joined)  # python-is-awesome"
+        "subdescriptionTm": "Setiri bölmek we birleşdirmek:",
+        "subdescriptionRu": "Разделение и объединение строк:",
+        "code": "words = 'python is awesome'\narr = words.split()\nprint(arr)\nprint('-'.join(arr))"
       },
       {
-        "subtitle": "find and startswith",
-        "subtitleTm": "find we startswith",
-        "subtitleRu": "find и startswith",
-        "subdescription": "Searching in strings:",
-        "subdescriptionTm": "Setirlerde gözlemek:",
-        "subdescriptionRu": "Поиск в строках:",
-        "code": "s = 'Python Programming'\nprint(s.find('Pro'))     # 7\nprint(s.startswith('Py'))  # True\nprint(s.endswith('ing'))   # True\nprint('Python' in s)       # True"
+        "subtitle": "find and index",
+        "subtitleTm": "find we index",
+        "subtitleRu": "find и index",
+        "subdescription": "Search in string:",
+        "subdescriptionTm": "Setirde gözlemek:",
+        "subdescriptionRu": "Поиск в строке:",
+        "code": "s = 'Python Programming'\nprint(s.find('Pro'))\nprint(s.index('Python'))"
+      },
+      {
+        "subtitle": "startswith and endswith",
+        "subtitleTm": "startswith we endswith",
+        "subtitleRu": "startswith и endswith",
+        "subdescription": "Check beginning and end:",
+        "subdescriptionTm": "Başyny we soňuny barlamak:",
+        "subdescriptionRu": "Проверка начала и конца:",
+        "code": "s = 'Python is fun'\nprint(s.startswith('Py'))\nprint(s.endswith('fun'))"
+      },
+      {
+        "subtitle": "count method",
+        "subtitleTm": "count usuly",
+        "subtitleRu": "метод count",
+        "subdescription": "Count characters:",
+        "subdescriptionTm": "Harplary sanamak:",
+        "subdescriptionRu": "Подсчёт символов:",
+        "code": "s = 'banana'\nprint(s.count('a'))"
+      },
+      {
+        "subtitle": "capitalize and title",
+        "subtitleTm": "capitalize we title",
+        "subtitleRu": "capitalize и title",
+        "subdescription": "Change text format:",
+        "subdescriptionTm": "Teksti formatlamak:",
+        "subdescriptionRu": "Форматирование текста:",
+        "code": "s = 'hello world'\nprint(s.capitalize())\nprint(s.title())"
+      },
+      {
+        "subtitle": "is methods",
+        "subtitleTm": "is usullary",
+        "subtitleRu": "методы is",
+        "subdescription": "Check string type:",
+        "subdescriptionTm": "Setiriň görnüşini barlamak:",
+        "subdescriptionRu": "Проверка типа строки:",
+        "code": "print('abc'.isalpha())\nprint('123'.isdigit())\nprint('abc123'.isalnum())"
+      },
+      {
+        "subtitle": "strip methods",
+        "subtitleTm": "strip usullary",
+        "subtitleRu": "методы strip",
+        "subdescription": "Remove spaces:",
+        "subdescriptionTm": "Boşluklary aýyrmak:",
+        "subdescriptionRu": "Удаление пробелов:",
+        "code": "s = '   hello   '\nprint(s.strip())\nprint(s.lstrip())\nprint(s.rstrip())"
+      },
+      {
+        "subtitle": "replace method",
+        "subtitleTm": "replace usuly",
+        "subtitleRu": "метод replace",
+        "subdescription": "Replace text in string:",
+        "subdescriptionTm": "Setiri çalyşmak:",
+        "subdescriptionRu": "Замена текста:",
+        "code": "s = 'I like Java'\ns = s.replace('Java', 'Python')\nprint(s)"
+      },
+      {
+        "subtitle": "indexing and slicing",
+        "subtitleTm": "indeks we dilim",
+        "subtitleRu": "индексация и срезы",
+        "subdescription": "Access string characters:",
+        "subdescriptionTm": "Harplara ýüzlenmek:",
+        "subdescriptionRu": "Доступ к символам строки:",
+        "code": "s = 'Python'\nprint(s[0])\nprint(s[-1])\nprint(s[1:4])"
       }
     ]
   },
@@ -925,19 +2014,91 @@
         "subtitle": "Reading files",
         "subtitleTm": "Faýllary okamak",
         "subtitleRu": "Чтение файлов",
-        "subdescription": "Use with statement to automatically close files:",
-        "subdescriptionTm": "Faýllary awtomatiki ýapmak üçin with beýannamasyny ulanyň:",
-        "subdescriptionRu": "Используйте оператор with для автоматического закрытия файлов:",
-        "code": "# Reading entire file\nwith open('example.txt', 'r') as f:\n    content = f.read()\n    print(content)\n\n# Reading line by line\nwith open('example.txt', 'r') as f:\n    for line in f:\n        print(line.strip())"
+        "subdescription": "Read entire file and line by line:",
+        "subdescriptionTm": "Faýly doly we setir-setir okamak:",
+        "subdescriptionRu": "Чтение файла целиком и построчно:",
+        "code": "with open('example.txt', 'r') as f:\n    content = f.read()\n    print(content)\n\nwith open('example.txt', 'r') as f:\n    for line in f:\n        print(line.strip())"
       },
       {
         "subtitle": "Writing files",
         "subtitleTm": "Faýllara ýazmak",
         "subtitleRu": "Запись в файлы",
-        "subdescription": "Write and append modes:",
-        "subdescriptionTm": "Ýazmak we goşmak rejimleri:",
-        "subdescriptionRu": "Режимы записи и добавления:",
-        "code": "# Write (overwrites)\nwith open('output.txt', 'w') as f:\n    f.write('Hello\\n')\n    f.write('World\\n')\n\n# Append (adds to end)\nwith open('output.txt', 'a') as f:\n    f.write('Python!\\n')"
+        "subdescription": "Write and append data:",
+        "subdescriptionTm": "Ýazmak we goşmak:",
+        "subdescriptionRu": "Запись и добавление данных:",
+        "code": "with open('output.txt', 'w') as f:\n    f.write('Hello\\n')\n    f.write('World\\n')\n\nwith open('output.txt', 'a') as f:\n    f.write('Python!\\n')"
+      },
+      {
+        "subtitle": "Reading single line",
+        "subtitleTm": "Bir setir okamak",
+        "subtitleRu": "Чтение одной строки",
+        "subdescription": "Use readline():",
+        "subdescriptionTm": "readline() ulanylyşy:",
+        "subdescriptionRu": "Использование readline():",
+        "code": "with open('example.txt', 'r') as f:\n    line = f.readline()\n    print(line)"
+      },
+      {
+        "subtitle": "Reading all lines",
+        "subtitleTm": "Bütin setirleri okamak",
+        "subtitleRu": "Чтение всех строк",
+        "subdescription": "Use readlines():",
+        "subdescriptionTm": "readlines() ulanylyşy:",
+        "subdescriptionRu": "Использование readlines():",
+        "code": "with open('example.txt', 'r') as f:\n    lines = f.readlines()\n    print(lines)"
+      },
+      {
+        "subtitle": "Check file exists",
+        "subtitleTm": "Faýlyň bardygyny barlamak",
+        "subtitleRu": "Проверка существования файла",
+        "subdescription": "Using os module:",
+        "subdescriptionTm": "os moduly bilen barlamak:",
+        "subdescriptionRu": "Проверка через модуль os:",
+        "code": "import os\n\nif os.path.exists('example.txt'):\n    print('File exists')\nelse:\n    print('File not found')"
+      },
+      {
+        "subtitle": "Writing numbers to file",
+        "subtitleTm": "Sanlary faýla ýazmak",
+        "subtitleRu": "Запись чисел в файл",
+        "subdescription": "Write numbers using loop:",
+        "subdescriptionTm": "Sanlary sikl bilen ýazmak:",
+        "subdescriptionRu": "Запись чисел через цикл:",
+        "code": "with open('nums.txt', 'w') as f:\n    for i in range(5):\n        f.write(str(i) + '\\n')"
+      },
+      {
+        "subtitle": "Reading file into list",
+        "subtitleTm": "Faýly list görnüşine almak",
+        "subtitleRu": "Чтение файла в список",
+        "subdescription": "Convert lines to list:",
+        "subdescriptionTm": "Setirleri liste öwürmek:",
+        "subdescriptionRu": "Преобразование строк в список:",
+        "code": "with open('example.txt', 'r') as f:\n    lines = [line.strip() for line in f]\nprint(lines)"
+      },
+      {
+        "subtitle": "File writing with print",
+        "subtitleTm": "print bilen ýazmak",
+        "subtitleRu": "запись через print",
+        "subdescription": "Write using print function:",
+        "subdescriptionTm": "print arkaly ýazmak:",
+        "subdescriptionRu": "Запись через print:",
+        "code": "with open('output.txt', 'w') as f:\n    print('Hello World', file=f)"
+      },
+      {
+        "subtitle": "Handling file errors",
+        "subtitleTm": "Faýl ýalňyşlyklaryny dolandyrmak",
+        "subtitleRu": "Обработка ошибок файлов",
+        "subdescription": "Try-except for file operations:",
+        "subdescriptionTm": "Faýl üçin try-except ulanylyşy:",
+        "subdescriptionRu": "Обработка ошибок при работе с файлами:",
+        "code": "try:\n    with open('missing.txt', 'r') as f:\n        print(f.read())\nexcept FileNotFoundError:\n    print('File does not exist')"
+      },
+      {
+        "subtitle": "File encoding",
+        "subtitleTm": "Faýl encoding",
+        "subtitleRu": "Кодировка файла",
+        "subdescription": "Use UTF-8 encoding:",
+        "subdescriptionTm": "UTF-8 encoding ulanylyşy:",
+        "subdescriptionRu": "Использование UTF-8 кодировки:",
+        "code": "with open('text.txt', 'w', encoding='utf-8') as f:\n    f.write('Salam dünýä')"
       }
     ]
   },
@@ -958,19 +2119,91 @@
         "subtitle": "Basic lambda",
         "subtitleTm": "Esasy lambda",
         "subtitleRu": "Базовая лямбда",
-        "subdescription": "Lambda syntax: lambda arguments: expression",
-        "subdescriptionTm": "Lambda sintaksis: lambda argumentler: aňlatma",
-        "subdescriptionRu": "Синтаксис лямбды: lambda аргументы: выражение",
-        "code": "# Regular function\ndef add(x, y):\n    return x + y\n\n# Lambda equivalent\nadd = lambda x, y: x + y\nprint(add(3, 5))  # 8\n\nsquare = lambda x: x**2\nprint(square(4))  # 16"
+        "subdescription": "Simple lambda function examples:",
+        "subdescriptionTm": "Ýönekeý lambda mysallary:",
+        "subdescriptionRu": "Простые примеры лямбда:",
+        "code": "add = lambda x, y: x + y\nprint(add(3, 5))\n\nsquare = lambda x: x**2\nprint(square(4))"
       },
       {
         "subtitle": "Lambda with map and filter",
         "subtitleTm": "map we filter bilen lambda",
         "subtitleRu": "Лямбда с map и filter",
-        "subdescription": "Common use of lambda with higher-order functions:",
-        "subdescriptionTm": "Lambda-ny ýokary derejeli funksiyalar bilen ulanmak:",
-        "subdescriptionRu": "Частое использование лямбды с функциями высшего порядка:",
-        "code": "nums = [1, 2, 3, 4, 5]\n\n# Double each number\ndoubled = list(map(lambda x: x * 2, nums))\nprint(doubled)  # [2, 4, 6, 8, 10]\n\n# Keep only even numbers\nevens = list(filter(lambda x: x % 2 == 0, nums))\nprint(evens)  # [2, 4]"
+        "subdescription": "Using lambda with built-in functions:",
+        "subdescriptionTm": "Gurlan funksiyalar bilen ulanmak:",
+        "subdescriptionRu": "Использование с встроенными функциями:",
+        "code": "nums = [1, 2, 3, 4, 5]\n\nprint(list(map(lambda x: x * 2, nums)))\nprint(list(filter(lambda x: x % 2 == 0, nums)))"
+      },
+      {
+        "subtitle": "Sort with lambda",
+        "subtitleTm": "lambda bilen sortlamak",
+        "subtitleRu": "сортировка с lambda",
+        "subdescription": "Sort list using key:",
+        "subdescriptionTm": "key bilen sortlamak:",
+        "subdescriptionRu": "сортировка с ключом:",
+        "code": "names = ['John', 'Alex', 'Bob']\nnames.sort(key=lambda x: len(x))\nprint(names)"
+      },
+      {
+        "subtitle": "Sort tuples",
+        "subtitleTm": "demetleri sortlamak",
+        "subtitleRu": "сортировка кортежей",
+        "subdescription": "Sort by second element:",
+        "subdescriptionTm": "ikinji element boýunça sortlamak:",
+        "subdescriptionRu": "сортировка по второму элементу:",
+        "code": "pairs = [(1, 3), (4, 1), (2, 2)]\npairs.sort(key=lambda x: x[1])\nprint(pairs)"
+      },
+      {
+        "subtitle": "Lambda in max function",
+        "subtitleTm": "max bilen lambda",
+        "subtitleRu": "lambda с max",
+        "subdescription": "Find max by custom rule:",
+        "subdescriptionTm": "öz düzgün boýunça maksimum tapmak:",
+        "subdescriptionRu": "поиск максимума по правилу:",
+        "code": "nums = [10, 25, 3, 99]\nprint(max(nums, key=lambda x: x))"
+      },
+      {
+        "subtitle": "Lambda in min function",
+        "subtitleTm": "min bilen lambda",
+        "subtitleRu": "lambda с min",
+        "subdescription": "Find minimum element:",
+        "subdescriptionTm": "minimum element tapmak:",
+        "subdescriptionRu": "поиск минимального элемента:",
+        "code": "nums = [10, 25, 3, 99]\nprint(min(nums, key=lambda x: x))"
+      },
+      {
+        "subtitle": "Lambda with condition",
+        "subtitleTm": "şert bilen lambda",
+        "subtitleRu": "lambda с условием",
+        "subdescription": "Return custom value:",
+        "subdescriptionTm": "şert boýunça baha gaýtarmak:",
+        "subdescriptionRu": "возврат значения по условию:",
+        "code": "check = lambda x: 'even' if x % 2 == 0 else 'odd'\nprint(check(10))\nprint(check(7))"
+      },
+      {
+        "subtitle": "Lambda in list processing",
+        "subtitleTm": "list işlemekde lambda",
+        "subtitleRu": "lambda в обработке списков",
+        "subdescription": "Transform list values:",
+        "subdescriptionTm": "list bahalaryny üýtgetmek:",
+        "subdescriptionRu": "преобразование списка:",
+        "code": "nums = [1, 2, 3, 4]\nsquared = list(map(lambda x: x**2, nums))\nprint(squared)"
+      },
+      {
+        "subtitle": "Lambda with strings",
+        "subtitleTm": "string bilen lambda",
+        "subtitleRu": "lambda со строками",
+        "subdescription": "Process strings:",
+        "subdescriptionTm": "setirleri işlemek:",
+        "subdescriptionRu": "обработка строк:",
+        "code": "words = ['apple', 'banana', 'kiwi']\nresult = list(map(lambda x: x.upper(), words))\nprint(result)"
+      },
+      {
+        "subtitle": "Lambda in sorted function",
+        "subtitleTm": "sorted bilen lambda",
+        "subtitleRu": "lambda с sorted",
+        "subdescription": "Sort without modifying original list:",
+        "subdescriptionTm": "asyl listi üýtgetmän sortlamak:",
+        "subdescriptionRu": "сортировка без изменения списка:",
+        "code": "nums = [5, 2, 9, 1]\nprint(sorted(nums, key=lambda x: x))"
       }
     ]
   },
@@ -991,19 +2224,91 @@
         "subtitle": "Basic decorator",
         "subtitleTm": "Esasy dekorator",
         "subtitleRu": "Базовый декоратор",
-        "subdescription": "Creating and using a decorator:",
-        "subdescriptionTm": "Dekorator döretmek we ulanmak:",
-        "subdescriptionRu": "Создание и использование декоратора:",
-        "code": "def my_decorator(func):\n    def wrapper():\n        print('Before function')\n        func()\n        print('After function')\n    return wrapper\n\n@my_decorator\ndef say_hello():\n    print('Hello!')\n\nsay_hello()"
+        "subdescription": "Wrap a function:",
+        "subdescriptionTm": "Funksiýany gurşap almak:",
+        "subdescriptionRu": "Обёртка функции:",
+        "code": "def my_decorator(func):\n    def wrapper():\n        print('Before')\n        func()\n        print('After')\n    return wrapper\n\n@my_decorator\ndef hello():\n    print('Hello')\n\nhello()"
       },
       {
-        "subtitle": "Practical decorators",
-        "subtitleTm": "Amaly dekoratorlar",
-        "subtitleRu": "Практические декораторы",
-        "subdescription": "Timer decorator example:",
-        "subdescriptionTm": "Taýmer dekoratorynyň mysaly:",
-        "subdescriptionRu": "Пример декоратора-таймера:",
-        "code": "import time\n\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        end = time.time()\n        print(f'{func.__name__} took {end-start:.4f}s')\n        return result\n    return wrapper\n\n@timer\ndef slow_function():\n    time.sleep(0.1)\n\nslow_function()"
+        "subtitle": "Decorator with arguments",
+        "subtitleTm": "argumentli dekorator",
+        "subtitleRu": "декоратор с аргументами",
+        "subdescription": "Support function parameters:",
+        "subdescriptionTm": "argumentli funksiýalar üçin:",
+        "subdescriptionRu": "поддержка аргументов функции:",
+        "code": "def decorator(func):\n    def wrapper(*args, **kwargs):\n        print('Start')\n        return func(*args, **kwargs)\n    return wrapper\n\n@decorator\ndef add(a, b):\n    return a + b\n\nprint(add(2, 3))"
+      },
+      {
+        "subtitle": "Timer decorator",
+        "subtitleTm": "taýmer dekoratory",
+        "subtitleRu": "таймер декоратор",
+        "subdescription": "Measure execution time:",
+        "subdescriptionTm": "ýerine ýetiriliş wagtyny ölçemek:",
+        "subdescriptionRu": "измерение времени выполнения:",
+        "code": "import time\n\ndef timer(func):\n    def wrapper(*args, **kwargs):\n        start = time.time()\n        result = func(*args, **kwargs)\n        end = time.time()\n        print('Time:', end - start)\n        return result\n    return wrapper"
+      },
+      {
+        "subtitle": "Logging decorator",
+        "subtitleTm": "log dekoratory",
+        "subtitleRu": "логирующий декоратор",
+        "subdescription": "Log function calls:",
+        "subdescriptionTm": "funksiýa çagyrmalaryny ýazmak:",
+        "subdescriptionRu": "логирование вызовов:",
+        "code": "def log(func):\n    def wrapper(*args, **kwargs):\n        print(f'Calling {func.__name__}')\n        return func(*args, **kwargs)\n    return wrapper\n\n@log\ndef test():\n    print('Test')\n\ntest()"
+      },
+      {
+        "subtitle": "Multiple decorators",
+        "subtitleTm": "köp dekorator",
+        "subtitleRu": "несколько декораторов",
+        "subdescription": "Stack decorators:",
+        "subdescriptionTm": "dekoratorlary gatlaklamak:",
+        "subdescriptionRu": "наложение декораторов:",
+        "code": "def deco1(func):\n    def wrapper():\n        print('Deco1')\n        func()\n    return wrapper\n\ndef deco2(func):\n    def wrapper():\n        print('Deco2')\n        func()\n    return wrapper\n\n@deco1\n@deco2\ndef hello():\n    print('Hello')\n\nhello()"
+      },
+      {
+        "subtitle": "Decorator with return value",
+        "subtitleTm": "netije bilen dekorator",
+        "subtitleRu": "декоратор с возвратом значения",
+        "subdescription": "Handle return values:",
+        "subdescriptionTm": "netijeleri gaýtarmak:",
+        "subdescriptionRu": "обработка возвращаемого значения:",
+        "code": "def decorator(func):\n    def wrapper(*args):\n        result = func(*args)\n        return result * 2\n    return wrapper\n\n@decorator\ndef multiply(x):\n    return x * 3\n\nprint(multiply(5))"
+      },
+      {
+        "subtitle": "Authorization decorator",
+        "subtitleTm": "rugsat dekoratory",
+        "subtitleRu": "декоратор авторизации",
+        "subdescription": "Check permission:",
+        "subdescriptionTm": "rugsat barlagy:",
+        "subdescriptionRu": "проверка доступа:",
+        "code": "def auth(func):\n    def wrapper(user):\n        if user == 'admin':\n            return func(user)\n        else:\n            print('Access denied')\n    return wrapper\n\n@auth\ndef dashboard(user):\n    print('Welcome', user)\n\ndashboard('admin')"
+      },
+      {
+        "subtitle": "Reusable decorator",
+        "subtitleTm": "gaýtadan ulanylýan dekorator",
+        "subtitleRu": "переиспользуемый декоратор",
+        "subdescription": "Generic wrapper:",
+        "subdescriptionTm": "umumy wrapper:",
+        "subdescriptionRu": "универсальная обёртка:",
+        "code": "def repeat(func):\n    def wrapper(*args, **kwargs):\n        func(*args, **kwargs)\n        func(*args, **kwargs)\n    return wrapper\n\n@repeat\ndef greet():\n    print('Hi')\n\ngreet()"
+      },
+      {
+        "subtitle": "Decorator with delay",
+        "subtitleTm": "giçikdirilen dekorator",
+        "subtitleRu": "декоратор с задержкой",
+        "subdescription": "Add delay before function:",
+        "subdescriptionTm": "funksiýadan öň gijikdirme:",
+        "subdescriptionRu": "задержка перед выполнением:",
+        "code": "import time\n\ndef delay(func):\n    def wrapper():\n        time.sleep(1)\n        return func()\n    return wrapper\n\n@delay\ndef hello():\n    print('Hello after delay')\n\nhello()"
+      },
+      {
+        "subtitle": "Class-based decorator",
+        "subtitleTm": "class dekorator",
+        "subtitleRu": "декоратор через класс",
+        "subdescription": "Decorator using class:",
+        "subdescriptionTm": "class arkaly dekorator:",
+        "subdescriptionRu": "декоратор через класс:",
+        "code": "class Decorator:\n    def __init__(self, func):\n        self.func = func\n\n    def __call__(self):\n        print('Before')\n        self.func()\n        print('After')\n\n@Decorator\ndef hello():\n    print('Hello')\n\nhello()"
       }
     ]
   },
@@ -1027,16 +2332,88 @@
         "subdescription": "Use yield instead of return:",
         "subdescriptionTm": "return ýerine yield ulanyň:",
         "subdescriptionRu": "Используйте yield вместо return:",
-        "code": "def count_up(n):\n    i = 0\n    while i < n:\n        yield i\n        i += 1\n\nfor num in count_up(5):\n    print(num)  # 0, 1, 2, 3, 4\n\n# Generator expression\ngen = (x**2 for x in range(10))\nprint(list(gen))"
+        "code": "def count_up(n):\n    i = 0\n    while i < n:\n        yield i\n        i += 1\n\nfor num in count_up(5):\n    print(num)"
+      },
+      {
+        "subtitle": "Generator expression",
+        "subtitleTm": "generator aňlatmasy",
+        "subtitleRu": "генераторное выражение",
+        "subdescription": "Memory efficient expression:",
+        "subdescriptionTm": "ýady tygşytly aňlatma:",
+        "subdescriptionRu": "эффективное по памяти выражение:",
+        "code": "gen = (x**2 for x in range(10))\nprint(list(gen))"
       },
       {
         "subtitle": "Infinite generator",
-        "subtitleTm": "Çäksiz generator",
-        "subtitleRu": "Бесконечный генератор",
-        "subdescription": "Generators can be infinite:",
-        "subdescriptionTm": "Generatorlar çäksiz bolup biler:",
-        "subdescriptionRu": "Генераторы могут быть бесконечными:",
-        "code": "def fibonacci():\n    a, b = 0, 1\n    while True:\n        yield a\n        a, b = b, a + b\n\nfib = fibonacci()\nfor _ in range(8):\n    print(next(fib), end=' ')  # 0 1 1 2 3 5 8 13"
+        "subtitleTm": "çäksiz generator",
+        "subtitleRu": "бесконечный генератор",
+        "subdescription": "Generate infinite sequence:",
+        "subdescriptionTm": "çäksiz yzygiderlik döretmek:",
+        "subdescriptionRu": "генерация бесконечной последовательности:",
+        "code": "def numbers():\n    i = 0\n    while True:\n        yield i\n        i += 1"
+      },
+      {
+        "subtitle": "Fibonacci generator",
+        "subtitleTm": "Fibonacci generator",
+        "subtitleRu": "генератор Фибоначчи",
+        "subdescription": "Generate Fibonacci numbers:",
+        "subdescriptionTm": "Fibonacci sanlaryny döretmek:",
+        "subdescriptionRu": "генерация чисел Фибоначчи:",
+        "code": "def fib():\n    a, b = 0, 1\n    while True:\n        yield a\n        a, b = b, a + b"
+      },
+      {
+        "subtitle": "Square generator",
+        "subtitleTm": "kwadrat generator",
+        "subtitleRu": "генератор квадратов",
+        "subdescription": "Yield squared values:",
+        "subdescriptionTm": "kwadrat bahalary bermek:",
+        "subdescriptionRu": "генерация квадратов:",
+        "code": "def squares(n):\n    for i in range(n):\n        yield i * i"
+      },
+      {
+        "subtitle": "File reading generator",
+        "subtitleTm": "faýl okamak generator",
+        "subtitleRu": "генератор чтения файла",
+        "subdescription": "Read file line by line:",
+        "subdescriptionTm": "faýly setir-setir okamak:",
+        "subdescriptionRu": "построчное чтение файла:",
+        "code": "def read_file(file):\n    with open(file) as f:\n        for line in f:\n            yield line.strip()"
+      },
+      {
+        "subtitle": "Even numbers generator",
+        "subtitleTm": "jübüt sanlar generator",
+        "subtitleRu": "генератор чётных чисел",
+        "subdescription": "Yield only even numbers:",
+        "subdescriptionTm": "diňe jübüt sanlary bermek:",
+        "subdescriptionRu": "генерация только чётных чисел:",
+        "code": "def evens(n):\n    for i in range(n):\n        if i % 2 == 0:\n            yield i"
+      },
+      {
+        "subtitle": "Using next()",
+        "subtitleTm": "next() ulanmak",
+        "subtitleRu": "использование next()",
+        "subdescription": "Manually get generator values:",
+        "subdescriptionTm": "el bilen next() ulanmak:",
+        "subdescriptionRu": "ручное получение значений:",
+        "code": "gen = (x for x in range(3))\nprint(next(gen))\nprint(next(gen))\nprint(next(gen))"
+      },
+      {
+        "subtitle": "Generator with condition",
+        "subtitleTm": "şertli generator",
+        "subtitleRu": "генератор с условием",
+        "subdescription": "Yield filtered values:",
+        "subdescriptionTm": "süzülen bahalary bermek:",
+        "subdescriptionRu": "генерация с фильтром:",
+        "code": "def filtered(n):\n    for i in range(n):\n        if i > 5:\n            yield i"
+      },
+      {
+        "subtitle": "Chained generator",
+        "subtitleTm": "birleşdirilen generator",
+        "subtitleRu": "цепной генератор",
+        "subdescription": "Combine multiple generators:",
+        "subdescriptionTm": "birnäçe generatory birleşdirmek:",
+        "subdescriptionRu": "объединение генераторов:",
+        "code": "def gen1():\n    yield from range(3)\n\ndef gen2():\n    yield from range(3, 6)"
       }
     ]
   },
@@ -1054,22 +2431,94 @@
     "textRu": "Регулярные выражения (regex) — это последовательности символов, определяющие шаблоны поиска. Модуль re в Python обеспечивает поддержку регулярных выражений для мощного поиска и манипуляций со строками.",
     "body": [
       {
-        "subtitle": "Basic regex",
-        "subtitleTm": "Esasy regex",
-        "subtitleRu": "Базовые регулярные выражения",
-        "subdescription": "Common regex patterns:",
-        "subdescriptionTm": "Umumy regex nusgalary:",
-        "subdescriptionRu": "Общие шаблоны regex:",
-        "code": "import re\n\ntext = 'Hello World 123'\n\n# Search\nmatch = re.search(r'\\d+', text)\nif match:\n    print(match.group())  # 123\n\n# Find all\nwords = re.findall(r'[A-Z][a-z]+', text)\nprint(words)  # ['Hello', 'World']"
+        "subtitle": "Basic regex search",
+        "subtitleTm": "Esasy regex gözleg",
+        "subtitleRu": "Базовый поиск regex",
+        "subdescription": "Search digits and words:",
+        "subdescriptionTm": "Sanlary we sözleri gözlemek:",
+        "subdescriptionRu": "Поиск цифр и слов:",
+        "code": "import re\n\ntext = 'Hello World 123'\n\nprint(re.search(r'\\d+', text).group())\nprint(re.findall(r'[A-Z][a-z]+', text))"
       },
       {
-        "subtitle": "Replace and split",
-        "subtitleTm": "Çalyşmak we bölmek",
-        "subtitleRu": "Замена и разбиение",
-        "subdescription": "Using regex for replacements:",
-        "subdescriptionTm": "Çalyşmalar üçin regex ulanmak:",
-        "subdescriptionRu": "Использование regex для замен:",
-        "code": "import re\n\ntext = 'cat bat rat sat'\nresult = re.sub(r'[cbr]at', 'dog', text)\nprint(result)  # dog dog dog sat\n\n# Validate email\nemail = 'test@example.com'\nif re.match(r'^[\\w.-]+@[\\w.-]+\\.\\w+$', email):\n    print('Valid email')"
+        "subtitle": "Replace with regex",
+        "subtitleTm": "regex bilen çalyşmak",
+        "subtitleRu": "замена через regex",
+        "subdescription": "Replace patterns in string:",
+        "subdescriptionTm": "setir içindäki nusgalary çalyşmak:",
+        "subdescriptionRu": "замена шаблонов в строке:",
+        "code": "import re\n\ntext = 'cat bat rat'\nprint(re.sub(r'cat|bat|rat', 'dog', text))"
+      },
+      {
+        "subtitle": "Email validation",
+        "subtitleTm": "email barlamak",
+        "subtitleRu": "проверка email",
+        "subdescription": "Check valid email format:",
+        "subdescriptionTm": "dogry email formatyny barlamak:",
+        "subdescriptionRu": "проверка корректного email:",
+        "code": "import re\n\nemail = 'test@example.com'\npattern = r'^[\\w.-]+@[\\w.-]+\\.\\w+$'\n\nprint(bool(re.match(pattern, email)))"
+      },
+      {
+        "subtitle": "Phone number extraction",
+        "subtitleTm": "telefon sanlaryny almak",
+        "subtitleRu": "извлечение телефона",
+        "subdescription": "Find numbers in text:",
+        "subdescriptionTm": "tekstdäki sanlary tapmak:",
+        "subdescriptionRu": "поиск телефонов в тексте:",
+        "code": "import re\n\ntext = 'Call me at 123-456-7890'\nprint(re.findall(r'\\d{3}-\\d{3}-\\d{4}', text))"
+      },
+      {
+        "subtitle": "Split with regex",
+        "subtitleTm": "regex bilen bölmek",
+        "subtitleRu": "разделение через regex",
+        "subdescription": "Split using patterns:",
+        "subdescriptionTm": "nusga boýunça bölmek:",
+        "subdescriptionRu": "разделение по шаблону:",
+        "code": "import re\n\ntext = 'apple,banana;orange|grape'\nprint(re.split(r'[;,|]', text))"
+      },
+      {
+        "subtitle": "Find all numbers",
+        "subtitleTm": "hemmesini tapmak",
+        "subtitleRu": "поиск всех чисел",
+        "subdescription": "Extract all digits:",
+        "subdescriptionTm": "ähli sanlary almak:",
+        "subdescriptionRu": "извлечение всех чисел:",
+        "code": "import re\n\ntext = 'A1 B22 C333'\nprint(re.findall(r'\\d+', text))"
+      },
+      {
+        "subtitle": "Character classes",
+        "subtitleTm": "harp toparlary",
+        "subtitleRu": "классы символов",
+        "subdescription": "Match patterns:",
+        "subdescriptionTm": "nusgalary gabat getirmek:",
+        "subdescriptionRu": "сопоставление шаблонов:",
+        "code": "import re\n\ntext = 'abc ABC 123'\nprint(re.findall(r'[a-z]+', text))\nprint(re.findall(r'[A-Z]+', text))\nprint(re.findall(r'[0-9]+', text))"
+      },
+      {
+        "subtitle": "Start and end match",
+        "subtitleTm": "baş we soň barlamak",
+        "subtitleRu": "проверка начала и конца",
+        "subdescription": "Check string boundaries:",
+        "subdescriptionTm": "setiriň başyny we soňuny barlamak:",
+        "subdescriptionRu": "проверка границ строки:",
+        "code": "import re\n\ntext = 'Python123'\nprint(bool(re.match(r'^Python', text)))\nprint(bool(re.search(r'123$', text)))"
+      },
+      {
+        "subtitle": "Whitespace removal",
+        "subtitleTm": "boşluklary aýyrmak",
+        "subtitleRu": "удаление пробелов",
+        "subdescription": "Clean extra spaces:",
+        "subdescriptionTm": "artykmaç boşluklary aýyrmak:",
+        "subdescriptionRu": "удаление лишних пробелов:",
+        "code": "import re\n\ntext = 'Hello    World'\nprint(re.sub(r'\\s+', ' ', text))"
+      },
+      {
+        "subtitle": "Validate username",
+        "subtitleTm": "ulanyjy adyny barlamak",
+        "subtitleRu": "проверка имени пользователя",
+        "subdescription": "Check valid username:",
+        "subdescriptionTm": "dogry username barlamak:",
+        "subdescriptionRu": "проверка username:",
+        "code": "import re\n\nusername = 'user_123'\npattern = r'^[a-zA-Z0-9_]{3,15}$'\nprint(bool(re.match(pattern, username)))"
       }
     ]
   },
@@ -1090,19 +2539,91 @@
         "subtitle": "Basic inheritance",
         "subtitleTm": "Esasy miras almak",
         "subtitleRu": "Базовое наследование",
-        "subdescription": "Animal and Dog example:",
-        "subdescriptionTm": "Haýwan we It mysaly:",
-        "subdescriptionRu": "Пример Animal и Dog:",
-        "code": "class Animal:\n    def __init__(self, name):\n        self.name = name\n    \n    def speak(self):\n        return 'Some sound'\n\nclass Dog(Animal):\n    def speak(self):\n        return f'{self.name} says: Woof!'\n\nclass Cat(Animal):\n    def speak(self):\n        return f'{self.name} says: Meow!'\n\nd = Dog('Rex')\nprint(d.speak())"
+        "subdescription": "Child class inherits parent class:",
+        "subdescriptionTm": "Çaga klas ata klasdan miras alýar:",
+        "subdescriptionRu": "Дочерний класс наследует родительский:",
+        "code": "class Animal:\n    def speak(self):\n        return 'Sound'\n\nclass Dog(Animal):\n    pass\n\nd = Dog()\nprint(d.speak())"
       },
       {
-        "subtitle": "super()",
-        "subtitleTm": "super()",
-        "subtitleRu": "super()",
-        "subdescription": "Calling parent class methods:",
-        "subdescriptionTm": "Ata klas usullaryny çagyrmak:",
-        "subdescriptionRu": "Вызов методов родительского класса:",
-        "code": "class Vehicle:\n    def __init__(self, brand, speed):\n        self.brand = brand\n        self.speed = speed\n\nclass Car(Vehicle):\n    def __init__(self, brand, speed, doors):\n        super().__init__(brand, speed)\n        self.doors = doors\n    \n    def info(self):\n        return f'{self.brand}: {self.speed}km/h, {self.doors} doors'\n\ncar = Car('Toyota', 180, 4)\nprint(car.info())"
+        "subtitle": "Method override",
+        "subtitleTm": "usuly üýtgetmek",
+        "subtitleRu": "переопределение метода",
+        "subdescription": "Override parent method:",
+        "subdescriptionTm": "ata klasyň usulyny üýtgetmek:",
+        "subdescriptionRu": "переопределение метода родителя:",
+        "code": "class Animal:\n    def speak(self):\n        return 'Sound'\n\nclass Dog(Animal):\n    def speak(self):\n        return 'Woof'\n\nd = Dog()\nprint(d.speak())"
+      },
+      {
+        "subtitle": "super() usage",
+        "subtitleTm": "super() ulanylyşy",
+        "subtitleRu": "использование super()",
+        "subdescription": "Call parent constructor:",
+        "subdescriptionTm": "ata constructor çagyryş:",
+        "subdescriptionRu": "вызов конструктора родителя:",
+        "code": "class Animal:\n    def __init__(self, name):\n        self.name = name\n\nclass Dog(Animal):\n    def __init__(self, name, age):\n        super().__init__(name)\n        self.age = age\n\nd = Dog('Rex', 5)\nprint(d.name, d.age)"
+      },
+      {
+        "subtitle": "Multiple inheritance",
+        "subtitleTm": "köp miras almak",
+        "subtitleRu": "множественное наследование",
+        "subdescription": "One class inherits from multiple:",
+        "subdescriptionTm": "birnäçe klasdan miras almak:",
+        "subdescriptionRu": "наследование от нескольких классов:",
+        "code": "class A:\n    def a(self):\n        return 'A'\n\nclass B:\n    def b(self):\n        return 'B'\n\nclass C(A, B):\n    pass\n\nobj = C()\nprint(obj.a(), obj.b())"
+      },
+      {
+        "subtitle": "Inheritance with constructor",
+        "subtitleTm": "constructor bilen miras",
+        "subtitleRu": "наследование с конструктором",
+        "subdescription": "Initialize parent and child:",
+        "subdescriptionTm": "ata we çaga init etmek:",
+        "subdescriptionRu": "инициализация родителя и потомка:",
+        "code": "class Person:\n    def __init__(self, name):\n        self.name = name\n\nclass Student(Person):\n    def __init__(self, name, grade):\n        super().__init__(name)\n        self.grade = grade"
+      },
+      {
+        "subtitle": "Add new methods",
+        "subtitleTm": "täze usullar goşmak",
+        "subtitleRu": "добавление новых методов",
+        "subdescription": "Child class adds functionality:",
+        "subdescriptionTm": "çaga klas täze funksiýa goşýar:",
+        "subdescriptionRu": "добавление новых методов:",
+        "code": "class Animal:\n    def speak(self):\n        return 'sound'\n\nclass Dog(Animal):\n    def run(self):\n        return 'Running'\n\nd = Dog()\nprint(d.speak())\nprint(d.run())"
+      },
+      {
+        "subtitle": "Inheritance hierarchy",
+        "subtitleTm": "miras ierarhýasy",
+        "subtitleRu": "иерархия наследования",
+        "subdescription": "Chain inheritance:",
+        "subdescriptionTm": "zincir miras:",
+        "subdescriptionRu": "цепочка наследования:",
+        "code": "class A:\n    def show(self):\n        return 'A'\n\nclass B(A):\n    def show(self):\n        return 'B'\n\nclass C(B):\n    pass\n\nc = C()\nprint(c.show())"
+      },
+      {
+        "subtitle": "Using super in methods",
+        "subtitleTm": "metodlarda super",
+        "subtitleRu": "super в методах",
+        "subdescription": "Extend parent behavior:",
+        "subdescriptionTm": "ata funksiýany giňeltmek:",
+        "subdescriptionRu": "расширение поведения родителя:",
+        "code": "class Animal:\n    def speak(self):\n        return 'sound'\n\nclass Dog(Animal):\n    def speak(self):\n        return super().speak() + ' + Woof'\n\nd = Dog()\nprint(d.speak())"
+      },
+      {
+        "subtitle": "Real-world example",
+        "subtitleTm": "hakyky mysal",
+        "subtitleRu": "реальный пример",
+        "subdescription": "User system example:",
+        "subdescriptionTm": "ulanyjy sistemi mysaly:",
+        "subdescriptionRu": "пример системы пользователей:",
+        "code": "class User:\n    def __init__(self, name):\n        self.name = name\n\nclass Admin(User):\n    def access(self):\n        return 'Full access'\n\nu = Admin('John')\nprint(u.name)\nprint(u.access())"
+      },
+      {
+        "subtitle": "Check inheritance type",
+        "subtitleTm": "miras görnüşini barlamak",
+        "subtitleRu": "проверка наследования",
+        "subdescription": "Use isinstance and issubclass:",
+        "subdescriptionTm": "isinstance we issubclass ulanmak:",
+        "subdescriptionRu": "использование isinstance и issubclass:",
+        "code": "class A:\n    pass\n\nclass B(A):\n    pass\n\nb = B()\nprint(isinstance(b, B))\nprint(issubclass(B, A))"
       }
     ]
   },
@@ -1121,21 +2642,93 @@
     "body": [
       {
         "subtitle": "Custom iterator",
-        "subtitleTm": "Özel iterator",
-        "subtitleRu": "Пользовательский итератор",
-        "subdescription": "Creating an iterator class:",
-        "subdescriptionTm": "Iterator klasy döretmek:",
-        "subdescriptionRu": "Создание класса итератора:",
-        "code": "class Counter:\n    def __init__(self, low, high):\n        self.current = low\n        self.high = high\n    \n    def __iter__(self):\n        return self\n    \n    def __next__(self):\n        if self.current > self.high:\n            raise StopIteration\n        self.current += 1\n        return self.current - 1\n\nfor n in Counter(1, 5):\n    print(n)"
+        "subtitleTm": "özel iterator",
+        "subtitleRu": "пользовательский итератор",
+        "subdescription": "Create iterator class:",
+        "subdescriptionTm": "iterator klasy döretmek:",
+        "subdescriptionRu": "создание класса итератора:",
+        "code": "class Counter:\n    def __init__(self, low, high):\n        self.current = low\n        self.high = high\n\n    def __iter__(self):\n        return self\n\n    def __next__(self):\n        if self.current > self.high:\n            raise StopIteration\n        self.current += 1\n        return self.current - 1\n\nfor i in Counter(1, 5):\n    print(i)"
       },
       {
-        "subtitle": "iter() and next()",
-        "subtitleTm": "iter() we next()",
-        "subtitleRu": "iter() и next()",
-        "subdescription": "Using built-in iterator functions:",
-        "subdescriptionTm": "Gurlan iterator funksiyalaryny ulanmak:",
-        "subdescriptionRu": "Использование встроенных функций итератора:",
-        "code": "my_list = [1, 2, 3]\nit = iter(my_list)\nprint(next(it))  # 1\nprint(next(it))  # 2\nprint(next(it))  # 3"
+        "subtitle": "Using iter() and next()",
+        "subtitleTm": "iter we next ulanmak",
+        "subtitleRu": "использование iter и next",
+        "subdescription": "Manual iteration:",
+        "subdescriptionTm": "el bilen iterasiýa:",
+        "subdescriptionRu": "ручная итерация:",
+        "code": "nums = [10, 20, 30]\nit = iter(nums)\nprint(next(it))\nprint(next(it))\nprint(next(it))"
+      },
+      {
+        "subtitle": "String iterator",
+        "subtitleTm": "setir iterator",
+        "subtitleRu": "итератор строки",
+        "subdescription": "Iterate over string:",
+        "subdescriptionTm": "setir boýunça geçmek:",
+        "subdescriptionRu": "перебор строки:",
+        "code": "s = 'ABC'\nit = iter(s)\nprint(next(it))\nprint(next(it))\nprint(next(it))"
+      },
+      {
+        "subtitle": "List iteration",
+        "subtitleTm": "list boýunça iterasiýa",
+        "subtitleRu": "итерация списка",
+        "subdescription": "Iterate list manually:",
+        "subdescriptionTm": "list boýunça el bilen geçmek:",
+        "subdescriptionRu": "ручная итерация списка:",
+        "code": "my_list = [1, 2, 3]\nit = iter(my_list)\nwhile True:\n    try:\n        print(next(it))\n    except StopIteration:\n        break"
+      },
+      {
+        "subtitle": "Dictionary iterator",
+        "subtitleTm": "dictionary iterator",
+        "subtitleRu": "итератор словаря",
+        "subdescription": "Iterate dictionary keys:",
+        "subdescriptionTm": "dictionary açarlary boýunça geçmek:",
+        "subdescriptionRu": "перебор словаря:",
+        "code": "d = {'a': 1, 'b': 2}\nit = iter(d)\nprint(next(it))\nprint(next(it))"
+      },
+      {
+        "subtitle": "Infinite iterator",
+        "subtitleTm": "çäksiz iterator",
+        "subtitleRu": "бесконечный итератор",
+        "subdescription": "Never-ending sequence:",
+        "subdescriptionTm": "çäksiz yzygiderlik:",
+        "subdescriptionRu": "бесконечная последовательность:",
+        "code": "class Infinite:\n    def __iter__(self):\n        self.x = 0\n        return self\n\n    def __next__(self):\n        self.x += 1\n        return self.x"
+      },
+      {
+        "subtitle": "Range-like iterator",
+        "subtitleTm": "range ýaly iterator",
+        "subtitleRu": "итератор как range",
+        "subdescription": "Custom range implementation:",
+        "subdescriptionTm": "özel range ýerine ýetirilişi:",
+        "subdescriptionRu": "реализация range:",
+        "code": "class MyRange:\n    def __init__(self, start, end):\n        self.start = start\n        self.end = end\n\n    def __iter__(self):\n        return self\n\n    def __next__(self):\n        if self.start >= self.end:\n            raise StopIteration\n        val = self.start\n        self.start += 1\n        return val"
+      },
+      {
+        "subtitle": "Iterator with for loop",
+        "subtitleTm": "for bilen iterator",
+        "subtitleRu": "итератор с for",
+        "subdescription": "Automatic iteration:",
+        "subdescriptionTm": "awtomatik iterasiýa:",
+        "subdescriptionRu": "автоматический перебор:",
+        "code": "class Numbers:\n    def __init__(self):\n        self.num = 1\n\n    def __iter__(self):\n        return self\n\n    def __next__(self):\n        if self.num > 3:\n            raise StopIteration\n        val = self.num\n        self.num += 1\n        return val\n\nfor i in Numbers():\n    print(i)"
+      },
+      {
+        "subtitle": "Resettable iterator",
+        "subtitleTm": "täzeden başlanýan iterator",
+        "subtitleRu": "сбрасываемый итератор",
+        "subdescription": "Reset iteration:",
+        "subdescriptionTm": "iterasiýany täzeden başlatmak:",
+        "subdescriptionRu": "сброс итератора:",
+        "code": "class Reset:\n    def __init__(self):\n        self.data = [1, 2, 3]\n\n    def __iter__(self):\n        self.index = 0\n        return self\n\n    def __next__(self):\n        if self.index >= len(self.data):\n            raise StopIteration\n        val = self.data[self.index]\n        self.index += 1\n        return val"
+      },
+      {
+        "subtitle": "Iterator vs Iterable",
+        "subtitleTm": "iterator vs iterable",
+        "subtitleRu": "итератор vs итерируемый",
+        "subdescription": "Difference example:",
+        "subdescriptionTm": "tapawut mysaly:",
+        "subdescriptionRu": "пример различия:",
+        "code": "lst = [1, 2, 3]\nprint(iter(lst))  # iterator object\n\nit = iter(lst)\nprint(next(it))"
       }
     ]
   },
@@ -1153,22 +2746,94 @@
     "textRu": "Контекстные менеджеры управляют ресурсами, такими как файлы и соединения с базой данных. Оператор 'with' обеспечивает правильное получение и освобождение ресурсов.",
     "body": [
       {
-        "subtitle": "Using with",
+        "subtitle": "Using with statement",
         "subtitleTm": "with ulanmak",
-        "subtitleRu": "Использование with",
-        "subdescription": "The with statement automatically closes resources:",
-        "subdescriptionTm": "with beýannama çeşmeleri awtomatiki ýapýar:",
-        "subdescriptionRu": "Оператор with автоматически закрывает ресурсы:",
-        "code": "# Without context manager\nf = open('file.txt', 'w')\ntry:\n    f.write('Hello')\nfinally:\n    f.close()\n\n# With context manager (better)\nwith open('file.txt', 'w') as f:\n    f.write('Hello')"
+        "subtitleRu": "использование with",
+        "subdescription": "Automatic resource handling:",
+        "subdescriptionTm": "awtomatiki çeşme dolandyryşy:",
+        "subdescriptionRu": "автоматическое управление ресурсами:",
+        "code": "with open('file.txt', 'w') as f:\n    f.write('Hello World')"
+      },
+      {
+        "subtitle": "File handling without with",
+        "subtitleTm": "with bolmazdan faýl",
+        "subtitleRu": "файл без with",
+        "subdescription": "Manual close required:",
+        "subdescriptionTm": "el bilen ýapmak zerur:",
+        "subdescriptionRu": "ручное закрытие файла:",
+        "code": "f = open('file.txt', 'w')\nf.write('Hello')\nf.close()"
       },
       {
         "subtitle": "Custom context manager",
-        "subtitleTm": "Özel kontekst dolandyryjy",
-        "subtitleRu": "Пользовательский контекстный менеджер",
-        "subdescription": "Using __enter__ and __exit__:",
-        "subdescriptionTm": "__enter__ we __exit__ ulanmak:",
-        "subdescriptionRu": "Использование __enter__ и __exit__:",
-        "code": "class Timer:\n    def __enter__(self):\n        import time\n        self.start = time.time()\n        return self\n    \n    def __exit__(self, *args):\n        import time\n        self.end = time.time()\n        print(f'Time: {self.end - self.start:.3f}s')\n\nwith Timer():\n    total = sum(range(1000000))"
+        "subtitleTm": "özel kontekst dolandyryjy",
+        "subtitleRu": "пользовательский менеджер",
+        "subdescription": "__enter__ and __exit__ methods:",
+        "subdescriptionTm": "__enter__ we __exit__ usullary:",
+        "subdescriptionRu": "методы __enter__ и __exit__:",
+        "code": "class MyContext:\n    def __enter__(self):\n        print('Start')\n        return self\n\n    def __exit__(self, exc_type, exc_val, exc_tb):\n        print('End')\n\nwith MyContext():\n    print('Inside block')"
+      },
+      {
+        "subtitle": "Timer context manager",
+        "subtitleTm": "taýmer kontekst dolandyryjy",
+        "subtitleRu": "таймер менеджер",
+        "subdescription": "Measure execution time:",
+        "subdescriptionTm": "wagty ölçemek:",
+        "subdescriptionRu": "измерение времени:",
+        "code": "import time\n\nclass Timer:\n    def __enter__(self):\n        self.start = time.time()\n        return self\n\n    def __exit__(self, *args):\n        print('Time:', time.time() - self.start)\n\nwith Timer():\n    sum(range(100000))"
+      },
+      {
+        "subtitle": "Database connection example",
+        "subtitleTm": "database birikme mysaly",
+        "subtitleRu": "пример подключения к БД",
+        "subdescription": "Auto connect and close:",
+        "subdescriptionTm": "awto birikmek we ýapmak:",
+        "subdescriptionRu": "автоподключение и закрытие:",
+        "code": "class DB:\n    def __enter__(self):\n        print('Connected')\n        return self\n\n    def __exit__(self, *args):\n        print('Disconnected')\n\nwith DB():\n    print('Query running')"
+      },
+      {
+        "subtitle": "Exception handling in context manager",
+        "subtitleTm": "ýalňyşlyk dolandyryşy",
+        "subtitleRu": "обработка ошибок",
+        "subdescription": "Handle exceptions safely:",
+        "subdescriptionTm": "ýalňyşlyklary dolandyrmak:",
+        "subdescriptionRu": "обработка исключений:",
+        "code": "class Safe:\n    def __enter__(self):\n        return self\n\n    def __exit__(self, exc_type, exc_val, exc_tb):\n        if exc_type:\n            print('Error handled')\n        return True\n\nwith Safe():\n    1 / 0"
+      },
+      {
+        "subtitle": "Lock context manager",
+        "subtitleTm": "blokirleme kontekst",
+        "subtitleRu": "контекст блокировки",
+        "subdescription": "Thread-safe example:",
+        "subdescriptionTm": "howpsuz kod mysaly:",
+        "subdescriptionRu": "пример потокобезопасности:",
+        "code": "import threading\n\nlock = threading.Lock()\n\nwith lock:\n    print('Critical section')"
+      },
+      {
+        "subtitle": "Nested context managers",
+        "subtitleTm": "içgin kontekst",
+        "subtitleRu": "вложенные менеджеры",
+        "subdescription": "Multiple with statements:",
+        "subdescriptionTm": "birnäçe with ulanmak:",
+        "subdescriptionRu": "несколько with:",
+        "code": "with open('a.txt', 'w') as f1, open('b.txt', 'w') as f2:\n    f1.write('A')\n    f2.write('B')"
+      },
+      {
+        "subtitle": "Contextlib usage",
+        "subtitleTm": "contextlib ulanmak",
+        "subtitleRu": "использование contextlib",
+        "subdescription": "Simplify context managers:",
+        "subdescriptionTm": "ýönekeýleşdirmek:",
+        "subdescriptionRu": "упрощение менеджеров:",
+        "code": "from contextlib import contextmanager\n\n@contextmanager\ndef demo():\n    print('Start')\n    yield\n    print('End')\n\nwith demo():\n    print('Inside')"
+      },
+      {
+        "subtitle": "Real-world logging context",
+        "subtitleTm": "log kontekst mysaly",
+        "subtitleRu": "пример логирования",
+        "subdescription": "Auto logging wrapper:",
+        "subdescriptionTm": "awto log ýazmak:",
+        "subdescriptionRu": "автоматическое логирование:",
+        "code": "class Logger:\n    def __enter__(self):\n        print('Log start')\n\n    def __exit__(self, *args):\n        print('Log end')\n\nwith Logger():\n    print('Processing data')"
       }
     ]
   },
@@ -1186,22 +2851,94 @@
     "textRu": "Замыкание — это функция, которая запоминает значения из охватывающей области видимости, даже когда поток выполнения программы больше не находится в этой области.",
     "body": [
       {
-        "subtitle": "Closure example",
-        "subtitleTm": "Ýapylma mysaly",
-        "subtitleRu": "Пример замыкания",
-        "subdescription": "Inner function captures outer variable:",
-        "subdescriptionTm": "Içki funksiýa daşky üýtgeýjini tutýar:",
-        "subdescriptionRu": "Внутренняя функция захватывает внешнюю переменную:",
-        "code": "def make_multiplier(n):\n    def multiplier(x):\n        return x * n  # n is captured\n    return multiplier\n\ndouble = make_multiplier(2)\ntriple = make_multiplier(3)\n\nprint(double(5))   # 10\nprint(triple(5))   # 15"
+        "subtitle": "Basic closure",
+        "subtitleTm": "Esasy ýapylma",
+        "subtitleRu": "Базовое замыкание",
+        "subdescription": "Inner function remembers outer variable:",
+        "subdescriptionTm": "Içki funksiýa daşky üýtgeýjini ýatda saklaýar:",
+        "subdescriptionRu": "Внутренняя функция помнит внешнюю переменную:",
+        "code": "def outer(x):\n    def inner():\n        return x + 10\n    return inner\n\nf = outer(5)\nprint(f())"
+      },
+      {
+        "subtitle": "Multiplier closure",
+        "subtitleTm": "köpeldiji ýapylma",
+        "subtitleRu": "замыкание множителя",
+        "subdescription": "Create custom multiplier:",
+        "subdescriptionTm": "özel köpeldiji döretmek:",
+        "subdescriptionRu": "создание множителя:",
+        "code": "def make_multiplier(n):\n    def multiply(x):\n        return x * n\n    return multiply\n\ndouble = make_multiplier(2)\nprint(double(6))"
       },
       {
         "subtitle": "Counter closure",
-        "subtitleTm": "Sanaç ýapylmasy",
-        "subtitleRu": "Замыкание-счётчик",
-        "subdescription": "Closures can maintain state:",
-        "subdescriptionTm": "Ýapylmalar ýagdaýy saklar:",
-        "subdescriptionRu": "Замыкания могут поддерживать состояние:",
-        "code": "def make_counter():\n    count = 0\n    def counter():\n        nonlocal count\n        count += 1\n        return count\n    return counter\n\nc = make_counter()\nprint(c())  # 1\nprint(c())  # 2\nprint(c())  # 3"
+        "subtitleTm": "sanaç ýapylma",
+        "subtitleRu": "замыкание счётчика",
+        "subdescription": "Maintain state:",
+        "subdescriptionTm": "ýagdaý saklamak:",
+        "subdescriptionRu": "сохранение состояния:",
+        "code": "def counter():\n    count = 0\n    def inc():\n        nonlocal count\n        count += 1\n        return count\n    return inc\n\nc = counter()\nprint(c())\nprint(c())"
+      },
+      {
+        "subtitle": "Adder closure",
+        "subtitleTm": "goşujy ýapylma",
+        "subtitleRu": "замыкание сложения",
+        "subdescription": "Add fixed value:",
+        "subdescriptionTm": "kesgitli baha goşmak:",
+        "subdescriptionRu": "фиксированное сложение:",
+        "code": "def add_n(n):\n    def add(x):\n        return x + n\n    return add\n\nadd5 = add_n(5)\nprint(add5(10))"
+      },
+      {
+        "subtitle": "Logger closure",
+        "subtitleTm": "log ýapylma",
+        "subtitleRu": "замыкание логгера",
+        "subdescription": "Track function calls:",
+        "subdescriptionTm": "funksiýa çagyrmalaryny ýazmak:",
+        "subdescriptionRu": "логирование вызовов:",
+        "code": "def logger(prefix):\n    def log(msg):\n        print(f'{prefix}: {msg}')\n    return log\n\nlog_info = logger('INFO')\nlog_info('System started')"
+      },
+      {
+        "subtitle": "Configuration closure",
+        "subtitleTm": "konfigurasiýa ýapylma",
+        "subtitleRu": "конфигурационное замыкание",
+        "subdescription": "Store settings:",
+        "subdescriptionTm": "sazlamalary saklamak:",
+        "subdescriptionRu": "хранение настроек:",
+        "code": "def config(mode):\n    def get_mode():\n        return f'Mode is {mode}'\n    return get_mode\n\nprod = config('production')\nprint(prod())"
+      },
+      {
+        "subtitle": "Discount closure",
+        "subtitleTm": "skidka ýapylma",
+        "subtitleRu": "замыкание скидки",
+        "subdescription": "Apply discount:",
+        "subdescriptionTm": "skidka ulanmak:",
+        "subdescriptionRu": "применение скидки:",
+        "code": "def discount(percent):\n    def apply(price):\n        return price - price * percent / 100\n    return apply\n\nsale = discount(10)\nprint(sale(100))"
+      },
+      {
+        "subtitle": "Power closure",
+        "subtitleTm": "dereje ýapylma",
+        "subtitleRu": "замыкание степени",
+        "subdescription": "Raise to power:",
+        "subdescriptionTm": "derejä çykarmak:",
+        "subdescriptionRu": "возведение в степень:",
+        "code": "def power(n):\n    def raise_to(x):\n        return x ** n\n    return raise_to\n\nsquare = power(2)\nprint(square(4))"
+      },
+      {
+        "subtitle": "Stateful closure",
+        "subtitleTm": "ýagdaýly ýapylma",
+        "subtitleRu": "замыкание с состоянием",
+        "subdescription": "Keep internal state:",
+        "subdescriptionTm": "içki ýagdaýy saklamak:",
+        "subdescriptionRu": "сохранение состояния:",
+        "code": "def state():\n    data = []\n    def add(x):\n        data.append(x)\n        return data\n    return add\n\ns = state()\nprint(s(1))\nprint(s(2))"
+      },
+      {
+        "subtitle": "Function factory closure",
+        "subtitleTm": "funksiýa fabrigi",
+        "subtitleRu": "фабрика функций",
+        "subdescription": "Generate functions dynamically:",
+        "subdescriptionTm": "funksiýalary döretmek:",
+        "subdescriptionRu": "динамическое создание функций:",
+        "code": "def make_greeting(word):\n    def greet(name):\n        return f'{word}, {name}'\n    return greet\n\nhello = make_greeting('Hello')\nprint(hello('Alex'))"
       }
     ]
   },
@@ -1222,19 +2959,91 @@
         "subtitle": "Basic type hints",
         "subtitleTm": "Esasy görnüş bellikleri",
         "subtitleRu": "Базовые аннотации типов",
-        "subdescription": "Adding type annotations to functions:",
-        "subdescriptionTm": "Funksiyalara görnüş bellikleri goşmak:",
-        "subdescriptionRu": "Добавление аннотаций типов к функциям:",
-        "code": "def greet(name: str) -> str:\n    return f'Hello, {name}!'\n\ndef add(x: int, y: int) -> int:\n    return x + y\n\ndef process(data: list[int]) -> dict[str, int]:\n    return {'sum': sum(data), 'count': len(data)}\n\nprint(greet('Alice'))\nprint(add(3, 4))"
+        "subdescription": "Function annotations:",
+        "subdescriptionTm": "Funksiýa bellikleri:",
+        "subdescriptionRu": "Аннотации функций:",
+        "code": "def greet(name: str) -> str:\n    return f'Hello {name}'\n\ndef add(a: int, b: int) -> int:\n    return a + b"
       },
       {
-        "subtitle": "Optional and Union types",
-        "subtitleTm": "Optional we Union görnüşler",
-        "subtitleRu": "Optional и Union типы",
-        "subdescription": "Using typing module:",
-        "subdescriptionTm": "typing modulyny ulanmak:",
-        "subdescriptionRu": "Использование модуля typing:",
-        "code": "from typing import Optional, Union, List\n\ndef find_user(user_id: int) -> Optional[str]:\n    users = {1: 'Alice', 2: 'Bob'}\n    return users.get(user_id)\n\ndef format_value(val: Union[int, float, str]) -> str:\n    return str(val)\n\nprint(find_user(1))  # Alice\nprint(find_user(99))  # None"
+        "subtitle": "List type hints",
+        "subtitleTm": "list görnüş bellikleri",
+        "subtitleRu": "аннотации списков",
+        "subdescription": "Using list[int]:",
+        "subdescriptionTm": "list[int] ulanmak:",
+        "subdescriptionRu": "использование list[int]:",
+        "code": "def total(nums: list[int]) -> int:\n    return sum(nums)\n\nprint(total([1, 2, 3]))"
+      },
+      {
+        "subtitle": "Dictionary type hints",
+        "subtitleTm": "dictionary bellikleri",
+        "subtitleRu": "аннотации словаря",
+        "subdescription": "Dict key-value types:",
+        "subdescriptionTm": "dictionary görnüşleri:",
+        "subdescriptionRu": "типы словаря:",
+        "code": "def get_scores() -> dict[str, int]:\n    return {'Alice': 90, 'Bob': 85}"
+      },
+      {
+        "subtitle": "Optional type",
+        "subtitleTm": "Optional görnüş",
+        "subtitleRu": "Optional тип",
+        "subdescription": "Value can be None:",
+        "subdescriptionTm": "None bolup biler:",
+        "subdescriptionRu": "значение может быть None:",
+        "code": "from typing import Optional\n\ndef find(id: int) -> Optional[str]:\n    data = {1: 'A'}\n    return data.get(id)"
+      },
+      {
+        "subtitle": "Union types",
+        "subtitleTm": "Union görnüş",
+        "subtitleRu": "Union тип",
+        "subdescription": "Multiple allowed types:",
+        "subdescriptionTm": "birnäçe görnüş:",
+        "subdescriptionRu": "несколько типов:",
+        "code": "from typing import Union\n\ndef process(x: Union[int, float]) -> float:\n    return float(x)"
+      },
+      {
+        "subtitle": "Tuple type hints",
+        "subtitleTm": "tuple bellikleri",
+        "subtitleRu": "аннотации кортежей",
+        "subdescription": "Fixed structure tuple:",
+        "subdescriptionTm": "kesgitli tuple:",
+        "subdescriptionRu": "фиксированный кортеж:",
+        "code": "def get_point() -> tuple[int, int]:\n    return (10, 20)"
+      },
+      {
+        "subtitle": "Function as argument",
+        "subtitleTm": "funksiýa argument",
+        "subtitleRu": "функция как аргумент",
+        "subdescription": "Callable type:",
+        "subdescriptionTm": "Callable ulanmak:",
+        "subdescriptionRu": "использование Callable:",
+        "code": "from typing import Callable\n\ndef apply(func: Callable[[int, int], int], a: int, b: int) -> int:\n    return func(a, b)\n\ndef add(x, y):\n    return x + y"
+      },
+      {
+        "subtitle": "Nested type hints",
+        "subtitleTm": "içgin görnüşler",
+        "subtitleRu": "вложенные типы",
+        "subdescription": "Complex structures:",
+        "subdescriptionTm": "çylşyrymly gurluşlar:",
+        "subdescriptionRu": "сложные структуры:",
+        "code": "def matrix() -> list[list[int]]:\n    return [[1, 2], [3, 4]]"
+      },
+      {
+        "subtitle": "Type hints with classes",
+        "subtitleTm": "class bilen bellikler",
+        "subtitleRu": "аннотации классов",
+        "subdescription": "Class return type:",
+        "subdescriptionTm": "class gaýtarmak:",
+        "subdescriptionRu": "возврат класса:",
+        "code": "class User:\n    pass\n\ndef create_user() -> User:\n    return User()"
+      },
+      {
+        "subtitle": "Complex typing example",
+        "subtitleTm": "çylşyrymly mysal",
+        "subtitleRu": "сложный пример",
+        "subdescription": "Combined types:",
+        "subdescriptionTm": "bileleşdirilen görnüşler:",
+        "subdescriptionRu": "комбинированные типы:",
+        "code": "from typing import Optional, List\n\ndef search(items: list[str], key: str) -> Optional[str]:\n    for item in items:\n        if key in item:\n            return item\n    return None"
       }
     ]
   },
@@ -1252,22 +3061,94 @@
     "textRu": "Модуль collections предоставляет специализированные контейнерные типы данных, которые являются альтернативами встроенным list, dict и tuple Python.",
     "body": [
       {
-        "subtitle": "Counter",
-        "subtitleTm": "Counter",
-        "subtitleRu": "Counter",
-        "subdescription": "Count element occurrences:",
-        "subdescriptionTm": "Element ýygylyklaryny sanamak:",
-        "subdescriptionRu": "Подсчёт вхождений элементов:",
-        "code": "from collections import Counter\n\nwords = 'apple banana apple cherry banana apple'\ncount = Counter(words.split())\nprint(count)\nprint(count.most_common(2))"
+        "subtitle": "Counter basic",
+        "subtitleTm": "Counter esasynda",
+        "subtitleRu": "основы Counter",
+        "subdescription": "Count word frequency:",
+        "subdescriptionTm": "söz ýygylygyny sanamak:",
+        "subdescriptionRu": "подсчёт слов:",
+        "code": "from collections import Counter\n\ntext = 'a b a c a b'\nc = Counter(text.split())\nprint(c)"
       },
       {
-        "subtitle": "defaultdict and deque",
-        "subtitleTm": "defaultdict we deque",
-        "subtitleRu": "defaultdict и deque",
-        "subdescription": "Other useful collection types:",
-        "subdescriptionTm": "Beýleki peýdaly ýygyndy görnüşleri:",
-        "subdescriptionRu": "Другие полезные типы коллекций:",
-        "code": "from collections import defaultdict, deque\n\n# defaultdict\ngraph = defaultdict(list)\ngraph['A'].append('B')\ngraph['A'].append('C')\nprint(dict(graph))\n\n# deque (double-ended queue)\ndq = deque([1, 2, 3])\ndq.appendleft(0)\ndq.append(4)\nprint(dq)"
+        "subtitle": "most_common method",
+        "subtitleTm": "most_common usuly",
+        "subtitleRu": "метод most_common",
+        "subdescription": "Get most frequent items:",
+        "subdescriptionTm": "iň köp gaýtalanýanlary almak:",
+        "subdescriptionRu": "самые частые элементы:",
+        "code": "from collections import Counter\n\nnums = [1,1,2,3,3,3]\nc = Counter(nums)\nprint(c.most_common(1))"
+      },
+      {
+        "subtitle": "defaultdict list",
+        "subtitleTm": "defaultdict list",
+        "subtitleRu": "defaultdict список",
+        "subdescription": "Auto initialize lists:",
+        "subdescriptionTm": "awto list döretmek:",
+        "subdescriptionRu": "автоинициализация списка:",
+        "code": "from collections import defaultdict\n\nd = defaultdict(list)\nd['a'].append(1)\nd['a'].append(2)\nprint(d)"
+      },
+      {
+        "subtitle": "defaultdict int",
+        "subtitleTm": "defaultdict int",
+        "subtitleRu": "defaultdict int",
+        "subdescription": "Auto counting:",
+        "subdescriptionTm": "awto sanamak:",
+        "subdescriptionRu": "автосчётчик:",
+        "code": "from collections import defaultdict\n\ncount = defaultdict(int)\ncount['a'] += 1\ncount['a'] += 1\nprint(count)"
+      },
+      {
+        "subtitle": "deque basics",
+        "subtitleTm": "deque esasynda",
+        "subtitleRu": "основы deque",
+        "subdescription": "Double-ended queue:",
+        "subdescriptionTm": "iki taraplaýyn queue:",
+        "subdescriptionRu": "двусторонняя очередь:",
+        "code": "from collections import deque\n\nd = deque([1,2,3])\nd.append(4)\nd.appendleft(0)\nprint(d)"
+      },
+      {
+        "subtitle": "deque rotation",
+        "subtitleTm": "deque aýlamak",
+        "subtitleRu": "вращение deque",
+        "subdescription": "Rotate elements:",
+        "subdescriptionTm": "elementleri aýlamak:",
+        "subdescriptionRu": "вращение элементов:",
+        "code": "from collections import deque\n\nd = deque([1,2,3,4])\nd.rotate(1)\nprint(d)\nd.rotate(-2)\nprint(d)"
+      },
+      {
+        "subtitle": "deque as queue",
+        "subtitleTm": "queue hökmünde deque",
+        "subtitleRu": "deque как очередь",
+        "subdescription": "FIFO structure:",
+        "subdescriptionTm": "FIFO gurluş:",
+        "subdescriptionRu": "структура FIFO:",
+        "code": "from collections import deque\n\nq = deque()\nq.append('A')\nq.append('B')\nprint(q.popleft())\nprint(q.popleft())"
+      },
+      {
+        "subtitle": "namedtuple example",
+        "subtitleTm": "namedtuple mysaly",
+        "subtitleRu": "пример namedtuple",
+        "subdescription": "Structured data:",
+        "subdescriptionTm": "gurluşly maglumat:",
+        "subdescriptionRu": "структурированные данные:",
+        "code": "from collections import namedtuple\n\nPoint = namedtuple('Point', ['x', 'y'])\np = Point(10, 20)\nprint(p.x, p.y)"
+      },
+      {
+        "subtitle": "Graph with defaultdict",
+        "subtitleTm": "graph defaultdict bilen",
+        "subtitleRu": "граф через defaultdict",
+        "subdescription": "Adjacency list:",
+        "subdescriptionTm": "goňşuluk list:",
+        "subdescriptionRu": "список смежности:",
+        "code": "from collections import defaultdict\n\ngraph = defaultdict(list)\ngraph['A'].append('B')\ngraph['A'].append('C')\ngraph['B'].append('D')\nprint(dict(graph))"
+      },
+      {
+        "subtitle": "Word frequency analyzer",
+        "subtitleTm": "söz analizatory",
+        "subtitleRu": "анализатор слов",
+        "subdescription": "Real use case:",
+        "subdescriptionTm": "hakyky mysal:",
+        "subdescriptionRu": "реальный пример:",
+        "code": "from collections import Counter\n\ntext = 'apple banana apple orange banana apple'\nwords = Counter(text.split())\nfor word, count in words.items():\n    print(word, count)"
       }
     ]
   },
@@ -1285,22 +3166,94 @@
     "textRu": "JSON (JavaScript Object Notation) — лёгкий формат данных. Модуль json Python предоставляет методы для кодирования объектов Python в строки JSON и декодирования строк JSON в объекты Python.",
     "body": [
       {
-        "subtitle": "dumps and loads",
-        "subtitleTm": "dumps we loads",
-        "subtitleRu": "dumps и loads",
-        "subdescription": "Converting between Python and JSON:",
-        "subdescriptionTm": "Python we JSON arasynda öwürmek:",
-        "subdescriptionRu": "Конвертация между Python и JSON:",
-        "code": "import json\n\n# Python to JSON\ndata = {'name': 'Alice', 'age': 25, 'hobbies': ['coding', 'reading']}\njson_str = json.dumps(data, indent=2)\nprint(json_str)\n\n# JSON to Python\nparsed = json.loads(json_str)\nprint(parsed['name'])  # Alice"
+        "subtitle": "json.dumps basic",
+        "subtitleTm": "json.dumps esasynda",
+        "subtitleRu": "основы json.dumps",
+        "subdescription": "Convert Python to JSON string:",
+        "subdescriptionTm": "Python JSON-a öwürmek:",
+        "subdescriptionRu": "конвертация Python в JSON:",
+        "code": "import json\n\ndata = {'name': 'Alice', 'age': 20}\nprint(json.dumps(data))"
       },
       {
-        "subtitle": "Reading/Writing JSON files",
-        "subtitleTm": "JSON faýllaryny okamak/ýazmak",
-        "subtitleRu": "Чтение/запись JSON файлов",
-        "subdescription": "Working with JSON files:",
-        "subdescriptionTm": "JSON faýllar bilen işlemek:",
-        "subdescriptionRu": "Работа с JSON файлами:",
-        "code": "import json\n\n# Write JSON file\ndata = [{'id': 1, 'name': 'Alice'}, {'id': 2, 'name': 'Bob'}]\nwith open('data.json', 'w') as f:\n    json.dump(data, f, indent=2)\n\n# Read JSON file\nwith open('data.json', 'r') as f:\n    loaded = json.load(f)\nprint(loaded[0]['name'])  # Alice"
+        "subtitle": "json.loads basic",
+        "subtitleTm": "json.loads esasynda",
+        "subtitleRu": "основы json.loads",
+        "subdescription": "Convert JSON to Python:",
+        "subdescriptionTm": "JSON Python-a öwürmek:",
+        "subdescriptionRu": "конвертация JSON в Python:",
+        "code": "import json\n\ns = '{\"name\": \"Bob\", \"age\": 30}'\ndata = json.loads(s)\nprint(data['name'])"
+      },
+      {
+        "subtitle": "Pretty JSON output",
+        "subtitleTm": "owadan JSON çykyş",
+        "subtitleRu": "форматированный JSON",
+        "subdescription": "Using indent:",
+        "subdescriptionTm": "indent ulanmak:",
+        "subdescriptionRu": "использование indent:",
+        "code": "import json\n\ndata = {'a':1,'b':2}\nprint(json.dumps(data, indent=4))"
+      },
+      {
+        "subtitle": "Sorting JSON keys",
+        "subtitleTm": "key sortlamak",
+        "subtitleRu": "сортировка ключей",
+        "subdescription": "Sorted output:",
+        "subdescriptionTm": "tertiplemek:",
+        "subdescriptionRu": "сортированный вывод:",
+        "code": "import json\n\ndata = {'b':2,'a':1}\nprint(json.dumps(data, sort_keys=True))"
+      },
+      {
+        "subtitle": "Writing JSON file",
+        "subtitleTm": "JSON ýazmak",
+        "subtitleRu": "запись JSON файла",
+        "subdescription": "Save data to file:",
+        "subdescriptionTm": "faýla ýazmak:",
+        "subdescriptionRu": "сохранение в файл:",
+        "code": "import json\n\ndata = {'name':'Alice'}\nwith open('file.json','w') as f:\n    json.dump(data, f)"
+      },
+      {
+        "subtitle": "Reading JSON file",
+        "subtitleTm": "JSON okamak",
+        "subtitleRu": "чтение JSON файла",
+        "subdescription": "Load from file:",
+        "subdescriptionTm": "faýldan okamak:",
+        "subdescriptionRu": "загрузка из файла:",
+        "code": "import json\n\nwith open('file.json','r') as f:\n    data = json.load(f)\nprint(data)"
+      },
+      {
+        "subtitle": "Nested JSON",
+        "subtitleTm": "içgin JSON",
+        "subtitleRu": "вложенный JSON",
+        "subdescription": "Complex structure:",
+        "subdescriptionTm": "çylşyrymly gurluş:",
+        "subdescriptionRu": "сложная структура:",
+        "code": "import json\n\ndata = {'user': {'name':'Alice','skills':['Python','JS']}}\nprint(json.dumps(data, indent=2))"
+      },
+      {
+        "subtitle": "JSON with list",
+        "subtitleTm": "list bilen JSON",
+        "subtitleRu": "JSON со списком",
+        "subdescription": "Array handling:",
+        "subdescriptionTm": "array ulanmak:",
+        "subdescriptionRu": "работа со списками:",
+        "code": "import json\n\nitems = [1,2,3,4]\nprint(json.dumps(items))"
+      },
+      {
+        "subtitle": "Handling JSON error",
+        "subtitleTm": "JSON ýalňyşlyk",
+        "subtitleRu": "ошибка JSON",
+        "subdescription": "Invalid JSON handling:",
+        "subdescriptionTm": "ýalňyş JSON:",
+        "subdescriptionRu": "обработка ошибок:",
+        "code": "import json\n\ntry:\n    json.loads('{bad json}')\nexcept json.JSONDecodeError:\n    print('Invalid JSON')"
+      },
+      {
+        "subtitle": "Real API-style JSON",
+        "subtitleTm": "API JSON mysaly",
+        "subtitleRu": "пример API JSON",
+        "subdescription": "Typical API response:",
+        "subdescriptionTm": "API jogaby:",
+        "subdescriptionRu": "ответ API:",
+        "code": "import json\n\nresponse = '{\"status\":\"ok\",\"data\":[{\"id\":1},{\"id\":2}]}'\ndata = json.loads(response)\nprint(data['data'][0]['id'])"
       }
     ]
   },
@@ -1318,22 +3271,94 @@
     "textRu": "map(), filter() и reduce() — инструменты функционального программирования. Они применяют функции к последовательностям и могут заменить явные циклы.",
     "body": [
       {
-        "subtitle": "map() and filter()",
-        "subtitleTm": "map() we filter()",
-        "subtitleRu": "map() и filter()",
-        "subdescription": "Transform and filter sequences:",
-        "subdescriptionTm": "Yzygiderlikleri öwürmek we süzmek:",
-        "subdescriptionRu": "Преобразование и фильтрация последовательностей:",
-        "code": "nums = [1, 2, 3, 4, 5, 6]\n\n# map: apply function to each element\nsquared = list(map(lambda x: x**2, nums))\nprint(squared)  # [1, 4, 9, 16, 25, 36]\n\n# filter: keep elements where function is True\nevens = list(filter(lambda x: x % 2 == 0, nums))\nprint(evens)  # [2, 4, 6]"
+        "subtitle": "Basic map()",
+        "subtitleTm": "map() esasynda",
+        "subtitleRu": "основы map()",
+        "subdescription": "Apply function to each element:",
+        "subdescriptionTm": "her elemente funksiýa ulanmak:",
+        "subdescriptionRu": "применение функции к каждому элементу:",
+        "code": "nums = [1,2,3]\nresult = list(map(lambda x: x*2, nums))\nprint(result)"
       },
       {
-        "subtitle": "reduce()",
-        "subtitleTm": "reduce()",
-        "subtitleRu": "reduce()",
-        "subdescription": "Reduce sequence to single value:",
-        "subdescriptionTm": "Yzygiderligi ýeke bahaya getirmek:",
-        "subdescriptionRu": "Сводка последовательности к одному значению:",
-        "code": "from functools import reduce\n\nnums = [1, 2, 3, 4, 5]\n\n# Product of all numbers\nproduct = reduce(lambda x, y: x * y, nums)\nprint(product)  # 120\n\n# Find maximum\nmax_val = reduce(lambda x, y: x if x > y else y, nums)\nprint(max_val)  # 5"
+        "subtitle": "Basic filter()",
+        "subtitleTm": "filter() esasynda",
+        "subtitleRu": "основы filter()",
+        "subdescription": "Filter elements:",
+        "subdescriptionTm": "elementleri süzmek:",
+        "subdescriptionRu": "фильтрация элементов:",
+        "code": "nums = [1,2,3,4,5]\nresult = list(filter(lambda x: x>3, nums))\nprint(result)"
+      },
+      {
+        "subtitle": "Basic reduce()",
+        "subtitleTm": "reduce() esasynda",
+        "subtitleRu": "основы reduce()",
+        "subdescription": "Combine values:",
+        "subdescriptionTm": "bahalary birleşdirmek:",
+        "subdescriptionRu": "объединение значений:",
+        "code": "from functools import reduce\n\nnums = [1,2,3,4]\nresult = reduce(lambda x,y: x+y, nums)\nprint(result)"
+      },
+      {
+        "subtitle": "Square numbers with map",
+        "subtitleTm": "kwadrat map bilen",
+        "subtitleRu": "квадраты через map",
+        "subdescription": "Transform list:",
+        "subdescriptionTm": "list öwürmek:",
+        "subdescriptionRu": "преобразование списка:",
+        "code": "nums = [2,3,4]\nsquares = list(map(lambda x: x**2, nums))\nprint(squares)"
+      },
+      {
+        "subtitle": "Filter even numbers",
+        "subtitleTm": "jübüt sanlar",
+        "subtitleRu": "чётные числа",
+        "subdescription": "Keep only evens:",
+        "subdescriptionTm": "diňe jübüt sanlar:",
+        "subdescriptionRu": "только чётные числа:",
+        "code": "nums = [1,2,3,4,5,6]\nevens = list(filter(lambda x: x%2==0, nums))\nprint(evens)"
+      },
+      {
+        "subtitle": "Reduce product",
+        "subtitleTm": "köpeltmek reduce",
+        "subtitleRu": "произведение reduce",
+        "subdescription": "Multiply all numbers:",
+        "subdescriptionTm": "hemmesini köpeltmek:",
+        "subdescriptionRu": "перемножение:",
+        "code": "from functools import reduce\n\nnums = [1,2,3,4]\nproduct = reduce(lambda x,y: x*y, nums)\nprint(product)"
+      },
+      {
+        "subtitle": "String map example",
+        "subtitleTm": "setir map mysal",
+        "subtitleRu": "строки map пример",
+        "subdescription": "Uppercase conversion:",
+        "subdescriptionTm": "uly harplara öwürmek:",
+        "subdescriptionRu": "преобразование в верхний регистр:",
+        "code": "words = ['a','b','c']\nupper = list(map(str.upper, words))\nprint(upper)"
+      },
+      {
+        "subtitle": "Filter strings",
+        "subtitleTm": "setir süzmek",
+        "subtitleRu": "фильтр строк",
+        "subdescription": "Keep long words:",
+        "subdescriptionTm": "uzyn sözleri saýlamak:",
+        "subdescriptionRu": "длинные слова:",
+        "code": "words = ['hi','hello','python']\nlong = list(filter(lambda w: len(w)>3, words))\nprint(long)"
+      },
+      {
+        "subtitle": "Reduce max value",
+        "subtitleTm": "maks reduce",
+        "subtitleRu": "максимум reduce",
+        "subdescription": "Find maximum:",
+        "subdescriptionTm": "iň uly baha:",
+        "subdescriptionRu": "поиск максимума:",
+        "code": "from functools import reduce\n\nnums = [3,7,2,9,5]\nmax_val = reduce(lambda x,y: x if x>y else y, nums)\nprint(max_val)"
+      },
+      {
+        "subtitle": "Combined map filter reduce",
+        "subtitleTm": "bileleşdirilen mysal",
+        "subtitleRu": "комбинированный пример",
+        "subdescription": "Chain operations:",
+        "subdescriptionTm": "operasiýalary birleşdirmek:",
+        "subdescriptionRu": "цепочка операций:",
+        "code": "from functools import reduce\n\nnums = [1,2,3,4,5,6]\nresult = reduce(\n    lambda x,y: x+y,\n    filter(lambda x: x%2==0,\n           map(lambda x: x*2, nums))\n)\nprint(result)"
       }
     ]
   },
@@ -1351,22 +3376,93 @@
     "textRu": "*args позволяет функции принимать любое количество позиционных аргументов, а **kwargs — любое количество именованных аргументов.",
     "body": [
       {
-        "subtitle": "*args",
-        "subtitleTm": "*args",
-        "subtitleRu": "*args",
+        "subtitle": "*args basic",
+        "subtitleTm": "*args esasynda",
+        "subtitleRu": "основы *args",
         "subdescription": "Variable positional arguments:",
-        "subdescriptionTm": "Üýtgeýji pozisiýa argumentleri:",
-        "subdescriptionRu": "Переменные позиционные аргументы:",
-        "code": "def sum_all(*args):\n    total = 0\n    for n in args:\n        total += n\n    return total\n\nprint(sum_all(1, 2))        # 3\nprint(sum_all(1, 2, 3, 4)) # 10\n\ndef first_last(*args):\n    return args[0], args[-1]\n\nprint(first_last(10, 20, 30, 40))"
+        "subdescriptionTm": "üýtgeýji pozisiýa argumentleri:",
+        "subdescriptionRu": "переменные позиционные аргументы:",
+        "code": "def add(*args):\n    return sum(args)\n\nprint(add(1,2,3))"
       },
       {
-        "subtitle": "**kwargs",
-        "subtitleTm": "**kwargs",
-        "subtitleRu": "**kwargs",
-        "subdescription": "Variable keyword arguments:",
-        "subdescriptionTm": "Üýtgeýji açar sözli argumentler:",
-        "subdescriptionRu": "Переменные именованные аргументы:",
-        "code": "def print_info(**kwargs):\n    for key, value in kwargs.items():\n        print(f'{key}: {value}')\n\nprint_info(name='Alice', age=25, city='NYC')\n\n# Combining *args and **kwargs\ndef show(*args, **kwargs):\n    print('Args:', args)\n    print('Kwargs:', kwargs)\n\nshow(1, 2, 3, x=10, y=20)"
+        "subtitle": "*args iteration",
+        "subtitleTm": "*args aýlaw",
+        "subtitleRu": "перебор *args",
+        "subdescription": "Loop through arguments:",
+        "subdescriptionTm": "argumentleri aýlamak:",
+        "subdescriptionRu": "перебор аргументов:",
+        "code": "def show(*args):\n    for a in args:\n        print(a)\n\nshow(10,20,30)"
+      },
+      {
+        "subtitle": "*args unpacking",
+        "subtitleTm": "*args açmak",
+        "subtitleRu": "распаковка *args",
+        "subdescription": "Unpack list into function:",
+        "subdescriptionTm": "list açmak:",
+        "subdescriptionRu": "распаковка списка:",
+        "code": "def add(a,b,c):\n    return a+b+c\n\nnums = [1,2,3]\nprint(add(*nums))"
+      },
+      {
+        "subtitle": "**kwargs basic",
+        "subtitleTm": "**kwargs esasynda",
+        "subtitleRu": "основы **kwargs",
+        "subdescription": "Keyword arguments:",
+        "subdescriptionTm": "açar söz argumentleri:",
+        "subdescriptionRu": "именованные аргументы:",
+        "code": "def info(**kwargs):\n    print(kwargs)\n\ninfo(name='Alice', age=20)"
+      },
+      {
+        "subtitle": "**kwargs iteration",
+        "subtitleTm": "**kwargs aýlaw",
+        "subtitleRu": "перебор **kwargs",
+        "subdescription": "Loop key-value pairs:",
+        "subdescriptionTm": "key-value aýlamak:",
+        "subdescriptionRu": "перебор ключ-значение:",
+        "code": "def print_data(**kwargs):\n    for k,v in kwargs.items():\n        print(k,v)\n\nprint_data(a=1,b=2)"
+      },
+      {
+        "subtitle": "**kwargs unpacking",
+        "subtitleTm": "**kwargs açmak",
+        "subtitleRu": "распаковка **kwargs",
+        "subdescription": "Pass dictionary:",
+        "subdescriptionTm": "dictionary geçirmek:",
+        "subdescriptionRu": "передача словаря:",
+        "code": "def greet(name, age):\n    print(name, age)\n\ndata = {'name':'Bob','age':30}\ngreet(**data)"
+      },
+      {
+        "subtitle": "args + kwargs combined",
+        "subtitleTm": "args + kwargs bile",
+        "subtitleRu": "args + kwargs вместе",
+        "subdescription": "Mix both:",
+        "subdescriptionTm": "ikisini bile ulanmak:",
+        "subdescriptionRu": "совместное использование:",
+        "code": "def func(*args, **kwargs):\n    print(args)\n    print(kwargs)\n\nfunc(1,2,3,x=10,y=20)"
+      },
+      {
+        "subtitle": "Logging example",
+        "subtitleTm": "log mysaly",
+        "subtitleRu": "пример логирования",
+        "subdescription": "Flexible logging function:",
+        "subdescriptionTm": "log funksiýasy:",
+        "subdescriptionRu": "гибкая функция логирования:",
+        "code": "def log(*args, **kwargs):\n    print('ARGS:', args)\n    print('KWARGS:', kwargs)\n\nlog('error', 404, user='admin')"
+      },
+      {
+        "subtitle": "Function wrapper style",
+        "subtitleTm": "wrapper stili",
+        "subtitleRu": "обёртка функции",
+        "subdescription": "Common in decorators:",
+        "subdescriptionTm": "dekoratorlarda ulanylýar:",
+        "subdescriptionRu": "используется в декораторах:",
+        "code": "def wrapper(*args, **kwargs):\n    print('Before')\n    print(args, kwargs)\n    print('After')\n\nwrapper(1,2,3,name='test')"
+      },
+      {
+        "subtitle": "Real-world API style",
+        "subtitleTm": "API mysaly",
+        "subdescription": "Flexible function calls:",
+        "subdescriptionTm": "esneklikli funksiýa:",
+        "subdescriptionRu": "гибкий API стиль:",
+        "code": "def request(*args, **kwargs):\n    print('URL args:', args)\n    print('Options:', kwargs)\n\nrequest('/home','/api',method='GET',auth=True)"
       }
     ]
   },
@@ -1384,22 +3480,92 @@
     "textRu": "Виртуальные среды позволяют иметь изолированные среды Python для разных проектов. pip — это менеджер пакетов для Python.",
     "body": [
       {
-        "subtitle": "Creating virtual environment",
-        "subtitleTm": "Wirtual gurşaw döretmek",
-        "subtitleRu": "Создание виртуальной среды",
-        "subdescription": "Create and activate virtual env:",
-        "subdescriptionTm": "Wirtual gurşaw döretmek we işletmek:",
-        "subdescriptionRu": "Создание и активация виртуальной среды:",
-        "code": "# Create virtual environment\n# python -m venv myenv\n\n# Activate (Linux/Mac)\n# source myenv/bin/activate\n\n# Activate (Windows)\n# myenv\\Scripts\\activate\n\n# Deactivate\n# deactivate\nprint('Virtual environment setup done!')"
+        "subtitle": "Create virtual environment",
+        "subtitleTm": "wirtual gurşaw döretmek",
+        "subtitleRu": "создание виртуальной среды",
+        "subdescription": "Initialize isolated environment:",
+        "subdescriptionTm": "izolirlenen gurşaw döretmek:",
+        "subdescriptionRu": "инициализация среды:",
+        "code": "# create venv\npython -m venv venv"
       },
       {
-        "subtitle": "pip commands",
-        "subtitleTm": "pip buýruklary",
-        "subtitleRu": "Команды pip",
-        "subdescription": "Package management with pip:",
-        "subdescriptionTm": "pip bilen paket dolandyryjysy:",
-        "subdescriptionRu": "Управление пакетами с помощью pip:",
-        "code": "# Install a package\n# pip install requests\n\n# Install specific version\n# pip install requests==2.28.0\n\n# List installed packages\n# pip list\n\n# Save requirements\n# pip freeze > requirements.txt\n\n# Install from requirements\n# pip install -r requirements.txt\nprint('pip commands are run in terminal, not in Python!')"
+        "subtitle": "Activate venv (Linux/Mac)",
+        "subtitleTm": "Linux/Mac işjeňleşdirmek",
+        "subtitleRu": "активация Linux/Mac",
+        "subdescription": "Activate environment:",
+        "subdescriptionTm": "gurşawy işjeňleşdirmek:",
+        "subdescriptionRu": "активация среды:",
+        "code": "source venv/bin/activate"
+      },
+      {
+        "subtitle": "Activate venv (Windows)",
+        "subtitleTm": "Windows işjeňleşdirmek",
+        "subtitleRu": "активация Windows",
+        "subdescription": "Windows activation command:",
+        "subdescriptionTm": "Windows buýrugy:",
+        "subdescriptionRu": "команда Windows:",
+        "code": "venv\\Scripts\\activate"
+      },
+      {
+        "subtitle": "Deactivate venv",
+        "subtitleTm": "ýapmak",
+        "subtitleRu": "деактивация",
+        "subdescription": "Exit virtual environment:",
+        "subdescriptionTm": "gurşawy çykmak:",
+        "subdescriptionRu": "выход из среды:",
+        "code": "deactivate"
+      },
+      {
+        "subtitle": "Install package",
+        "subtitleTm": "paket gurmak",
+        "subtitleRu": "установка пакета",
+        "subdescription": "Install with pip:",
+        "subdescriptionTm": "pip bilen gurmak:",
+        "subdescriptionRu": "установка через pip:",
+        "code": "pip install requests"
+      },
+      {
+        "subtitle": "Install specific version",
+        "subtitleTm": "kesgitli wersiýa",
+        "subtitleRu": "конкретная версия",
+        "subdescription": "Version control:",
+        "subdescriptionTm": "wersiýa saýlamak:",
+        "subdescriptionRu": "контроль версии:",
+        "code": "pip install numpy==1.24.0"
+      },
+      {
+        "subtitle": "List packages",
+        "subtitleTm": "paketleri görkezmek",
+        "subtitleRu": "список пакетов",
+        "subdescription": "Show installed libraries:",
+        "subdescriptionTm": "gurulan paketleri görmek:",
+        "subdescriptionRu": "установленные пакеты:",
+        "code": "pip list"
+      },
+      {
+        "subtitle": "Freeze requirements",
+        "subtitleTm": "requirements ýazmak",
+        "subdescription": "Save dependencies:",
+        "subdescriptionTm": "dependencies saklamak:",
+        "subdescriptionRu": "сохранение зависимостей:",
+        "code": "pip freeze > requirements.txt"
+      },
+      {
+        "subtitle": "Install from requirements",
+        "subtitleTm": "requirements gurmak",
+        "subdescription": "Install all dependencies:",
+        "subdescriptionTm": "hemmesini gurmak:",
+        "subdescriptionRu": "установка всех зависимостей:",
+        "code": "pip install -r requirements.txt"
+      },
+      {
+        "subtitle": "Check pip version",
+        "subtitleTm": "pip wersiýa barlamak",
+        "subtitleRu": "проверка версии pip",
+        "subdescription": "Verify pip installation:",
+        "subdescriptionTm": "pip barlamak:",
+        "subdescriptionRu": "проверка pip:",
+        "code": "pip --version"
       }
     ]
   },
@@ -1417,22 +3583,94 @@
     "textRu": "Написание чистого, читаемого кода Python следует руководству по стилю PEP8. Хороший Python-код читаем, пригоден для повторного использования и хорошо документирован.",
     "body": [
       {
-        "subtitle": "PEP8 style guide",
-        "subtitleTm": "PEP8 stil gollanmasy",
-        "subtitleRu": "Руководство по стилю PEP8",
-        "subdescription": "Key Python coding conventions:",
-        "subdescriptionTm": "Python kodlamanyň esasy düzgünleri:",
-        "subdescriptionRu": "Основные соглашения о кодировании Python:",
-        "code": "# Good variable names (snake_case)\nuser_name = 'Alice'\nmax_count = 100\n\n# Good function names\ndef calculate_area(width, height):\n    return width * height\n\n# Good class names (PascalCase)\nclass UserAccount:\n    pass\n\n# Constants in UPPER_CASE\nMAX_SIZE = 1000"
+        "subtitle": "PEP8 naming rules",
+        "subtitleTm": "PEP8 atlandyryş",
+        "subtitleRu": "PEP8 именование",
+        "subdescription": "Proper variable naming:",
+        "subdescriptionTm": "dogry atlandyrmak:",
+        "subdescriptionRu": "правильные имена:",
+        "code": "user_age = 25\nmax_value = 100\n\n# Bad: userAge, MAXvalue (avoid)"
       },
       {
-        "subtitle": "Pythonic code",
-        "subtitleTm": "Pythonik kod",
-        "subtitleRu": "Питонический код",
-        "subdescription": "Write idiomatic Python:",
-        "subdescriptionTm": "Idiomaçy Python ýazyň:",
-        "subdescriptionRu": "Пишите идиоматический Python:",
-        "code": "# Use enumerate instead of range+len\nfruits = ['apple', 'banana', 'cherry']\nfor i, fruit in enumerate(fruits):\n    print(f'{i}: {fruit}')\n\n# Use zip to iterate pairs\nnames = ['Alice', 'Bob']\nscores = [95, 87]\nfor name, score in zip(names, scores):\n    print(f'{name}: {score}')\n\n# Use any() and all()\nnums = [1, 2, 3, 4, 5]\nprint(any(x > 4 for x in nums))  # True\nprint(all(x > 0 for x in nums))  # True"
+        "subtitle": "Function readability",
+        "subtitleTm": "funksiýa okalyş",
+        "subtitleRu": "читаемость функций",
+        "subdescription": "Keep functions small:",
+        "subdescriptionTm": "funksiýalary kiçi saklaň:",
+        "subdescriptionRu": "делайте функции маленькими:",
+        "code": "def add(a, b):\n    return a + b"
+      },
+      {
+        "subtitle": "Avoid magic numbers",
+        "subtitleTm": "magic sanlardan gaça dur",
+        "subtitleRu": "избегайте магических чисел",
+        "subdescription": "Use constants instead:",
+        "subdescriptionTm": "konstant ulanmak:",
+        "subdescriptionRu": "используйте константы:",
+        "code": "MAX_USERS = 100\nif len(users) > MAX_USERS:\n    print('Limit reached')"
+      },
+      {
+        "subtitle": "Use list comprehensions",
+        "subtitleTm": "list comprehension ulanmak",
+        "subtitleRu": "list comprehension",
+        "subdescription": "Cleaner loops:",
+        "subdescriptionTm": "arassa aýlawlar:",
+        "subdescriptionRu": "чистые циклы:",
+        "code": "nums = [1,2,3,4]\nsquares = [x*x for x in nums]"
+      },
+      {
+        "subtitle": "Use enumerate",
+        "subtitleTm": "enumerate ulanmak",
+        "subtitleRu": "использование enumerate",
+        "subdescription": "Better looping:",
+        "subdescriptionTm": "gowşak aýlaw ýerine:",
+        "subdescriptionRu": "лучший цикл:",
+        "code": "items = ['a','b','c']\nfor i, item in enumerate(items):\n    print(i, item)"
+      },
+      {
+        "subtitle": "Use zip",
+        "subtitleTm": "zip ulanmak",
+        "subtitleRu": "использование zip",
+        "subdescription": "Parallel iteration:",
+        "subdescriptionTm": "parallel aýlaw:",
+        "subdescriptionRu": "параллельный перебор:",
+        "code": "names = ['A','B']\nscores = [10,20]\nfor n,s in zip(names, scores):\n    print(n, s)"
+      },
+      {
+        "subtitle": "Avoid global variables",
+        "subtitleTm": "global gaça dur",
+        "subtitleRu": "избегайте global",
+        "subdescription": "Use function scope:",
+        "subdescriptionTm": "funksiýa içinde saklaň:",
+        "subdescriptionRu": "локальная область:",
+        "code": "def calculate():\n    result = 10 + 5\n    return result"
+      },
+      {
+        "subtitle": "Use docstrings",
+        "subtitleTm": "docstring ulanmak",
+        "subtitleRu": "использование docstring",
+        "subdescription": "Document functions:",
+        "subdescriptionTm": "funksiýany düşündirmek:",
+        "subdescriptionRu": "документация функций:",
+        "code": "def add(a, b):\n    \"\"\"Return sum of two numbers\"\"\"\n    return a + b"
+      },
+      {
+        "subtitle": "Use any/all",
+        "subtitleTm": "any/all ulanmak",
+        "subtitleRu": "использование any/all",
+        "subdescription": "Clean conditions:",
+        "subdescriptionTm": "şertleri ýönekeýleşdirmek:",
+        "subdescriptionRu": "упрощение условий:",
+        "code": "nums = [1,2,3]\nprint(any(x>2 for x in nums))"
+      },
+      {
+        "subtitle": "Avoid deep nesting",
+        "subtitleTm": "çuňňur nestingden gaça dur",
+        "subtitleRu": "избегайте вложенности",
+        "subdescription": "Keep code flat:",
+        "subdescriptionTm": "ýönekeý gurluş:",
+        "subdescriptionRu": "плоская структура:",
+        "code": "# Bad\n# if a:\n#     if b:\n#         if c:\n#             pass\n\n# Good\ndef check(a,b,c):\n    if not (a and b and c):\n        return False\n    return True"
       }
     ]
   }
